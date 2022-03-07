@@ -1,9 +1,12 @@
 #!/bin/bash
 
 #Get path from Cronjob
+
 whoami > name.txt
 namepath=$(head -1 name.txt)
 path=/home/$namepath
+gitpath=$(head -1 gitpath.txt)
+
 
 #Get subscription name:
 az account list-locations > list-location.txt
@@ -20,10 +23,10 @@ read -p "Nhap vao ten ResourceGroup: " NameResourceGroup
 echo "Data received"
 echo $NameResourceGroup > GroupResource.txt
 
-wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/auto-run.sh
-wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/auto-add.sh
-wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/auto-setsub.sh
-wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/auto-sys-cron.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-run.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-add.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-setsub.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-sys-cron.sh
 chmod +x auto-run.sh
 chmod +x auto-add.sh
 chmod +x auto-setsub.sh
@@ -32,16 +35,8 @@ chmod +x auto-sys-cron.sh
 #cd $path
 #crontab -r
 
-
-#create cron content
-#tee -a cronjob.txt <<EOF
-#* * * * * cd $path && nohup sh auto-run.sh > run.log 2>&1 &
-#EOF
-
-#cronjob=$(head -1 cronjob.txt)
-#(crontab -u $namepath -l; echo "$cronjob" ) | crontab -u $namepath -
 sudo /etc/init.d/cron start
 ./auto-sys-cron.sh
-#./auto-run.sh
+
 
 
