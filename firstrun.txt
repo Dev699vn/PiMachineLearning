@@ -1,4 +1,8 @@
-wget https://raw.githubusercontent.com/awsdiami/CliAzureGit/main/ubuntu-driver-ins.sh
+wget wget https://raw.githubusercontent.com/awsdiami/CliAzureGit/main/gitpath.txt
+gitpath=$(head -1 gitpath.txt)
+
+
+wget https://raw.githubusercontent.com/$gitpath/main/ubuntu-driver-ins.sh
 chmod +x ins_script.sh
 ./ins_script.sh
 
