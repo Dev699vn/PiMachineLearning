@@ -31,7 +31,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 #--------------------------#
 #---Copy link hiện ra từ ubuntu vào trình duyệt của vps đang chứa acc azure
-#   https://microsoft.com/devicelogin
+https://microsoft.com/devicelogin
 #---Copy mã từ ubuntu vào ô hiện lên trong vps acc azure
 
 #### Step 4: Cài đặt xong, tiến hành cài đặt code auto
