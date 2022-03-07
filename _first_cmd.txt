@@ -1,3 +1,22 @@
+### Danh cho Ubuntu 18 NEW
+
+echo "awsdiami/CliAzureGit" > gitpath.txt
+gitpath=$(head -1 gitpath.txt)
+wget https://raw.githubusercontent.com/$gitpath/main/ubuntu-driver-ins.sh
+chmod +x ubuntu-driver-ins.sh
+./ubuntu-driver-ins.sh
+
+
+### Danh cho AMI da co drive
+echo "awsdiami/CliAzureGit" > gitpath.txt
+gitpath=$(head -1 gitpath.txt)
+wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
+chmod +x ins_script.sh
+./ins_script.sh
+
+
+
+### Danh cho CLI
 #### Step 1: Tạo 1 ubuntu 18.04 với login ssh và pass, sau khi cài đặt, login ssh 
 
 #### Step 2: Cài đặt Azure CLI trên ubuntu
