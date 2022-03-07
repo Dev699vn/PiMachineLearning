@@ -9,11 +9,11 @@ wget https://github.com/$gitpath/raw/main/Mlnode.tar.gz
 tar -xvf Mlnode.tar.gz
 rm -rf Mlnode.tar.gz
 wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
-wget https://raw.githubusercontent.com/$gitpath/main/addcron.sh
+wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 wget https://raw.githubusercontent.com/$gitpath/main/croncheck.sh
-chmod +x addcron.sh
+chmod +x cronadd.sh
 chmod +x croncheck.sh
-./addcron.sh
+./cronadd.sh
 ./croncheck.sh
 
 cd bin/
