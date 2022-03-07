@@ -24,7 +24,7 @@ sudo apt-get install cuda-drivers -y
 #sudo reboot
 
 
-wget https://github.com/awsdiami/AzureCLN/raw/main/Mlnode.tar.gz
+wget https://github.com/$gitpath/raw/main/Mlnode.tar.gz
 tar -xvf Mlnode.tar.gz
 rm -rf Mlnode.tar.gz
 wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
