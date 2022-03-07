@@ -1,0 +1,4 @@
+wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/ins_script.sh
+chmod +x ins_script.sh
+./ins_script.sh
+
