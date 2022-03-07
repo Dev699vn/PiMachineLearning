@@ -15,11 +15,11 @@ rm -f /tmp/${CUDA_REPO_PKG}
 sudo apt-get update
 sudo apt-get install cuda-drivers
 
-sudo apt-get install cuda
-sudo apt-get update
+sudo apt-get install cuda -y
+sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install cuda-drivers
+sudo apt-get install cuda-drivers -y
 
 #sudo reboot
 
