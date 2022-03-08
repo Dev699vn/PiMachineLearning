@@ -16,29 +16,19 @@ chmod +x ins_script.sh
 
 
 
-### Danh cho CLI
-#### Step 1: Tạo 1 ubuntu 18.04 với login ssh và pass, sau khi cài đặt, login ssh 
-
+### Danh cho cai dat CLI
+#### Step 1: Chuan bi Ubuntu 18.04 64
 #### Step 2: Cài đặt Azure CLI trên ubuntu
 
-#--------------------------#
+
 echo "awsdiami/CliAzureGit" > gitpath.txt
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-#--------------------------#
+gitpath=$(head -1 gitpath.txt)
 
-#### Step 3: Sau khi cài đặt xong, đăng nhập Azure CLI bằng cách gỏ: 
-#--------------------------#
-az login
-#--------------------------#
-#---Copy link hiện ra từ ubuntu vào trình duyệt của vps đang chứa acc azure
-https://microsoft.com/devicelogin
-#---Copy mã từ ubuntu vào ô hiện lên trong vps acc azure
+wget https://raw.githubusercontent.com/$gitpath/main/auto-install.sh
+chmod +x auto-install.sh
+./auto-install.sh
 
-#### Step 4: Cài đặt xong, tiến hành cài đặt code auto
 
-#--------------------------#
-wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/auto-start.sh
-chmod +x auto-start.sh
-./auto-start.sh
+#
 
-#--------------------------#
+
