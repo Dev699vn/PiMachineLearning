@@ -20,6 +20,8 @@ chmod +x ins_script.sh
 #### Step 1: Chuan bi Ubuntu 18.04 64
 #### Step 2: Cài đặt Azure CLI trên ubuntu
 
+https://microsoft.com/devicelogin
+
 
 echo "awsdiami/CliAzureGit" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
