@@ -194,13 +194,13 @@ echo "$tmpvmname"_group >> GroupResource.txt
 
 # Tuy chinh VM
 size=Standard_NC6s_v3
-#size=DS1_v2
+#size=Standard_B2s
 priority=Spot
 adminusername=azureuser
 adminpassword=12345678@Abc
 
 az group create --location $locationset --resource-group "$tmpvmname"_group
 sleep 2
-az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image UbuntuLTS --size $size --public-ip-sku Standard --admin-username $adminusername --admin-password $adminpassword
+az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image UbuntuLTS --size $size --public-ip-sku Standard --admin-username $adminusername --admin-password $adminpassword --custom-data custom-data.txt
 
 echo "Done"
