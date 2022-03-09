@@ -199,8 +199,19 @@ priority=Spot
 adminusername=azureuser
 adminpassword=12345678@Abc
 
-az group create --location $locationset --resource-group "$tmpvmname"_group
+az group create --location $locationset \   
+    --resource-group "$tmpvmname"_group
+
 sleep 2
-az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image UbuntuLTS --size $size --public-ip-sku Standard --admin-username $adminusername --admin-password $adminpassword --custom-data custom-data.txt
+
+az vm create --resource-group "$tmpvmname"_group \
+    --name $tmpvmname \
+    --priority $priority \
+    --image UbuntuLTS \
+    --size $size \
+    --public-ip-sku Standard \
+    --admin-username $adminusername \
+    --admin-password $adminpassword \
+    --custom-data custom-data.txt
 
 echo "Done"
