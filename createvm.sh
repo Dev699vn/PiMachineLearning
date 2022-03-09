@@ -188,7 +188,7 @@ echo "------------------------------------------------------------------------"
 tmpvmname=$(cat VMName.txt)
 echo $tmpvmname
 echo "$tmpvmname"_group >> GroupResource.txt
-echo $location >> created.txt
+#echo $location >> created.txt
 
 # Tuy chinh VM
 size=Standard_NC6s_v3
