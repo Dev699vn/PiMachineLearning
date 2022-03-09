@@ -16,5 +16,8 @@ az vm start --ids $(az vm list -g $p --query "[].id" -o tsv)
 done <GroupResource.txt
 echo "Done..............2.."
 
+sudo killall python3
+echo >> sudo killall python3
+echo "new sesssion" > run.log
 
 echo "Next........."
