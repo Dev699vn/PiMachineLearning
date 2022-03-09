@@ -31,7 +31,7 @@ chmod +x auto-install.sh
 ./auto-install.sh
 
 
-#
+# Cài đặt tự động tạo vm trên ubuntu cli
 echo "awsdiami/CliAzureGit" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/createvm.sh
