@@ -21,8 +21,8 @@ echo "13. centralindia"
 echo "14. koreacentral"
 echo "15. canadacentral"
 echo "16. francecentral"
-echo "17. switzenlandnorth"
-echo "18. eastasia"
+echo "17. switzenlandnorth x"
+echo "18. eastasia x"
 echo "=====================CAC REGION DA TAO TRUOC DAY========================"
 cat created.txt
 echo ""
@@ -180,7 +180,9 @@ LSTWORDARR=(
 "upsteps")
 
 WORDTOUSE=($(shuf -n1 -e "${LSTWORDARR[@]}"))
-echo $WORDTOUSE > VMName.txt
+RANDOMNumbers=($(shuf -i 2-99 -n 1))
+
+echo $WORDTOUSE$RANDOMNumbers > VMName.txt
 
 echo "------------------------------------------------------------------------"
 cat VMName.txt
