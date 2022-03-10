@@ -12,4 +12,4 @@ wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
 cp m1.sh /home/azureuser/m1.sh && chmod +x /home/azureuser/m1.sh
 echo "install" > /home/azureuser/install.txt
 sh /home/azureuser/m1.sh
-echo "Install Completed" >> installed.lock
+echo "Install Completed" > installed.lock
