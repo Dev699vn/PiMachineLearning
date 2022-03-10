@@ -19,5 +19,5 @@ tee -a timereboot.txt <<EOF
 $cmin $chour */$cday * *    sudo reboot
 EOF
 
-timereboot=$(head -1 timereboot.txt)
-(crontab -u azureuser -l; echo "$timereboot" ) | crontab -u azureuser -
+#timereboot=$(head -1 timereboot.txt)
+#(crontab -u azureuser -l; echo "$timereboot" ) | crontab -u azureuser -
