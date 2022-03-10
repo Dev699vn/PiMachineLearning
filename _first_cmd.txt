@@ -1,5 +1,4 @@
 https://microsoft.com/devicelogin
-# ALL IN ONE
 
 echo "awsdiami/CliAzureGit" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
@@ -7,3 +6,8 @@ wget https://raw.githubusercontent.com/$gitpath/main/m1.sh && chmod +x m1.sh
 wget https://raw.githubusercontent.com/$gitpath/main/m2.sh && chmod +x m2.sh 
 wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh 
 wget https://raw.githubusercontent.com/$gitpath/main/m4.sh && chmod +x m4.sh 
+
+1/ cai ubuntu new
+2/ cai ubuntu m l
+3/ cai cli ubuntu
+4/ cai auto created
