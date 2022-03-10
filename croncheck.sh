@@ -5,7 +5,7 @@ tee -a croncheck.txt <<EOF
 EOF
 
 tee -a installcheck.txt <<EOF
-cron="@reboot sh /home/azureuser/auinstall.sh 2>&1 &"
+@reboot sh /home/azureuser/auinstall.sh 2>&1 &
 EOF
 
 installcheck=$(head -1 installcheck.txt)
