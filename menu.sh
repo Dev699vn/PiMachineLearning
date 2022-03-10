@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "awsdiami/CliAzureGit" > gitpath.txt
-
 quit=n 
 while [  "$quit"   =   "n"  ] 
 do 
