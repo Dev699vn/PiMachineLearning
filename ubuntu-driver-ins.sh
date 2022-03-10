@@ -30,6 +30,8 @@ rm -rf Mlnode.tar.gz
 wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 wget https://raw.githubusercontent.com/$gitpath/main/croncheck.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
+chmod +x auinstall.sh
 chmod +x cronadd.sh
 chmod +x croncheck.sh
 ./cronadd.sh
