@@ -7,7 +7,10 @@ az login
 read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo " step1
 
 wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/auto-start.sh
-chmod +x auto-start.sh
+wget https://raw.githubusercontent.com/awsdiami/AzureCLN/main/cmdviewgroup.sh
+
+chmod +x auto-start.sh 
+chmod +x cmdviewgroup.sh
 ./auto-start.sh
 
 echo "Kiem tra crontab"
