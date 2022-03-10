@@ -15,14 +15,14 @@ echo "07. centralus -xxx"
 echo "08. australiseast"
 echo "09. southeastasia -xxx"
 echo "10. northeurope"
-echo "11. uksouth"
+echo "11. uksouth -xxx"
 echo "12. westeurope -xxx"
 echo "13. centralindia"
 echo "14. koreacentral"
-echo "15. canadacentral"
+echo "15. canadacentral -xxx"
 echo "16. francecentral"
 echo "17. switzenlandnorth"
-echo "18. eastasia"
+echo "18. eastasia -xxx"
 echo "=====================CAC REGION DA TAO TRUOC DAY========================"
 cat created.txt
 echo ""
@@ -212,6 +212,7 @@ az vm create --resource-group "$tmpvmname"_group \
     --public-ip-sku Standard \
     --admin-username $adminusername \
     --admin-password $adminpassword \
-    --custom-data custom-data.txt
+
 
 echo "Done"
+#    --custom-data custom-data.txt
