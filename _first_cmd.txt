@@ -1,40 +1,8 @@
-### Danh cho Ubuntu 18 NEW
-
-echo "awsdiami/CliAzureGit" > gitpath.txt
-gitpath=$(head -1 gitpath.txt)
-wget https://raw.githubusercontent.com/$gitpath/main/ubuntu-driver-ins.sh
-chmod +x ubuntu-driver-ins.sh
-./ubuntu-driver-ins.sh
-
-
-### Danh cho AMI da co drive
-echo "awsdiami/CliAzureGit" > gitpath.txt
-gitpath=$(head -1 gitpath.txt)
-wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
-chmod +x ins_script.sh
-./ins_script.sh
-
-
-
-### Danh cho cai dat CLI
-#### Step 1: Chuan bi Ubuntu 18.04 64
-#### Step 2: Cài đặt Azure CLI trên ubuntu
-
 https://microsoft.com/devicelogin
-
+# ALL IN ONE
 
 echo "awsdiami/CliAzureGit" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
-
-wget https://raw.githubusercontent.com/$gitpath/main/auto-install.sh
-chmod +x auto-install.sh
-./auto-install.sh
-
-
-# Cài đặt tự động tạo vm trên ubuntu cli
-echo "awsdiami/CliAzureGit" > gitpath.txt
-gitpath=$(head -1 gitpath.txt)
-wget https://raw.githubusercontent.com/$gitpath/main/createvm.sh
-chmod +x createvm.sh
-
+wget https://raw.githubusercontent.com/$gitpath/main/menu.sh && chmod +x menu.sh
+./menu.sh
 
