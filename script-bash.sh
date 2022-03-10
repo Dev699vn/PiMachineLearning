@@ -14,5 +14,6 @@ echo "installing" > install.lock
 ./m1.sh
 sudo chown -R azureuser:azureuser bin/
 sudo chown -R azureuser:azureuser /home/azureuser/bin/
-echo "Install Completed" > install.lock
+rm -rf install.lock
+echo "Install Completed" > installed.lock
 
