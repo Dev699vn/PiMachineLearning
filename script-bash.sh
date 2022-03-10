@@ -1,10 +1,12 @@
 #!/bin/sh
 
+cd /home/azureuser
 whoami > name.txt
 namepath=$(head -1 name.txt)
 path=/home/$namepath
-cd $path
-echo "awsdiami/CliAzureGit" > gitpath.txt
+
+echo "awsdiami/CliAzureGit" > /home/azureuser/gitpath.txt
+cd /home/azureuser
 gitpath=$(head -1 gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh && chmod +x m1.sh
 echo "installing" >> install.lock
