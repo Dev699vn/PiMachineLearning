@@ -1,6 +1,7 @@
 https://microsoft.com/devicelogin
 
-echo "awsdiami/CliAzureGit" > gitpath.txt
+
+echo "mlazcode/CliAzureGit" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
 rm -rf *.sh *.txt *.log
 crontab -r
@@ -10,22 +11,3 @@ wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh
 wget https://raw.githubusercontent.com/$gitpath/main/m4.sh && chmod +x m4.sh
 ./m3.sh
 
-
-1/ cai ubuntu new
-2/ cai ubuntu m l
-3/ cai cli ubuntu
-4/ cai auto created
-
-
-01. eastus -xxx         |
-02. eastus2 -xxx        |
-03. southcentralus -xxx |
-04. westus -xxx         |
-05. westus2 -xxx        |
-06. westus3 -xxx        |
-07. centralus -xxx      |
-09. southeastasia -xxx  |
-11. uksouth -xxx        |
-12. westeurope -xxx     |
-15. canadacentral -xxx  |
-18. eastasia -xxx       |
