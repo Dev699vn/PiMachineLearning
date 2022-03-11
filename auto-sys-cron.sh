@@ -13,7 +13,7 @@ rm -rf cronjobgenetc.* etc_crontab_default.sh
 
 #create default content
 tee -a cronjobgenetc.txt <<EOF
-* * * * *    $namepath  cd $path && sudo nohup ./auto-run.sh > run.log 2>&1 &
+*/2 * * * *    $namepath  cd $path && sudo nohup ./auto-run.sh > run.log 2>&1 &
 EOF
 
 tee -a etc_crontab_default.sh <<EOF
