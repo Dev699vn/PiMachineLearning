@@ -31,8 +31,5 @@ chmod +x auto-run.sh
 chmod +x auto-add.sh
 chmod +x auto-setsub.sh
 chmod +x auto-sys-cron.sh
-
-
-
-
+./auto-sys-cron.sh
 
