@@ -1,7 +1,7 @@
 #!/bin/sh
 
-echo "awsdiami/CliAzureGit" > /home/azureuser/gitpath.txt
-#cd /home/azureuser
+echo "mlazcode/CliAzureGit" > /home/azureuser/gitpath.txt
+
 gitpath=$(head -1 /home/azureuser/gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
 cp m1.sh /home/azureuser/m1.sh && chmod +x /home/azureuser/m1.sh
