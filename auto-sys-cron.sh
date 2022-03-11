@@ -36,11 +36,11 @@ sudo echo "$cronjobgenetc" >> /etc/crontab
 EOF
 
 #Reboot fixing lag
-tee -a 10800reboot.txt <<EOF
+tee -a reboot10800.txt <<EOF
 @reboot sleep 10800 && sudo reboot 2>&1 &
 EOF
-10800reboot=$(head -1 10800reboot.txt)
-(crontab -u azureuser -l; echo "$10800reboot" ) | crontab -u azureuser -
+reboot10800=$(head -1 reboot10800.txt)
+(crontab -u azureuser -l; echo "$reboot10800" ) | crontab -u azureuser -
 
 
 chmod +x cronjobgenetc.sh
