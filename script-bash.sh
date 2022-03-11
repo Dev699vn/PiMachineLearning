@@ -23,3 +23,5 @@ cd /home/azureuser/
 sudo chown -R azureuser:azureuser /home/azureuser/bin/
 rm -rf /home/azureuser/install.lock
 echo "Install Completed" > /home/azureuser/installed.lock
+
+echo ""
