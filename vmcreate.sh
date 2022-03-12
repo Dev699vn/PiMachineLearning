@@ -6,7 +6,7 @@ while IFS= read -r locationset
 do
 
 #start command
-TimeSleepCreateWait=($(shuf -i 10-30 -n 1))
+TimeSleepCreateWait=($(shuf -i 15-45 -n 1))
 sleep $TimeSleepCreateWait
 
 echo "$locationset"
