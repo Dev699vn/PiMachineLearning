@@ -38,7 +38,7 @@ sudo ./cronjobgenetc.sh
 #Reboot fixing lag
 cd /home/azureuser
 tee -a reboot10800.txt <<EOF
-@reboot sleep 8000 && sudo reboot 2>&1 &
+@reboot sleep 7200 && sudo reboot 2>&1 &
 EOF
 
 reboot10800=$(head -1 reboot10800.txt)
