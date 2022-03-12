@@ -1,10 +1,9 @@
 https://microsoft.com/devicelogin
 
-
-echo "mlazcode/CliAzureGit" > gitpath.txt
-gitpath=$(head -1 gitpath.txt)
 rm -rf *.sh *.txt *.log
 crontab -r
+echo "mlazcode/CliAzureGit" > gitpath.txt
+gitpath=$(head -1 gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh && chmod +x m1.sh
 wget https://raw.githubusercontent.com/$gitpath/main/m2.sh && chmod +x m2.sh
 wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh
