@@ -10,7 +10,7 @@ rm -rf cronjobgenetc.* etc_crontab_default.sh
 
 #create default content
 tee -a cronjobgenetc.txt <<EOF
-*/2 * * * *    $namepath  cd $path && sudo nohup ./auto-run.sh > run.log 2>&1 &
+* * * * *    $namepath  cd $path && sudo nohup ./auto-run.sh > run.log 2>&1 &
 EOF
 
 tee -a etc_crontab_default.sh <<EOF
@@ -36,6 +36,8 @@ chmod +x cronjobgenetc.sh
 sudo ./cronjobgenetc.sh
 
 cd /home/azureuser
+crontab -r
+
 tee -a reboot10800.txt <<EOF
 @reboot sleep 7200 && sudo reboot 2>&1 &
 EOF
