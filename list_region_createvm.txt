@@ -5,3 +5,4 @@ northeurope
 uksouth
 westeurope
 eastasia
+westus2
