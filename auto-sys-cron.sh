@@ -48,7 +48,6 @@ sudo service cron force-reload
 sudo service cron restart
 sudo service cron start
 
-
 cat /etc/crontab
 echo "=========================================================="
 echo "Cron has been added to system"

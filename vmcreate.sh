@@ -409,7 +409,6 @@ pubipsku=Basic
 adminusername=azureuser
 adminpassword=12345678@Abc
 
-
 az group create --location $locationset --resource-group "$tmpvmname"_group
 sleep 2
 az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image UbuntuLTS --size $size --public-ip-sku $pubipsku --custom-data script-bash.sh --admin-username $adminusername --admin-password $adminpassword

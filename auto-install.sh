@@ -2,7 +2,6 @@
 
 gitpath=$(head -1 gitpath.txt)
 
-
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 echo "Truy cap URL https://microsoft.com/devicelogin, sau do gan code ben duoi de approve cli access"
 az login

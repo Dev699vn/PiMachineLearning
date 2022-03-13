@@ -1,3 +1,4 @@
+#!/bin/bash
 
 unset NameResourceGroup
 read -p "Nhap vao ten ResourceGroup: " NameResourceGroup

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 az account list --output table > list_subscription.txt
 cat list_subscription.txt
 

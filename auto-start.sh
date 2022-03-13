@@ -1,12 +1,10 @@
 #!/bin/bash
 
 #Get path from Cronjob
-
 whoami > name.txt
 namepath=$(head -1 name.txt)
 path=/home/$namepath
 gitpath=$(head -1 gitpath.txt)
-
 
 #Get subscription name:
 az account list-locations > list-location.txt

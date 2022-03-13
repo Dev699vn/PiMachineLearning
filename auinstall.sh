@@ -1,6 +1,6 @@
 #!/bin/bash
 
-		file="/home/azureuser/installed.lock"
+	file="/home/azureuser/installed.lock"
 		if [ -f "$file" ]
 	then
 		echo "$file found OK."

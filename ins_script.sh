@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Get path from Cronjob
 whoami > name.txt
 namepath=$(head -1 name.txt)
