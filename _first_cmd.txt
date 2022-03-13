@@ -2,6 +2,8 @@ https://microsoft.com/devicelogin
 
 rm -rf *.sh *.txt *.log
 crontab -r
+
+
 echo "qamiawz/CliAzMlnode" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh
