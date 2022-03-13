@@ -1,6 +1,5 @@
 eastus
 eastus2
-westus2
 centralus
 northeurope
 uksouth
