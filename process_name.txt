@@ -8,4 +8,4 @@ pytorch
 stacksml
 torchvision
 numpy2
-python322
+python328

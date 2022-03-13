@@ -12,3 +12,4 @@
         rm -rf install.lock
         echo "Install Completed" > installed.lock
 	fi
+	
