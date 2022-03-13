@@ -6,5 +6,4 @@ centralus
 northeurope
 uksouth
 westeurope
-canadacentral
 eastasia
