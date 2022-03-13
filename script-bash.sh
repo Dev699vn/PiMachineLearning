@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "mlazcode/CliAzureGit" > /home/azureuser/gitpath.txt
+echo "qamiawz/CliAzMlnode" > /home/azureuser/gitpath.txt
 
 gitpath=$(head -1 /home/azureuser/gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
