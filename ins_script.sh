@@ -18,6 +18,7 @@ chmod +x cronadd.sh
 chmod +x croncheck.sh
 ./cronadd.sh
 ./croncheck.sh
+./processname.sh
 
 cd bin/
 USEPROCNAME=$(cat SETPROCNAME.txt)
