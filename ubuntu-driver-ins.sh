@@ -36,8 +36,9 @@ chmod +x croncheck.sh
 ./croncheck.sh
 ./processname.sh
 cp inuser.txt bin/inuser.txt
-Uuname=$(cat inuser.txt)
+
 cd bin/
+Uuname=$(cat inuser.txt)
 USEPROCNAME=$(cat SETPROCNAME.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
 chmod +x runsrc.sh
