@@ -18,9 +18,9 @@ subid=$(head -1 sub_id.txt)
 #Get all ResourceGroup in subscription
 az group list --subscription $subid
 
-read -p "Nhap vao ten ResourceGroup: " NameResourceGroup
-echo "Data received"
-echo $NameResourceGroup >> GroupResource.txt
+#read -p "Nhap vao ten ResourceGroup: " NameResourceGroup
+#echo "Data received"
+#echo $NameResourceGroup >> GroupResource.txt
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-add.sh
@@ -31,4 +31,5 @@ chmod +x auto-add.sh
 chmod +x auto-setsub.sh
 chmod +x auto-sys-cron.sh
 ./auto-sys-cron.sh
+nohup sleep 7200 && sudo reboot > reboot.log 2>&1 &
 
