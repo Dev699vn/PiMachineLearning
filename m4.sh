@@ -9,6 +9,7 @@ cat list_region_createvm.txt | awk 'BEGIN{srand();}{print rand()"\t"$0}' | sort 
 
 chmod +x createvm.sh
 chmod +x vmcreate.sh
+./script-bash-default.sh
 
 echo "CAI DAT CLI HOAN THANH, CHO REBOOT VA LOGIN VAO LAI"
-sudo reboot
+#sudo reboot
