@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source listVMname.sh
-touch GroupResource.txt
 file=list_region_createvm_use.txt
 
 while IFS= read -r locationset
@@ -397,7 +395,7 @@ cat VMName.txt
 echo "------------------------------------------------------------------------"
 tmpvmname=$(cat VMName.txt)
 echo $tmpvmname
-#echo "$tmpvmname"_group >> GroupResource.txt
+echo "$tmpvmname"_group >> GroupResource.txt
 
 Uuname=$(cat inuser.txt)
 Upassw=$(cat inpass.txt)

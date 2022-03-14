@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source listVMname.sh
-
 quit=n 
 while [  "$quit"   =   "n"  ] 
 do 
