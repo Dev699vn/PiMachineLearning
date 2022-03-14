@@ -213,11 +213,11 @@ Upassw=$(cat inpass.txt)
 
 
 # Tuy chinh VM
-#size=Standard_NC6s_v3
-size=Standard_B2s
-#priority=Spot
-pubipsku=Standard
-#pubipsku=Basic
+size=Standard_NC6s_v3
+#size=Standard_B2s
+priority=Spot
+#pubipsku=Standard
+pubipsku=Basic
 adminusername=$Uuname
 adminpassword=$Upassw
 
