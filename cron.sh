@@ -1,7 +1,8 @@
 #!/bin/bash
+
 USEPROCNAME=$(cat SETPROCNAME.txt)
 whoami > name.txt
-namepath=$(head -1 name.txt)
+namepath=$(cat -1 name.txt)
 
 PROCESS="$USEPROCNAME";
 if ps ax | grep -v grep | grep $PROCESS > /dev/null
