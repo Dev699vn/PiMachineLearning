@@ -16,9 +16,7 @@ cp auinstall.sh /home/$Uuname/auinstall.sh && chmod +x /home/$Uuname/auinstall.s
 
 echo "installing" > /home/$Uuname/install.txt
 
-echo "@reboot sh /home/$Uuname/auinstall.sh 2>&1 &" > installcheck.txt
-
-(crontab -u $Uuname -l; echo "$(head -1 installcheck.txt)" ) | crontab -u $Uuname -
+(crontab -u $Uuname -l; echo "@reboot sh /home/$Uuname/auinstall.sh 2>&1 &" ) | crontab -u $Uuname -
 
 cd /home/$Uuname/
 ./m1.sh
