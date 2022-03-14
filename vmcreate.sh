@@ -15,8 +15,6 @@ echo $location >> created.txt
 echo > VMName.txt
 
 LSTWORDARR=(
-"ubuNtu"
-"liNux"
 "clustEr"
 "cloudEr"
 "hostsErvEr"
