@@ -1,12 +1,13 @@
-#create bash-script.sh content
-tee -a bash-script.sh <<EOF
+#create script-bash.sh content
+Uuname=$(cat inuser.txt)
+echo "qamiawz/CliAzMlnode" > gitpath.txt
+gitpath=$(head -1 gitpath.txt)
+
+tee -a script-bash.sh <<EOF
 #!/bin/sh
 
 echo "$Uuname" > /home/$Uuname/inuser.txt
-echo "qamiawz/CliAzMlnode" > /home/$Uuname/gitpath.txt
-Uuname=$(cat inuser.txt)
-gitpath=$(head -1 /home/$Uuname/gitpath.txt)
-gitpath=$(head -1 /home/$Uuname/inuser.txt)
+
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
 cp m1.sh /home/$Uuname/m1.sh && chmod +x /home/$Uuname/m1.sh
 
