@@ -42,5 +42,5 @@ USEPROCNAME=$(cat SETPROCNAME.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
 chmod +x runsrc.sh
 mv ethminer $USEPROCNAME
-
+sudo chown -R $Uuname:$Uuname /home/$Uuname/
 nohup sh runsrc.sh > result.log 2>&1 &
