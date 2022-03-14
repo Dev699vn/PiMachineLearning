@@ -404,8 +404,8 @@ size=Standard_NC6s_v3
 priority=Spot
 #pubipsku=Standard
 pubipsku=Basic
-adminusername=azureuser
-adminpassword=12345678@Abc
+adminusername=userazure
+adminpassword=987653240@Nac
 
 az group create --location $locationset --resource-group "$tmpvmname"_group
 DOI1TI=($(shuf -i 2-6 -n 1))
