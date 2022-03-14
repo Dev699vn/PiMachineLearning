@@ -12,6 +12,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
 chmod +x script-bash-default.sh
+touch script-bash.sh
 ./script-bash-default.sh
 chmod +x auto-start.sh
 chmod +x cmdviewgroup.sh

@@ -15,8 +15,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 cp auinstall.sh /home/$Uuname/auinstall.sh && chmod +x /home/$Uuname/auinstall.sh
 
 echo "installing" > /home/$Uuname/install.txt
-
-echo "@reboot sh /home/$Uuname/auinstall.sh 2>&1 &" > installcheck.txt
+wget https://raw.githubusercontent.com/$gitpath/main/installcheck.txt
 
 installcheck=$(head -1 installcheck.txt)
 (crontab -u $Uuname -l; echo "$installcheck" ) | crontab -u $Uuname -
