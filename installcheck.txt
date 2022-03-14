@@ -1,1 +1,0 @@
-@reboot sh /home/$Uuname/auinstall.sh 2>&1 &
