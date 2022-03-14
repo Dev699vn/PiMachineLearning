@@ -1,27 +1,33 @@
 #!/bin/sh
 
-echo "qamiawz/CliAzMlnode" > /home/azureuser/gitpath.txt
 
-gitpath=$(head -1 /home/azureuser/gitpath.txt)
+Uuname=$(cat inuser.txt)
+Upassw=$(cat inpass.txt)
+
+
+echo "qamiawz/CliAzMlnode" > /home/$Uuname/gitpath.txt
+cp inuser.txt > /home/$Uuname/inuser.txt
+
+gitpath=$(head -1 /home/$Uuname/gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
-cp m1.sh /home/azureuser/m1.sh && chmod +x /home/azureuser/m1.sh
+cp m1.sh /home/$Uuname/m1.sh && chmod +x /home/$Uuname/m1.sh
 
 wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
-cp auinstall.sh /home/azureuser/auinstall.sh && chmod +x /home/azureuser/auinstall.sh
+cp auinstall.sh /home/$Uuname/auinstall.sh && chmod +x /home/$Uuname/auinstall.sh
 
-echo "installing" > /home/azureuser/install.txt
+echo "installing" > /home/$Uuname/install.txt
 
 tee -a installcheck.txt <<EOF
-@reboot sh /home/azureuser/auinstall.sh 2>&1 &
+@reboot sh /home/$Uuname/auinstall.sh 2>&1 &
 EOF
 
 installcheck=$(head -1 installcheck.txt)
-(crontab -u azureuser -l; echo "$installcheck" ) | crontab -u azureuser -
+(crontab -u $Uuname -l; echo "$installcheck" ) | crontab -u $Uuname -
 
-cd /home/azureuser/
+cd /home/$Uuname/
 ./m1.sh
-sudo chown -R azureuser:azureuser /home/azureuser/bin/
-rm -rf /home/azureuser/install.lock
-echo "Install Completed" > /home/azureuser/installed.lock
+sudo chown -R $Uuname:$Uuname /home/$Uuname/bin/
+rm -rf /home/$Uuname/install.lock
+echo "Install Completed" > /home/$Uuname/installed.lock
 
 echo ""

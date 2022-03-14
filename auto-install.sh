@@ -9,11 +9,12 @@ read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh
 wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
-
-chmod +x auto-start.sh 
+wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
+chmod +x auto-start.sh
 chmod +x cmdviewgroup.sh
+chmod +x Azaccount.sh
 ./auto-start.sh
-
+./Azaccount.sh
 crontab -l
 
 chmod +x m4.sh

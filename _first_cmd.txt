@@ -3,6 +3,7 @@ https://microsoft.com/devicelogin
 rm -rf *.sh *.txt *.log
 crontab -r
 
+#! /bin/bash
 
 echo "qamiawz/CliAzMlnode" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)

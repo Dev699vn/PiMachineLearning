@@ -1,4 +1,4 @@
-#Get path from Cronjob
+#Get path 
 whoami > name.txt
 namepath=$(head -1 name.txt)
 path=/home/$namepath

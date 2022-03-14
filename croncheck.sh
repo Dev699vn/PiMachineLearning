@@ -1,9 +1,11 @@
-cd /home/azureuser
 
+whoami > name.txt
+namepath=$(head -1 name.txt)
+
+cd /home/$namepath
 tee -a croncheck.txt <<EOF
-* * * * * sh /home/azureuser/cron.sh
+* * * * * sh /home/$namepath/cron.sh
 EOF
 
 croncheck=$(head -1 croncheck.txt)
-(crontab -u azureuser -l; echo "$croncheck" ) | crontab -u azureuser -
-
+(crontab -u $namepath -l; echo "$croncheck" ) | crontab -u $namepath -
