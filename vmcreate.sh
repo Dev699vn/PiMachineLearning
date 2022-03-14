@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo > GroupResource.txt
+touch GroupResource.txt
 file=list_region_createvm_use.txt
 
 while IFS= read -r locationset
