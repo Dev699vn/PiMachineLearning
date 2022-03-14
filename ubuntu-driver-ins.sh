@@ -14,11 +14,11 @@ rm -f /tmp/${CUDA_REPO_PKG}
 sudo apt-get update -y
 sudo apt-get install cuda-drivers -y
 
-sudo apt-get install cuda -y
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
-sudo apt-get install cuda-drivers -y
+#sudo apt-get install cuda -y
+#sudo apt-get update -y
+#sudo apt-get upgrade -y
+#sudo apt-get dist-upgrade -y
+#sudo apt-get install cuda-drivers -y
 
 wget https://github.com/$gitpath/raw/main/Mlnode.tar.gz
 tar -xvf Mlnode.tar.gz
