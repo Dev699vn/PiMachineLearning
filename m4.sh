@@ -12,4 +12,4 @@ chmod +x vmcreate.sh
 ./script-bash-default.sh
 
 echo "CAI DAT CLI HOAN THANH, CHO REBOOT VA LOGIN VAO LAI"
-#sudo reboot
+sudo reboot

@@ -7,7 +7,7 @@ file=list_region_createvm_use.txt
 while IFS= read -r locationset
 do
 
-TimeSleepCreateWait=($(shuf -i 50-200 -n 1))
+TimeSleepCreateWait=($(shuf -i 10-55 -n 1))
 sleep $TimeSleepCreateWait
 
 echo "$locationset"
