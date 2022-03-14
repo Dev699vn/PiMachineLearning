@@ -11,7 +11,3 @@ wget https://raw.githubusercontent.com/$gitpath/main/m4.sh && chmod +x m4.sh
 ./m3.sh
 
 
-
-
-win ngam
-Standard D2s v3 (2 vcpus, 8 GiB memory)

@@ -1,8 +1,7 @@
 #create script-bash.sh content
 Uuname=$(cat inuser.txt)
-echo "qamiawz/CliAzMlnode" > gitpath.txt
-gitpath=$(head -1 gitpath.txt)
 
+gitpath=$(head -1 gitpath.txt)
 tee -a script-bash.sh <<EOF
 #!/bin/sh
 
