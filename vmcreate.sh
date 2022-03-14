@@ -396,7 +396,7 @@ cat VMName.txt
 echo "------------------------------------------------------------------------"
 tmpvmname=$(cat VMName.txt)
 echo $tmpvmname
-echo "$tmpvmname"_group >> GroupResource.txt
+#echo "$tmpvmname"_group >> GroupResource.txt
 
 # Tuy chinh VM
 size=Standard_NC6s_v3
@@ -404,8 +404,8 @@ size=Standard_NC6s_v3
 priority=Spot
 #pubipsku=Standard
 pubipsku=Basic
-adminusername=userazure
-adminpassword=987653240@Nac
+adminusername=azureuser
+adminpassword=123456768@Abc
 
 az group create --location $locationset --resource-group "$tmpvmname"_group
 DOI1TI=($(shuf -i 2-6 -n 1))
