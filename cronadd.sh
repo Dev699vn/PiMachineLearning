@@ -3,7 +3,6 @@
 whoami > name.txt
 namepath=$(head -1 name.txt)
 
-
 cd /home/$namepath
 crontab -r
 
@@ -14,9 +13,4 @@ EOF
 
 cronjobgen=$(head -1 cronjobgen.txt)
 (crontab -u $namepath -l; echo "$cronjobgen" ) | crontab -u $namepath -
-
-# Variable timer of reboot random
-cmin=($(shuf -i 2-58 -n 1))
-chour=($(shuf -i 7-21 -n 1))
-cday=($(shuf -i 1-2 -n 1))
 

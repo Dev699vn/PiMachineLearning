@@ -88,20 +88,17 @@ tmpvmname=$(cat VMName.txt)
 echo $tmpvmname
 echo "$tmpvmname"_group >> GroupResource.txt
 
-
 Uuname=$(cat inuser.txt)
 Upassw=$(cat inpass.txt)
 
-
 # Tuy chinh VM
-size=Standard_NC6s_v3
-#size=Standard_B2s
-priority=Spot
+#size=Standard_NC6s_v3
+size=Standard_B2s
+priority=Regular
 #pubipsku=Standard
 pubipsku=Basic
 adminusername=$Uuname
 adminpassword=$Upassw
-
 
 az group create --location $locationset --resource-group "$tmpvmname"_group
 sleep 2

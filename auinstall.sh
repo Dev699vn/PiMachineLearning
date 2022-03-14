@@ -1,10 +1,7 @@
 #!/bin/bash
 
-
-#Uuname=$(cat inuser.txt)
 whoami > name.txt
 namepath=$(head -1 name.txt)
-
 
 	file="/home/$namepath/installed.lock"
 		if [ -f "$file" ]

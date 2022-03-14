@@ -11,4 +11,4 @@ chmod +x createvm.sh
 chmod +x vmcreate.sh
 
 echo "CAI DAT CLI HOAN THANH, CHO REBOOT VA LOGIN VAO LAI"
-#sudo reboot
+sudo reboot

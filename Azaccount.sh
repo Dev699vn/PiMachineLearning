@@ -1,7 +1,6 @@
-#File nay nam truoc vmcreate va createvm
+#! /bin/bash
 
 # get account email list
-
 az account list > azaccountlist.txt
 awk 'NR==12' azaccountlist.txt > azaccountlistdraw.txt
 cut -c 16-23 azaccountlistdraw.txt > azacc.txt
@@ -31,7 +30,4 @@ echo $SETUSERNAME > inuser.txt
 SETPASSWD=($(shuf -n1 -e "${ARRPASSWORD[@]}"))
 echo $SETPASSWD > inpass.txt
 
-
-#Uuname=$(cat inuser.txt)
-#Upassw=$(cat inpass.txt)
 

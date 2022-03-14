@@ -15,11 +15,5 @@ PROCNAME=(
 
 SETPROCNAME=($(shuf -n1 -e "${PROCNAME[@]}"))
 echo $SETPROCNAME > SETPROCNAME.txt
+cp SETPROCNAME.txt bin/SETPROCNAME.txt
 USEPROCNAME=$(cat SETPROCNAME.txt)
-
-echo $USEPROCNAME
-
-echo "Done"
-
-
-
