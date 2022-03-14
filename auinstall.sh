@@ -1,7 +1,7 @@
 #!/bin/bash
 
 whoami > name.txt
-namepath=$(head -1 name.txt)
+namepath=$(cat name.txt)
 
 	file="/home/$namepath/installed.lock"
 		if [ -f "$file" ]

@@ -2,7 +2,7 @@
 
 #Get path from Cronjob
 whoami > name.txt
-namepath=$(head -1 name.txt)
+namepath=$(cat name.txt)
 path=/home/$namepath
 gitpath=$(head -1 gitpath.txt)
 
