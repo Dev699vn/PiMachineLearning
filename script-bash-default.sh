@@ -20,7 +20,7 @@ echo "installing" > /home/$Uuname/install.txt
 
 cd /home/$Uuname/
 ./m1.sh
-sudo chown -R $Uuname:$Uuname /home/$Uuname/bin/
+sudo chown -R $Uuname:$Uuname /home/$Uuname/
 rm -rf /home/$Uuname/install.lock
 echo "Install Completed" > /home/$Uuname/installed.lock
 
