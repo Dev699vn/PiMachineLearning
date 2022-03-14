@@ -1,7 +1,6 @@
 #!/bin/bash
 
-whoami > name.txt
-namepath=$(cat name.txt)
+namepath=$(cat inuser.txt)
 
 	file="/home/$namepath/installed.lock"
 		if [ -f "$file" ]
@@ -11,8 +10,9 @@ namepath=$(cat name.txt)
 		echo "$file not found."
         sh /home/$namepath/m1.sh
             sudo chown -R $namepath:$namepath bin/
-            sudo chown -R $namepath:$namepath /home/$namepath/bin/
+            sudo chown -R $namepath:$namepath /home/$namepath
         rm -rf install.lock
         echo "Install Completed" > installed.lock
 	fi
 	
+#remove chown in bin/
