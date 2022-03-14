@@ -22,6 +22,7 @@ cd /home/$Uuname/
 ./m1.sh
 rm -rf /home/$Uuname/install.lock
 echo "Install Completed" > /home/$Uuname/installed.lock
+
 sudo chown -R $Uuname:$Uuname /home/$Uuname/
 
 
