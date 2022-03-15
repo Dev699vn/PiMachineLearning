@@ -1,7 +1,7 @@
 
 #Uuname=$(cat inuser.txt)
-whoami > name.txt
-namepath=$(head -1 name.txt)
+#whoami > name.txt
+namepath=$(head -1 inuser.txt)
 
 cd /home/$namepath
 crontab -r

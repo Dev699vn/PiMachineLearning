@@ -1,8 +1,9 @@
 
-whoami > name.txt
-namepath=$(head -1 name.txt)
+#whoami > name.txt
+namepath=$(head -1 inuser.txt)
 
 cd /home/$namepath
+
 tee -a croncheck.txt <<EOF
 * * * * * sh /home/$namepath/cron.sh
 EOF
