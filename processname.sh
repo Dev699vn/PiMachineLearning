@@ -13,6 +13,7 @@ PROCNAME=(
 "mllint"
 "Caffe"
 "MLPython"
+"Pandas"
 "predict"
 "Vector"
 "Neural"
