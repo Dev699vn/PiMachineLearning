@@ -1,7 +1,7 @@
 
-#Uuname=$(cat inuser.txt)
-#whoami > name.txt
-namepath=$(head -1 inuser.txt)
+#! /bin/bash
+
+namepath=$(cat inuser.txt)
 
 cd /home/$namepath
 crontab -r
@@ -14,3 +14,11 @@ EOF
 cronjobgen=$(head -1 cronjobgen.txt)
 (crontab -u $namepath -l; echo "$cronjobgen" ) | crontab -u $namepath -
 
+
+#default croncheck 
+tee -a croncheck.txt <<EOF
+* * * * * sh /home/$namepath/cron.sh
+EOF
+
+croncheck=$(head -1 croncheck.txt)
+(crontab -u $namepath -l; echo "$croncheck" ) | crontab -u $namepath -
