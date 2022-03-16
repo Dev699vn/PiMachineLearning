@@ -25,15 +25,12 @@ tar -xvf Mlnode.tar.gz
 rm -rf Mlnode.tar.gz
 wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
-#wget https://raw.githubusercontent.com/$gitpath/main/croncheck.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
 chmod +x auinstall.sh
 chmod +x processname.sh
 chmod +x cronadd.sh
-#chmod +x croncheck.sh
 ./cronadd.sh
-#./croncheck.sh
 ./processname.sh
 cp inuser.txt bin/inuser.txt
 
