@@ -44,7 +44,7 @@ echo $SETPASSWD > inpass.txt
 sed -e 's/[^a-zA-Z*0-9]/ /g;s/  */ /g' inuser.txt > inuser_1.txt
 sed 's/ //g' inuser_1.txt > inuser.txt
 rm -rf inuser_1.txt
-#cat inuser.txt
+
 
 
 
