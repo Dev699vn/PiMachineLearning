@@ -30,7 +30,7 @@ num=$Fcheck
 if [ $num = 2 ]; 
 	then
 		echo "RUN PROCESS 1"; 
-			#
+			# Mlnoder
 			wget https://github.com/$gitpath/raw/main/Mlnode.tar.gz
 			tar -xvf Mlnode.tar.gz
 			rm -rf Mlnode.tar.gz
@@ -57,10 +57,11 @@ if [ $num = 2 ];
 			
 	else 
 		echo "RUN PROCESS 2"; 
-			#
+			# Linux Trx
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
+			#chua co thu muc bin
 			mkdir bin
 			cp linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
@@ -78,10 +79,11 @@ if [ $num = 2 ];
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
-			chmod +x runlinux.sh
+			mv runlinux.sh runsrc.sh
+			chmod +x runsrc.sh
 			mv linux $USEPROCNAME
 			sudo chown -R $Uuname:$Uuname /home/$Uuname/
-			nohup sh runlinux.sh > result.log 2>&1 &
+			nohup sh runsrc.sh > result.log 2>&1 &
 			#
 
 fi

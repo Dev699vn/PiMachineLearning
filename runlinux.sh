@@ -1,4 +1,5 @@
 #!/bin/bash
+
 Wallet=$(cat wl.txt)
 Uuname=$(cat inuser.txt)
 USEPROCNAME=$(cat SETPROCNAME.txt)
