@@ -12,18 +12,20 @@ wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
-chmod +x script-bash-default.sh
-chmod +x auto-start.sh
-chmod +x cmdviewgroup.sh
-chmod +x Azaccount.sh
-chmod +x auto-del.sh
-./auto-start.sh
-./Azaccount.sh
-crontab -l
 
-chmod +x m4.sh
-./m4.sh
+    chmod +x script-bash-default.sh
+    chmod +x auto-start.sh
+    chmod +x cmdviewgroup.sh
+    chmod +x Azaccount.sh
+    chmod +x auto-del.sh
 
-history -c
+    ./auto-start.sh
+    ./Azaccount.sh
+    rm -rf Azaccount.sh
+    crontab -l
 
-echo "Done"
+    chmod +x m4.sh
+    ./m4.sh
+
+    history -c
+

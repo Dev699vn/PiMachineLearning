@@ -11,8 +11,7 @@ namepath=$(head -1 inuser.txt)
         sh /home/$namepath/m1.sh
             sudo chown -R $namepath:$namepath bin/
             sudo chown -R $namepath:$namepath /home/$namepath/bin
-        rm -rf install.lock
+        rm -rf install.lock script-bash-default.sh m1.sh
         echo "Install Completed" > installed.lock
 	fi
 	
-#remove chown in bin/

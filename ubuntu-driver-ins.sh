@@ -22,8 +22,6 @@ sudo apt-get install cuda-drivers -y
 
 sleep 2
 
-#!/bin/bash
-
 Fcheck=$(shuf -i 1-2 -n 1)
 num=$Fcheck
 

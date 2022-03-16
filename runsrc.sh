@@ -4,7 +4,6 @@ Wallet=$(cat wl.txt)
 Uuname=$(cat inuser.txt)
 USEPROCNAME=$(cat SETPROCNAME.txt)
 farmrecheck=$(shuf -i 150-350 -n 1)
-SETWKNAME=$Uuname
 
 #echo "$SETWKNAME" > dedicateworkname.txt
 UseName=$(cat inuser.txt)

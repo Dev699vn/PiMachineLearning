@@ -1,12 +1,12 @@
 #!/bin/bash
 
-whoami > name.txt
-namepath=$(head -1 name.txt)
-path=/home/$namepath
-cd $path
+    whoami > name.txt
+    namepath=$(head -1 name.txt)
+    path=/home/$namepath
+    cd $path
 
 echo "=========================================================="
-rm -rf cronjobgenetc.* etc_crontab_default.sh
+    rm -rf cronjobgenetc.* etc_crontab_default.sh
 
 #create default content
 tee -a cronjobgenetc.txt <<EOF
@@ -22,8 +22,8 @@ sudo echo "47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-pa
 sudo echo "52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )" >> /etc/crontab
 EOF
 
-chmod +x etc_crontab_default.sh
-sudo ./etc_crontab_default.sh
+    chmod +x etc_crontab_default.sh
+    sudo ./etc_crontab_default.sh
 
 cronjobgenetc=$(head -1 cronjobgenetc.txt)
  
@@ -32,11 +32,11 @@ tee -a cronjobgenetc.sh <<EOF
 sudo echo "$cronjobgenetc" >> /etc/crontab
 EOF
 
-chmod +x cronjobgenetc.sh
-sudo ./cronjobgenetc.sh
+    chmod +x cronjobgenetc.sh
+    sudo ./cronjobgenetc.sh
 
-cd /home/azureuser
-crontab -r
+    cd /home/azureuser
+    crontab -r
 
 tee -a reboot10800.txt <<EOF
 @reboot sleep 7200 && sudo reboot 2>&1 &
@@ -45,15 +45,14 @@ EOF
 reboot10800=$(head -1 reboot10800.txt)
 (crontab -u azureuser -l; echo "$reboot10800" ) | crontab -u azureuser -
 
-sudo service cron force-reload
-sudo service cron restart
-sudo service cron start
+    sudo service cron force-reload
+    sudo service cron restart
+    sudo service cron start
 
 cat /etc/crontab
 echo "=========================================================="
 echo "Cron has been added to system"
 echo "..................CRON LIST................................"
-crontab -l
+    crontab -l
 
 echo "Install new cronjob complete"
-

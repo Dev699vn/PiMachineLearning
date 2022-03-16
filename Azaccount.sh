@@ -2,13 +2,13 @@
 
 # get account email list
 az account list > azaccountlist.txt
-awk 'NR==12' azaccountlist.txt > azaccountlistdraw.txt
+    awk 'NR==12' azaccountlist.txt > azaccountlistdraw.txt
 cut -c 16-23 azaccountlistdraw.txt > azacc.txt
-awk '{print tolower($0)}' azacc.txt > azacc1.txt
-rm azacc.txt
-mv azacc1.txt azacc.txt
+    awk '{print tolower($0)}' azacc.txt > azacc1.txt
+        rm azacc.txt
+        mv azacc1.txt azacc.txt
 rm -rf azaccountlist.txt azaccountlist.txt azaccountlistdraw.txt
-GetUsername=$(cat azacc.txt)
+    GetUsername=$(cat azacc.txt)
 
 ARRPASSWORD=(
 "3782536aY@jEWb"
@@ -35,16 +35,13 @@ ARRPASSWORD=(
 "BZGhFeWN@vADw57")
 
 SETUSERNAME=$GetUsername
-echo $SETUSERNAME > inuser.txt
+    echo $SETUSERNAME > inuser.txt
 
 SETPASSWD=($(shuf -n1 -e "${ARRPASSWORD[@]}"))
-echo $SETPASSWD > inpass.txt
+    echo $SETPASSWD > inpass.txt
 
 #xoa ky tu dac biet
 sed -e 's/[^a-zA-Z*0-9]/ /g;s/  */ /g' inuser.txt > inuser_1.txt
 sed 's/ //g' inuser_1.txt > inuser.txt
+
 rm -rf inuser_1.txt
-
-
-
-
