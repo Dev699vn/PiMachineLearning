@@ -1,7 +1,5 @@
 #
 
-https://microsoft.com/devicelogin
-
 
 rm -rf *.sh *.txt *.log
 crontab -r
