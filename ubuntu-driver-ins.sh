@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 10
 gitpath=$(head -1 gitpath.txt)
 
 yes '' | sudo add-apt-repository ppa:graphics-drivers/ppa
