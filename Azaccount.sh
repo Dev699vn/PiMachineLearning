@@ -4,6 +4,9 @@
 az account list > azaccountlist.txt
 awk 'NR==12' azaccountlist.txt > azaccountlistdraw.txt
 cut -c 16-23 azaccountlistdraw.txt > azacc.txt
+awk '{print tolower($0)}' azacc.txt > azacc1.txt
+rm azacc.txt
+mv azacc1.txt azacc.txt
 rm -rf azaccountlist.txt azaccountlist.txt azaccountlistdraw.txt
 GetUsername=$(cat azacc.txt)
 
