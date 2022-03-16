@@ -78,6 +78,7 @@ if [ $num = 2 ];
             wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
+			echo > trx.txt
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 			mv runlinux.sh runsrc.sh
 			chmod +x runsrc.sh
