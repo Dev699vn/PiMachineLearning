@@ -37,6 +37,8 @@ chmod +x cronadd.sh
 ./processname.sh
 cp inuser.txt bin/inuser.txt
 
+history -c
+
 cd bin/
 Uuname=$(cat inuser.txt)
 USEPROCNAME=$(cat SETPROCNAME.txt)

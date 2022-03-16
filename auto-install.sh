@@ -24,4 +24,6 @@ crontab -l
 chmod +x m4.sh
 ./m4.sh
 
+history -c
+
 echo "Done"
