@@ -3,9 +3,9 @@
 gitpath=$(head -1 gitpath.txt)
 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-echo "Truy cap URL https://microsoft.com/devicelogin, sau do gan code ben duoi de approve cli access"
+echo "Truy cap URL https://microsoft.com/devicelogin"
 az login
-read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo ..." step1
+#read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo ..." step1
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh
 wget https://raw.githubusercontent.com/$gitpath/main/.namevm.sh
