@@ -1,8 +1,10 @@
 #!/bin/bash
 #update code cli within az login
 mv GroupResource.txt GroupResource.backup
+cp update.sh update.backup
 rm -rf *.sh *.txt *.log
 crontab -r
+cp update.backup update.sh
 echo "qamiawz/CliAzMlnode" > gitpath.txt
 gitpath=$(cat gitpath.txt)
 
