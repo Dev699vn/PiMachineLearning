@@ -16,3 +16,16 @@ crontab -r
 
 # Update gitpath trong: gitpath.txt, m1.sh, m2.sh
 # Update wallet trong wallet.txt 
+
+
+
+#Update without install Cli
+
+echo "qamiawz/CliAzMlnode" > gitpath.txt
+wget https://raw.githubusercontent.com/qamiawz/CliAzMlnode/main/update.sh
+chmod +x update.sh
+./update.sh
+
+
+
+#
