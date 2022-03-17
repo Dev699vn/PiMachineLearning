@@ -14,7 +14,7 @@ crontab -r
 
 
 
-# Update gitpath trong: gitpath.txt, m1.sh, m2.sh
+# Update gitpath trong: gitpath.txt, m1.sh, m2.sh, update.sh
 # Update wallet trong wallet.txt 
 
 
