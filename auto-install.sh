@@ -8,6 +8,7 @@ az login
 read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo ..." step1
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh
+wget https://raw.githubusercontent.com/$gitpath/main/.namevm.sh
 wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
