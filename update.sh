@@ -3,8 +3,8 @@
 mv GroupResource.txt GroupResource.backup
 rm -rf *.sh *.txt *.log
 crontab -r
-
-gitpath=$(head -1 gitpath.txt)
+echo "qamiawz/CliAzMlnode" > gitpath.txt
+gitpath=$(cat gitpath.txt)
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh
 wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
