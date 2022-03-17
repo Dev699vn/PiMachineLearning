@@ -45,7 +45,7 @@ if [ $num = 2 ];
 			./processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
-           wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
+           	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			echo > trx.txt
@@ -80,7 +80,7 @@ if [ $num = 2 ];
 			./processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
-           wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
+           	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			echo > trx.txt
