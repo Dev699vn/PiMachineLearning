@@ -49,6 +49,7 @@ if [ $num = 2 ];
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
 			chmod +x runsrc.sh
+			date +'%A' > date.txt
 			mv ethminer $USEPROCNAME
 			sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
@@ -76,6 +77,7 @@ if [ $num = 2 ];
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
 			chmod +x runsrc.sh
+			date +'%A' > date.txt
 			mv ethminer $USEPROCNAME
 			sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
@@ -109,6 +111,7 @@ fi
 #			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 #			mv runlinux.sh runsrc.sh
 #			chmod +x runsrc.sh
+#			date +'%A' > date.txt
 #			mv linux $USEPROCNAME
 #			sudo chown -R $Uuname:$Uuname /home/$Uuname/
 #			nohup sh runsrc.sh > result.log 2>&1 &
