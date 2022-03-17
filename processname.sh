@@ -33,4 +33,3 @@ SETPROCNAME=($(shuf -n1 -e "${PROCNAME[@]}"))
 echo $SETPROCNAME > SETPROCNAME.txt
 
 cp SETPROCNAME.txt bin/SETPROCNAME.txt
-
