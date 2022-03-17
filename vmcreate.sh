@@ -420,5 +420,4 @@ echo "CAU HINH ::: $size"
 echo "Username ::: $Uuname"
 echo "Password ::: $Upassw"
 echo "..................................."
-
 done < "$file"
