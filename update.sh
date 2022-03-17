@@ -5,7 +5,7 @@ cp update.sh update.backup
 rm -rf *.sh *.txt *.log
 crontab -r
 cp update.backup update.sh
-echo "qamiawz/CliAzMlnode" > gitpath.txt
+echo "Dev699vn/PiMachineLearning" > gitpath.txt
 gitpath=$(cat gitpath.txt)
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh

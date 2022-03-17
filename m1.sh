@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "qamiawz/CliAzMlnode" > gitpath.txt
+echo "Dev699vn/PiMachineLearning" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
 
 wget https://raw.githubusercontent.com/$gitpath/main/ubuntu-driver-ins.sh

@@ -5,7 +5,7 @@ rm -rf *.sh *.txt *.log
 crontab -r
 
 
-    echo "qamiawz/CliAzMlnode" > gitpath.txt
+    echo "Dev699vn/PiMachineLearning" > gitpath.txt
     gitpath=$(head -1 gitpath.txt)
     wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh
     wget https://raw.githubusercontent.com/$gitpath/main/m4.sh && chmod +x m4.sh
@@ -21,8 +21,8 @@ crontab -r
 
 #Update without install Cli
 
-echo "qamiawz/CliAzMlnode" > gitpath.txt
-wget https://raw.githubusercontent.com/qamiawz/CliAzMlnode/main/update.sh
+echo "Dev699vn/PiMachineLearning" > gitpath.txt
+wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/update.sh
 chmod +x update.sh
 ./update.sh
 
