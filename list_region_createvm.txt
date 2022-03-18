@@ -4,4 +4,3 @@ centralus
 westus2
 westus
 westeurope
-centralus
