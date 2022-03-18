@@ -1,6 +1,8 @@
 eastus
 eastus2
 centralus
-westus2
 westus
+westus2
 westeurope
+uksouth
+eastasia
