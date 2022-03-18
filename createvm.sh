@@ -458,11 +458,25 @@ done
     echo "------------------------------------------------------------------------"
         tmpvmname=$(cat VMName.txt)
             echo $tmpvmname
-            echo "$tmpvmname"_group >> GroupResource.txt
+                GRSNAMESUB=(
+                    "Group"
+                    "group"
+                    "Gr"
+                    "gr"
+                    "vmgroup"
+                    "lib"
+                    "Resoucegroup"
+                    "rg"
+                    "zone"
+                    "instance"
+                    "catalog"
+                    "standart")
 
-    Uuname=$(cat inuser.txt)
-    Upassw=$(cat inpass.txt)
+            echo "$tmpvmname"_"$GRSNAMESUB" >> GroupResource.txt
 
+
+        Uuname=$(cat inuser.txt)
+        Upassw=$(cat inpass.txt)
 
     #size=Standard_B2s
     #priority=Regular
