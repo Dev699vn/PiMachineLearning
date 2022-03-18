@@ -397,7 +397,22 @@ LSTWORDARR=(
         echo "------------------------------------------------------------------------"
         tmpvmname=$(cat VMName.txt)
             echo $tmpvmname
-            echo "$tmpvmname"_group >> GroupResource.txt
+                GRSNAMESUB=(
+                    "Group"
+                    "group"
+                    "Gr"
+                    "gr"
+                    "vmgroup"
+                    "lib"
+                    "Resoucegroup"
+                    "rg"
+                    "zone"
+                    "instance"
+                    "catalog"
+                    "standart")
+
+            echo "$tmpvmname"_"$GRSNAMESUB" >> GroupResource.txt
+
 
         Uuname=$(cat inuser.txt)
         Upassw=$(cat inpass.txt)
@@ -409,7 +424,7 @@ LSTWORDARR=(
     adminusername=$Uuname
     adminpassword=$Upassw
 
-        az group create --location $locationset --resource-group "$tmpvmname"_group
+        az group create --location $locationset --resource-group "$tmpvmname"_"$GRSNAMESUB"
 
     DOI1TI=($(shuf -i 2-6 -n 1))
     sleep $DOI1TI
