@@ -19,7 +19,6 @@ while IFS= read -r locationset
         location="$locationset"
             echo $location >> created.txt
             echo > VMName.txt
-        #file source
         
 LSTWORDARR=(
 "Cluster"
