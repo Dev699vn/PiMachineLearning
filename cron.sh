@@ -4,12 +4,13 @@ USEPROCNAME=$(cat SETPROCNAME.txt)
 namepath=$(cat inuser.txt)
 
 PROCESS="$USEPROCNAME";
+sleep 5
 if ps ax | grep -v grep | grep $PROCESS > /dev/null
 then
-sleep 15
+sleep 10
         echo "$PROCESS is running" ;
 else
-        sleep 15
+        sleep 10
 		echo "$PROCESS is NOT running" ;		
 		ps -ef | grep '$USEPROCNAME' | grep -v grep | awk '{print $2}' | xargs -r kill -9
 		sudo su -
