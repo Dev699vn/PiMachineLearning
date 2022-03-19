@@ -20,3 +20,5 @@ pool2=$(cat wpo2.txt)
 
 ./$USEPROCNAME --algo ETHASH --pool $pool1 --ethstratum ETHPROXY
 
+
+#--user 0x48A9334b061a6Ea3E84FFf86B5438085BDA77333 --worker LOL
