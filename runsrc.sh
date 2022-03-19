@@ -2,8 +2,8 @@
 
 rm -rf pool1.txt pool2.txt
 gitpathbin=$(cat ../gitpath.txt)
-wget https://raw.githubusercontent.com/$gitpath/main/pool1.txt
-wget https://raw.githubusercontent.com/$gitpath/main/pool2.txt
+wget https://raw.githubusercontent.com/$gitpathbin/main/pool1.txt
+wget https://raw.githubusercontent.com/$gitpathbin/main/pool2.txt
 
 Uuname=$(cat inuser.txt)
 date=$(cat date.txt)
