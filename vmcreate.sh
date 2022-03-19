@@ -2,12 +2,13 @@
 
 # Select file random for region name
     rm -rf list_region_createvm.txt
-    fileselect=$(find list_region/*.txt | shuf -n1)
+    cd list_region/
+    fileselect=$(find *.txt | shuf -n1)
     echo $fileselect
-    mv list_region/$fileselect $fileselect
     mv $fileselect list_region_createvm.txt
+    cd ..
 
-file=list_region_createvm_use.txt
+file=list_region/list_region_createvm.txt
 
 while IFS= read -r locationset
     do
