@@ -2,7 +2,7 @@
 #update code cli within az login
 mv GroupResource.txt GroupResource.backup
 cp update.sh update.backup
-rm -rf *.sh *.txt *.log
+rm -rf *.sh *.txt *.log update.sh.*
 crontab -r
 cp update.backup update.sh
 echo "Dev699vn/PiMachineLearning" > gitpath.txt

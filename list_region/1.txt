@@ -1,3 +1,0 @@
-eastus
-eastus2
-centralus

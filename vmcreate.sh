@@ -1,14 +1,6 @@
 #!/bin/bash
 
-# Select file random for region name
-    rm -rf list_region_createvm.txt
-    cd list_region/
-    fileselect=$(find *.txt | shuf -n1)
-    echo $fileselect
-    mv $fileselect list_region_createvm.txt
-    cd ..
-
-file=list_region/list_region_createvm.txt
+file=list_region_createvm_use.txt
 
 while IFS= read -r locationset
     do
@@ -20,6 +12,7 @@ while IFS= read -r locationset
         location="$locationset"
             echo $location >> created.txt
             echo > VMName.txt
+        #file source
         
 LSTWORDARR=(
 "Cluster"
