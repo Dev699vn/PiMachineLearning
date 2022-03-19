@@ -1,0 +1,3 @@
+uksouth
+northeurope
+eastus

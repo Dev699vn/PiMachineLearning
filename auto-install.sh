@@ -12,6 +12,14 @@ wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
+mkdir list_region
+cd list_region/
+wget https://raw.githubusercontent.com/$gitpath/main/list_region/1.txt
+wget https://raw.githubusercontent.com/$gitpath/main/list_region/2.txt
+wget https://raw.githubusercontent.com/$gitpath/main/list_region/3.txt
+wget https://raw.githubusercontent.com/$gitpath/main/list_region/4.txt
+wget https://raw.githubusercontent.com/$gitpath/main/list_region/5.txt
+cd ..
 
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh

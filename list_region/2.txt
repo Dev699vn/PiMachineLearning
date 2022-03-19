@@ -1,0 +1,3 @@
+westus
+westus2
+uksouth
