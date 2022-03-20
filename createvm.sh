@@ -163,7 +163,6 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
         cat VMName.txt
     echo "------------------------------------------------------------------------"
         tmpvmname=$(cat VMName.txt)
-            echo $tmpvmname
                 
             echo "$tmpvmname"_group >> GroupResource.txt
 
