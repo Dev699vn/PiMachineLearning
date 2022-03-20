@@ -26,8 +26,6 @@ chmod +x update.sh
 
 
 
-#
-
 #manual install
 
 
