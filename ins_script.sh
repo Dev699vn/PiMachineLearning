@@ -9,6 +9,7 @@ gitpath=$(head -1 gitpath.txt)
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
+			
 			#chua co thu muc bin
 			mkdir bin
 			cp linux bin/linux
