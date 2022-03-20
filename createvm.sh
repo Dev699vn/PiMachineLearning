@@ -185,13 +185,13 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
         Upassw=$(cat inpass.txt)
 
     # Tuy chinh VM
-    size=$vmsizes
-    priority=$prioritys
-    pubipsku=$pubipskus
-	image=$imagess
+		size=$vmsizes
+		priority=$prioritys
+		pubipsku=$pubipskus
+		image=$imagess
 
-    adminusername=$Uuname
-    adminpassword=$Upassw
+		adminusername=$Uuname
+		adminpassword=$Upassw
 
     az group create --location $locationset --resource-group "$tmpvmname"_group
     sleep 2
