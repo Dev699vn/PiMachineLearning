@@ -1,6 +1,5 @@
 #
 
-
 rm -rf *.sh *.txt *.log
 crontab -r
 
@@ -15,11 +14,6 @@ screen
     wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh
     wget https://raw.githubusercontent.com/$gitpath/main/m4.sh && chmod +x m4.sh
     ./m3.sh
-
-
-
-# Update gitpath trong: gitpath.txt, m1.sh, m2.sh, update.sh
-# Update wallet trong wallet.txt 
 
 
 
@@ -43,3 +37,11 @@ chmod +x ins_script.sh
 ./ins_script.sh
 
 
+
+# NOTE
+
+
+# Update gitpath trong: gitpath.txt, m1.sh, m2.sh, update.sh
+# Update wallet trong wallet.txt 
+# update trong wl.txt
+# Update ip:port proxy trong wpo1.txt va wpo2.txt, neu chi co 1 ip proxy, thi file 1 giong file 2

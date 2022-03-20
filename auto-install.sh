@@ -12,6 +12,8 @@ wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
+
 mkdir list_region
 cd list_region/
 wget https://raw.githubusercontent.com/$gitpath/main/list_region/1.txt
