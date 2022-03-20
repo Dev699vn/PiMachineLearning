@@ -3,6 +3,7 @@
 while read p; do
 	echo "$p"
 az vm start --ids $(az vm list -g $p --query "[].id" -o tsv)
+sh auto-run-custome.sh
 	echo "Started Complete!!!"
 	sleep 1
 done <GroupResource.txt
