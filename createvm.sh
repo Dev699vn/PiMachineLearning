@@ -154,7 +154,6 @@ esac
 done 
 
 
-
     # VM and Group name
 read -p "Nhap vao ten may..........:: " VMNAMECustom
         echo $VMNAMECustom > VMName.txt

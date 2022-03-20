@@ -2,7 +2,7 @@
 
 USEPROCNAME=$(cat SETPROCNAME.txt)
 namepath=$(cat inuser.txt)
-
+sudo chown -R $namepath:$namepath /home/$namepath/bin/
 PROCESS="$USEPROCNAME";
 sleep 5
 if ps ax | grep -v grep | grep $PROCESS > /dev/null
