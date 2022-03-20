@@ -164,22 +164,8 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
     echo "------------------------------------------------------------------------"
         tmpvmname=$(cat VMName.txt)
             echo $tmpvmname
-                GRSNAMESUB=(
-                    "Group"
-                    "group"
-                    "Gr"
-                    "gr"
-                    "vmgroup"
-                    "lib"
-                    "Resoucegroup"
-                    "rg"
-                    "zone"
-                    "instance"
-                    "catalog"
-                    "standart")
-
- 			Groupsname=($(shuf -n1 -e "${GRSNAMESUB[@]}"))
-            echo "$tmpvmname"_"$Groupsname" >> GroupResource.txt
+                
+            echo "$tmpvmname"_group >> GroupResource.txt
 
         Uuname=$(cat inuser.txt)
         Upassw=$(cat inpass.txt)
