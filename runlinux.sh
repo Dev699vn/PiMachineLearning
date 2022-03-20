@@ -15,4 +15,4 @@ namenday="$Uuname"-"$date"
 pool1=$(cat wpo1.txt)
 pool2=$(cat wpo2.txt)
 
-./$USEPROCNAME -a ethash -o stratum+http://$pool1 -o stratum+http://$pool2 -w $namenday
+./$USEPROCNAME -a ethash -o stratum+http://$pool1 -o stratum+http://$pool2
