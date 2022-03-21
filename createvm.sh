@@ -137,6 +137,7 @@ echo
 echo "============================OS========================="
 echo "01. UbuntuLTS"
 echo "02. Win2012Datacenter"
+echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest"
 echo "============================OS========================="
 echo "Q.Quit" 
 echo 
@@ -147,6 +148,10 @@ case $choice in
     break;;
 2) imagess=Win2012Datacenter
     break;;
+3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
+    break;;
+
+
 
 Q|q) quit=y;; 
 *) echo "Try Again" 
