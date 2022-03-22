@@ -3,8 +3,10 @@ whoami > name.txt
 namepath=$(head -1 name.txt)
 path=/home/$namepath
 cd $path
+echo azureuser > inuser.txt
+echo "Dev699vn/PiMachineLearning" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
-
+Uuname=$(cat inuser.txt)
 #1 Linux Trx
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
@@ -12,7 +14,7 @@ gitpath=$(head -1 gitpath.txt)
 			
 			#chua co thu muc bin
 			mkdir bin
-			cp linux bin/linux
+			mv linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
