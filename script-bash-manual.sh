@@ -1,12 +1,16 @@
 #!/bin/bash
 
+# File danh cho copy dan vao SSH de cai
+
 echo "azureuser" > inuser.txt
 echo "Dev699vn/PiMachineLearning" > gitpath.txt
+cp gitpath.txt /home/azureuser/gitpath.txt
 Uuname=$(cat inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 
-
+cd /home/azureuser
 echo "$Uuname" > /home/$Uuname/inuser.txt
+Uuname=$(cat /home/$Uuname/inuser.txt)
 
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
     cp m1.sh /home/$Uuname/m1.sh && chmod +x /home/$Uuname/m1.sh

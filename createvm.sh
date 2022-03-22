@@ -142,8 +142,8 @@ echo
 echo "============================OS========================="
 echo "01. UbuntuLTS"
 echo "02. Win2012Datacenter"
-echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest"
-echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest"
+echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest danh cho ND96 chua Drive"
+echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest danh cho ND96 co san Drive"
 echo "============================OS========================="
 echo "Q.Quit" 
 echo 
@@ -186,8 +186,8 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
 		pubipsku=$pubipskus
 		image=$imagess
 
-		adminusername=$Uuname
-		adminpassword=$Upassw
+		adminusername=azureuser
+		adminpassword=azureuser@2234
         DATA_INSERT=$customdatas
         
 
@@ -197,8 +197,10 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
 
     echo "DA TAO Virtual Machine ::: $tmpvmname"
     echo "CAU HINH ::: $size"
-    echo "Username ::: $Uuname"
-    echo "Password ::: $Upassw"
+    echo "Username ::: $adminusername"
+    echo "Password ::: $adminpassword"
+    echo "Data load::: $DATA_INSERT"
+    echo "Image USed:: $image"
 
     echo "Done"
     
