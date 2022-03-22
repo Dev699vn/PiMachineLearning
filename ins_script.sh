@@ -1,11 +1,14 @@
 #!/bin/bash
 
-whoami > name.txt
-namepath=$(head -1 name.txt)
-path=/home/$namepath
-cd $path
 echo azureuser > inuser.txt
 echo "Dev699vn/PiMachineLearning" > gitpath.txt
+
+whoami > name.txt
+namepath=$(head -1 name.txt)
+
+path=/home/$namepath
+cd $path
+
 gitpath=$(head -1 gitpath.txt)
 Uuname=$(cat inuser.txt)
 #1 Linux Trx
