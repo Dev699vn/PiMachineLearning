@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#File auto cai dat cho vmcreatevm
 Uuname=$(cat inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 

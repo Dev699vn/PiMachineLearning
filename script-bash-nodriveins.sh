@@ -2,18 +2,16 @@
 #Install with createvm.sh manual script + ND96 NOT INSTALL DRIVE
 # Danh cho cai tu dong
 
-#Uuname="azureuser"
-#gitpath="Dev699vn/PiMachineLearning"
-
-namepath=$Uuname
 Uuname=$(cat inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 
-cd /home/$Uuname
 
-# Trong thu muc Home
-echo $Uuname > inuser.txt
-echo $gitpath > gitpath.txt
+tee -a script-bash-no-driver.sh <<EOF
+
+echo "$Uuname" > /home/$Uuname/inuser.txt
+echo "$gitpath" > /home/$Uuname/gitpath.txt
+
+cd /home/$Uuname
 
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
@@ -42,8 +40,6 @@ echo $gitpath > gitpath.txt
 			mv linux $USEPROCNAME
 			sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
-			#2
-
-
+EOF
 
 

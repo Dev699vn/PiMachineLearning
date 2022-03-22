@@ -103,12 +103,12 @@ case $choice in
 1) vmsizes=Standard_B2s
     prioritys=Regular
     pubipskus=Standard
-    customdatas=auto-run-custome.sh
+    customdatas=script_bash.sh
     break;;
 2) vmsizes=Standard_DS1_v2
     prioritys=Regular
     pubipskus=Standard
-    customdatas=auto-run-custome.sh
+    customdatas=script-bash-no-driver.sh
     break;;
 3) vmsizes=Standard_D2s_v3
     prioritys=Regular
@@ -123,7 +123,7 @@ case $choice in
 5) vmsizes=Standard_ND96amsr_A100_v4
     prioritys=Spot
     pubipskus=Basic
-    customdatas=ins_script.sh
+    customdatas=script-bash-no-driver.sh
     break;;
 
 
@@ -186,8 +186,8 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
 		pubipsku=$pubipskus
 		image=$imagess
 
-		adminusername=azureuser
-		adminpassword=azureuser@2234
+		adminusername=$Uuname
+		adminpassword=$Upassw
         DATA_INSERT=$customdatas
         
 

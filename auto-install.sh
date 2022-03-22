@@ -14,21 +14,14 @@ wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
-
-mkdir list_region
-cd list_region/
-wget https://raw.githubusercontent.com/$gitpath/main/list_region/1.txt
-wget https://raw.githubusercontent.com/$gitpath/main/list_region/2.txt
-wget https://raw.githubusercontent.com/$gitpath/main/list_region/3.txt
-wget https://raw.githubusercontent.com/$gitpath/main/list_region/4.txt
-wget https://raw.githubusercontent.com/$gitpath/main/list_region/5.txt
-cd ..
+wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh
     chmod +x cmdviewgroup.sh
     chmod +x Azaccount.sh
     chmod +x auto-del.sh
+    chmod +x script-bash-nodriveins.sh
 
     ./auto-start.sh
     ./Azaccount.sh

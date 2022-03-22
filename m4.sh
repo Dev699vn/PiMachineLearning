@@ -15,9 +15,11 @@ rm -rf list_region_createvm_full.txt
     chmod +x vmcreate.sh
 echo > GroupResource.txt
 ./script-bash-default.sh
-echo "File script-bash.sh has been generated"
+./script-bash-nodriveins.sh
+
+echo "File script-bash.sh & script-bash-no-driver.shh has been generated"
 sleep 2
-    rm -rf script-bash-default.sh
+    rm -rf script-bash-default.sh script-bash-nodriveins.sh
     history -c
 
 echo "CAI DAT CLI HOAN THANH, CHO REBOOT VA LOGIN VAO LAI"

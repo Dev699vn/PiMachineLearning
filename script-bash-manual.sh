@@ -1,14 +1,17 @@
 #!/bin/bash
 
 # File danh cho copy dan vao SSH de cai
+whoami > name.txt
+namepath=$(cat name.txt)
+path=/home/$namepath
 
-echo "azureuser" > inuser.txt
-echo "Dev699vn/PiMachineLearning" > gitpath.txt
+echo > "Dev699vn/PiMachineLearning" > gitpath.txt
 cp gitpath.txt /home/azureuser/gitpath.txt
-Uuname=$(cat inuser.txt)
+
+Uuname=$(cat name.txt)
 gitpath=$(head -1 gitpath.txt)
 
-cd /home/azureuser
+cd /home/$Uuname
 echo "$Uuname" > /home/$Uuname/inuser.txt
 Uuname=$(cat /home/$Uuname/inuser.txt)
 
