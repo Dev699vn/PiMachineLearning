@@ -13,7 +13,7 @@ shuf -n 4 list_region_createvm_full.txt > list_region_createvm_use.txt
 rm -rf list_region_createvm_full.txt
     chmod +x createvm.sh
     chmod +x vmcreate.sh
-
+echo > GroupResource.txt
 ./script-bash-default.sh
 echo "File script-bash.sh has been generated"
 sleep 2
