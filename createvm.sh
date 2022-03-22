@@ -103,27 +103,27 @@ case $choice in
 1) vmsizes=Standard_B2s
     prioritys=Regular
     pubipskus=Standard
-    customdatas=script_bash.sh
+    customdatas="script_bash.sh"
     break;;
 2) vmsizes=Standard_DS1_v2
     prioritys=Regular
     pubipskus=Standard
-    customdatas=script-bash-no-driver.sh
+    customdatas="script-bash-no-driver.sh"
     break;;
 3) vmsizes=Standard_D2s_v3
     prioritys=Regular
     pubipskus=Standard
-    customdatas=auto-run-custome.sh
+    customdatas="auto-run-custome.sh"
     break;;
 4) vmsizes=Standard_NC6s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas=script_bash.sh
+    customdatas="script_bash.sh"
     break;;
 5) vmsizes=Standard_ND96amsr_A100_v4
     prioritys=Spot
     pubipskus=Basic
-    customdatas=script-bash-no-driver.sh
+    customdatas="script-bash-no-driver.sh"
     break;;
 
 
