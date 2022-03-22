@@ -13,6 +13,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
+wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 
 mkdir list_region
 cd list_region/

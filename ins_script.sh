@@ -1,4 +1,5 @@
-#Get path 
+#!/bin/bash
+
 whoami > name.txt
 namepath=$(head -1 name.txt)
 path=/home/$namepath

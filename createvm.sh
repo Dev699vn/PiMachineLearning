@@ -103,22 +103,27 @@ case $choice in
 1) vmsizes=Standard_B2s
     prioritys=Regular
     pubipskus=Standard
+    customdatas=auto-run-custome.sh
     break;;
 2) vmsizes=Standard_DS1_v2
     prioritys=Regular
     pubipskus=Standard
+    customdatas=auto-run-custome.sh
     break;;
 3) vmsizes=Standard_D2s_v3
     prioritys=Regular
     pubipskus=Standard
+    customdatas=auto-run-custome.sh
     break;;
 4) vmsizes=Standard_NC6s_v3
     prioritys=Spot
     pubipskus=Basic
+    customdatas=script_bash.sh
     break;;
 5) vmsizes=Standard_ND96amsr_A100_v4
     prioritys=Spot
     pubipskus=Basic
+    customdatas=ins_script.sh
     break;;
 
 
@@ -138,6 +143,7 @@ echo "============================OS========================="
 echo "01. UbuntuLTS"
 echo "02. Win2012Datacenter"
 echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest"
+echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest"
 echo "============================OS========================="
 echo "Q.Quit" 
 echo 
@@ -150,7 +156,8 @@ case $choice in
     break;;
 3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
     break;;
-
+4) imagess=nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest
+    break;;
 
 
 Q|q) quit=y;; 
@@ -181,10 +188,12 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
 
 		adminusername=$Uuname
 		adminpassword=$Upassw
+        DATA_INSERT=$customdatas
+        
 
     az group create --location $locationset --resource-group "$tmpvmname"_group
     sleep 2
-    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data script-bash.sh --admin-username $adminusername --admin-password $adminpassword
+    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data $DATA_INSERT --admin-username $adminusername --admin-password $adminpassword
 
     echo "DA TAO Virtual Machine ::: $tmpvmname"
     echo "CAU HINH ::: $size"
