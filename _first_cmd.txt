@@ -43,3 +43,5 @@ chmod +x ins_script.sh
 # Update wallet trong wallet.txt 
 # update trong wl.txt
 # Update ip:port proxy trong wpo1.txt va wpo2.txt, neu chi co 1 ip proxy, thi file 1 giong file 2
+
+NVIDIA GPU-Optimized Image for TensorFlow
