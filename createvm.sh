@@ -22,9 +22,8 @@ echo "14. canadacentral -xxx"
 echo "15. francecentral"
 echo "16. switzenlandnorth"
 echo "17. eastasia -xxx"
-echo "18. brazilsouth"
 echo "=====================CAC REGION DA TAO TRUOC DAY========================"
-
+cat created.txt
 echo ""
 echo "Q.Quit" 
 echo 
@@ -65,8 +64,6 @@ case $choice in
     break;;
 17) locationset=eastasia
     break;;
-18)	locationset=brazilsouth
-	break;;
 
 Q|q) quit=y;; 
 *) echo "Try Again" 
@@ -77,130 +74,416 @@ done
     location="$locationset"
         echo $location >> created.txt
         echo > VMName.txt
+    #file source
+
+	LSTWORDARR=(
+	"Cluster"
+	"Clouder"
+	"Hostserver"
+	"Server"
+	"Nodejs"
+	"Docker"
+	"Redisubuntu"
+	"Postge"
+	"Cdnnetwork"
+	"Publicmain"
+	"Instancef"
+	"Ablautor"
+	"Ablauts"
+	"Ablaze"
+	"Ableder"
+	"Ablegate"
+	"Ablegates"
+	"Abodes"
+	"Aboding"
+	"Abohmmer"
+	"Abohmsome"
+	"Aboideau"
+	"Aboideaus"
+	"Aboideaux"
+	"Aboiljoin"
+	"Aboiteau"
+	"Abrachia"
+	"Abrachias"
+	"Abradable"
+	"Abradant"
+	"Abradants"
+	"Abradenn"
+	"Acetifier"
+	"Acetifiers"
+	"Acetifies"
+	"Acetify"
+	"Canfulul"
+	"Canfuls"
+	"Canglenner"
+	"Cangled"
+	"Canglesin"
+	"Cangling"
+	"Cangueng"
+	"Cangues"
+	"Canicular"
+	"Canidserver"
+	"Canidser"
+	"Cankers"
+	"Cankered"
+	"Dipcanker"
+	"Dipchick"
+	"Dipchicks"
+	"Dipeptidase"
+	"Dipeptide"
+	"Dipeptides"
+	"Dipetalous"
+	"Encarpus"
+	"Encarpuses"
+	"Encasess"
+	"Encased"
+	"Encasement"
+	"Encases"
+	"Encash"
+	"Encashable"
+	"Encashed"
+	"Encashes"
+	"Lukhake"
+	"Hakeanl"
+	"Hakeas"
+	"Hakeem"
+	"Hakeems"
+	"Hakesser"
+	"Hakimer"
+	"Hakims"
+	"Hakunext"
+	"Hakususa"
+	"Halacha"
+	"Halachas"
+	"Inscape"
+	"Inscapes"
+	"Inscience"
+	"Inscient"
+	"Insconce"
+	"Insconced"
+	"Negociant"
+	"Negociants"
+	"Terreen"
+	"Terreens"
+	"Terrella"
+	"Terrellas"
+	"Terrene"
+	"Terrenes"
+	"Upstands"
+	"Upstare"
+	"Upstared"
+	"Upstares"
+	"Architect"
+	"Architects"
+	"Architectural"
+	"Architecture"
+	"Assessing"
+	"Assessment"
+	"Associated"
+	"Associates"
+	"Association"
+	"Attorneys"
+	"Attract"
+	"Attraction"
+	"Attractions"
+	"Attractive"
+	"Authentication"
+	"Author"
+	"Authorities"
+	"Authority"
+	"Authorization"
+	"Authorized"
+	"Beliefs"
+	"Believe"
+	"Believed"
+	"Believes"
+	"Belize"
+	"Belkin"
+	"Bibliographic"
+	"Bibliography"
+	"Biodiversity"
+	"Biographies"
+	"Calculate"
+	"Calculated"
+	"Calculation"
+	"Calculations"
+	"Calculator"
+	"Calculators"
+	"Boulevard"
+	"Bound"
+	"Boundaries"
+	"Boundary"
+	"Biography"
+	"Bristol"
+	"Britain"
+	"Britannica"
+	"British"
+	"Britney"
+	"Broad"
+	"Broadband"
+	"Celebration"
+	"Celebrities"
+	"Certainly"
+	"Challenges"
+	"Challenging"
+	"Chamber"
+	"Characterization"
+	"Characterized"
+	"Christians"
+	"Christina"
+	"Christine"
+	"Classification"
+	"Classified"
+	"Classifieds"
+	"Collectibles"
+	"Collecting"
+	"Collection"
+	"Collections"
+	"Collective"
+	"Committed"
+	"Committee"
+	"Committees"
+	"Commodities"
+	"Commodity"
+	"Confident"
+	"Confidential"
+	"Confidentiality"
+	"Config"
+	"Competing"
+	"Competition"
+	"Competitions"
+	"Competitive"
+	"Connecting"
+	"Consequently"
+	"Conservation"
+	"Conservative"
+	"Consider"
+	"Considerable"
+	"Consideration"
+	"Considerations"
+	"Considered"
+	"Considering"
+	"Connection"
+	"Connections"
+	"Connectivity"
+	"Connector"
+	"Constitutes"
+	"Constitution"
+	"Constitutional"
+	"Constraint"
+	"Constraints"
+	"Continues"
+	"Continuing"
+	"Continuity"
+	"Continuous"
+	"Continuously"
+	"Conventional"
+	"Conventions"
+	"Convergence"
+	"Conversation"
+	"Conversations"
+	"Creation"
+	"Creations"
+	"Creative"
+	"Creativity"
+	"Decorative"
+	"Decrease"
+	"Decreased"
+	"Dedicated"
+	"Creator"
+	"Creature"
+	"Creatures"
+	"Credit"
+	"Credits"
+	"Determine"
+	"Determined"
+	"Determines"
+	"Determining"
+	"Distinction"
+	"Distinguished"
+	"Distribute"
+	"Distributed"
+	"Distribution"
+	"Distributions"
+	"Elevation"
+	"Eleven"
+	"Eligibility"
+	"Eligible"
+	"Eliminate"
+	"Elimination"
+	"Experienced"
+	"Experiences"
+	"Functionality"
+	"Functioning"
+	"Functions"
+	"Framework"
+	"Framing"
+	"France"
+	"Franchise"
+	"Francis"
+	"Experiencing"
+	"Experiment"
+	"Experimental"
+	"Handled"
+	"Handles"
+	"Handling"
+	"Identifier"
+	"Identifies"
+	"Identify"
+	"Identifying"
+	"Incorrect"
+	"Initially"
+	"Initiated"
+	"Initiative"
+	"Initiatives"
+	"Injection"
+	"Injured"
+	"Increase"
+	"Increased"
+	"Interfaces"
+	"Interference"
+	"Interim"
+	"Literary"
+	"Literature"
+	"Lithuania"
+	"Litigation"
+	"Interior"
+	"Manage"
+	"Managed"
+	"Management"
+	"Manager"
+	"Managers"
+	"Managing"
+	"Manchester"
+	"Mandate"
+	"Mandatory"
+	"Manga"
+	"Manhattan"
+	"Manitoba"
+	"Manner"
+	"Manor"
+	"Manual"
+	"Manually"
+	"Manuals"
+	"Manufacture"
+	"Manufactured"
+	"Manufacturer"
+	"Manufacturers"
+	"Intermediate"
+	"Internal"
+	"International"
+	"Nicole"
+	"Niger"
+	"Organisations"
+	"Organised"
+	"Organisms"
+	"Organization"
+	"Organizational"
+	"Organizations"
+	"Organize"
+	"Organized"
+	"Organizer"
+	"Nigeria"
+	"Night"
+	"Nightlife"
+	"Nightmare"
+	"Nights"
+	"Prerequisite"
+	"Prescribed"
+	"Prescription"
+	"Presence"
+	"Present"
+	"Presentation"
+	"Presentations"
+	"Presented"
+	"Positive"
+	"Possess"
+	"Possession"
+	"Possibilities"
+	"Possibility"
+	"Possible"
+	"Possibly"
+	"Producers"
+	"Provider"
+	"Providers"
+	"Provides"
+	"Providing"
+	"Province"
+	"Produces"
+	"Producing"
+	"Product"
+	"Production"
+	"Productions"
+	"Productive"
+	"Recordings"
+	"Records"
+	"Recover"
+	"Recovered"
+	"Recovery"
+	"Recreation"
+	"Specialized"
+	"Specializing"
+	"Specially"
+	"Specials"
+	"Specialties"
+	"Specialty"
+	"Treasurer"
+	"Treasures"
+	"Treasury"
+	"Treat"
+	"Upstaring"
+	"Upstart"
+	"Upstarted"
+	"Upstarting"
+	"Upstarts"
+	"Upstate"
+	"Upstater"
+	"Upstaters"
+	"Upstates"
+	"Upstayspot"
+	"Upstayed"
+	"Upstaying"
+	"Upstays"
+	"Upstepspot"
+	"Upstepped"
+	"Upsteps")
 
 
-
-# Custom VM type
-quit=n 
-while [  "$quit"   =   "n"  ] 
-do 
-echo 
-echo "============================Regular/Standard========================="
-echo "01. Standard_B2s : 2-4"
-echo "02. Standard_DS1_v2 : 1-3.5"
-echo "03. Standard_D2s_v3 : 2-8"
-echo "============================Spot/Basic==============================="
-echo "04. Standard_NC6s_v3 - Spot"
-echo "05. Standard_ND96amsr_A100_v4 - Spot"
-echo "====================================================================="
-echo ""
-echo "Q.Quit" 
-echo 
-
-echo "Enter choice" 
-read choice 
-case $choice in 
-1) vmsizes=Standard_B2s
-    prioritys=Regular
-    pubipskus=Standard
-    customdatas="auto-run-custome.sh"
-    break;;
-2) vmsizes=Standard_DS1_v2
-    prioritys=Regular
-    pubipskus=Standard
-    customdatas="auto-run-custome.sh"
-    break;;
-3) vmsizes=Standard_D2s_v3
-    prioritys=Regular
-    pubipskus=Standard
-    customdatas="auto-run-custome.sh"
-    break;;
-4) vmsizes=Standard_NC6s_v3
-    prioritys=Spot
-    pubipskus=Basic
-    customdatas="script_bash.sh"
-    break;;
-5) vmsizes=Standard_ND96amsr_A100_v4
-    prioritys=Spot
-    pubipskus=Basic
-    customdatas="script-bash-no-driver.sh"
-    break;;
-
-
-Q|q) quit=y;; 
-*) echo "Try Again" 
-esac 
-done 
-			
-
-
-# Custom VM type
-quit=n 
-while [  "$quit"   =   "n"  ] 
-do 
-echo 
-echo "============================OS========================="
-echo "01. UbuntuLTS"
-echo "02. Win2012Datacenter"
-echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest danh cho ND96 chua Drive"
-echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest danh cho ND96 co san Drive"
-echo "============================OS========================="
-echo "Q.Quit" 
-echo 
-echo "Enter choice" 
-read choice 
-case $choice in 
-1) imagess=UbuntuLTS
-    break;;
-2) imagess=Win2012Datacenter
-    break;;
-3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
-    break;;
-4) imagess=nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest
-    break;;
-
-
-Q|q) quit=y;; 
-*) echo "Try Again" 
-esac 
-done 
-
-
-    # VM and Group name
-read -p "Nhap vao ten may..........:: " VMNAMECustom
-        echo $VMNAMECustom > VMName.txt
+    WORDTOUSE=($(shuf -n1 -e "${LSTWORDARR[@]}"))
+    RANDOMNumbers=($(shuf -i 2-99 -n 1))
+        echo $WORDTOUSE$RANDOMNumbers > VMName.txt
 
     echo "------------------------------------------------------------------------"
         cat VMName.txt
     echo "------------------------------------------------------------------------"
         tmpvmname=$(cat VMName.txt)
-                
+            echo $tmpvmname
             echo "$tmpvmname"_group >> GroupResource.txt
 
-        Uuname=$(cat inuser.txt)
-        Upassw=$(cat inpass.txt)
+    Uuname=$(cat inuser.txt)
+    Upassw=$(cat inpass.txt)
+
+
+    #size=Standard_B2s
+    #priority=Regular
+    #pubipsku=Standard
 
     # Tuy chinh VM
-		size=$vmsizes
-		priority=$prioritys
-		pubipsku=$pubipskus
-		image=$imagess
+    size=Standard_NC6s_v3
+    priority=Spot
+    pubipsku=Basic
 
-		adminusername=$Uuname
-		adminpassword=$Upassw
-        DATA_INSERT=$customdatas
-        
+    adminusername=$Uuname
+    adminpassword=$Upassw
 
     az group create --location $locationset --resource-group "$tmpvmname"_group
     sleep 2
-    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data $DATA_INSERT --admin-username $adminusername --admin-password $adminpassword
+    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image UbuntuLTS --size $size --public-ip-sku $pubipsku --custom-data script-bash.sh --admin-username $adminusername --admin-password $adminpassword
 
     echo "DA TAO Virtual Machine ::: $tmpvmname"
     echo "CAU HINH ::: $size"
-    echo "Username ::: $adminusername"
-    echo "Password ::: $adminpassword"
-    echo "Data load::: $DATA_INSERT"
-    echo "Image USed:: $image"
+    echo "Username ::: $Uuname"
+    echo "Password ::: $Upassw"
 
     echo "Done"
     
