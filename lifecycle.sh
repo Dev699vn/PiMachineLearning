@@ -5,7 +5,7 @@ cd /home/ec2-user
             rm -rf linux.tar.gz
             mkdir bin
             cd bin/
-            mv linux bin/linux
+            sudo mv linux bin/linux
 
 tee -a runsrc.sh <<EOF
 #!/bin/bash
