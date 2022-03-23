@@ -7,12 +7,12 @@ cd /home/ec2-user
 			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/processname.sh
 			chmod +x processname.sh
             ./processname.sh
-			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/cron.sh
-			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/cronadd.sh
-			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/auinstall.sh
-			chmod +x auinstall.sh 
-            chmod +x cronadd.sh
-            ./cronadd.sh
+#			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/cron.sh
+#			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/cronadd.sh
+#			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/auinstall.sh
+#			chmod +x auinstall.sh 
+#           chmod +x cronadd.sh
+#            ./cronadd.sh
 			echo ec2-user > inuser.txt
             echo "Dev699vn/PiMachineLearning"> gitpath.txt
             cp inuser.txt bin/inuser.txt
