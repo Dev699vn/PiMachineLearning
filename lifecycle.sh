@@ -13,10 +13,14 @@ cd /home/ec2-user
 			chmod +x auinstall.sh 
             chmod +x cronadd.sh
             ./cronadd.sh
-			cp inuser.txt bin/inuser.txt
+			echo ec2-user > inuser.txt
+            echo "Dev699vn/PiMachineLearning"> gitpath.txt
+            cp inuser.txt bin/inuser.txt
+            cp gitpath.txt bin/gitpath.txt
             cd bin/
            	wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/wl.txt
 			wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/runlinux.sh
 			mv runlinux.sh runsrc.sh
             chmod +x runsrc.sh
 			sudo reboot
+
