@@ -6,8 +6,8 @@ Uuname=$(cat inuser.txt)
 cp ../gitpath.txt gitpath.txt
 
 gitpathbin=$(cat gitpath.txt)
-wget https://raw.githubusercontent.com/$gitpathbin/main/wpo1.txt
-wget https://raw.githubusercontent.com/$gitpathbin/main/wpo2.txt
+sudo wget https://raw.githubusercontent.com/$gitpathbin/main/wpo1.txt
+sudo wget https://raw.githubusercontent.com/$gitpathbin/main/wpo2.txt
 sleep 1
 
 date=$(cat date.txt)
