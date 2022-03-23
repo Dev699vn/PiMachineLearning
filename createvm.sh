@@ -177,8 +177,8 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
                 
             echo "$tmpvmname"_group >> GroupResource.txt
 
-        Uuname=$(head -1 inuser.txt)
-        Upassw=$(head -1 inpass.txt)
+        Uuname=$(cat inuser.txt)
+        Upassw=$(cat inpass.txt)
 
     # Tuy chinh VM
 		size=$vmsizes
@@ -186,14 +186,14 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
 		pubipsku=$pubipskus
 		image=$imagess
 
-		adminusername="$Uuname"
-		adminpassword="$Upassw"
-        DATA_INSERT="$customdatas"
+		adminusername=$Uuname
+		adminpassword=$Upassw
+        DATA_INSERT=$customdatas
         
 
     az group create --location $locationset --resource-group "$tmpvmname"_group
     sleep 2
-    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data $DATA_INSERT --admin-username "$adminusername" --admin-password "$adminpassword"
+    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data $DATA_INSERT --admin-username $adminusername --admin-password $adminpassword
 
     echo "DA TAO Virtual Machine ::: $tmpvmname"
     echo "CAU HINH ::: $size"

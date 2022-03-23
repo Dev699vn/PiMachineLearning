@@ -83,5 +83,3 @@ echo $gitpath > gitpath.txt
 			#2
 
 
-
-
