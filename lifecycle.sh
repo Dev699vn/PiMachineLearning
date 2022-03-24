@@ -1,5 +1,5 @@
-###########
-
+########### Code add start
+sleep 5
 wget https://github.com/Dev699vn/PiMachineLearning/raw/main/linux.tar.gz
 tar -xvf linux.tar.gz
 rm -rf linux.tar.gz
