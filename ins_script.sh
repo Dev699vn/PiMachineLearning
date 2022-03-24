@@ -4,16 +4,13 @@
 
 #Uuname="azureuser"
 gitpath="Dev699vn/PiMachineLearning"
-
-namepath=$Uuname
+whoami > inuser.txt
 Uuname=$(cat inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 
 cd /home/$Uuname
 
 # Trong thu muc Home
-echo $Uuname > inuser.txt
-echo $gitpath > gitpath.txt
 
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
