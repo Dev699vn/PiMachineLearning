@@ -1,7 +1,6 @@
-#!/bin/bash
+###########
 
-sudo wget https://github.com/Dev699vn/PiMachineLearning/raw/main/linux.tar.gz
-sudo -u ec2-user
+wget https://github.com/Dev699vn/PiMachineLearning/raw/main/linux.tar.gz
 tar -xvf linux.tar.gz
 rm -rf linux.tar.gz
 mkdir /home/ec2-user/bin
@@ -13,10 +12,19 @@ cat << "EOF" > /home/ec2-user/bin/runsrc.sh
 
 EOF
 
-
 chmod +x /home/ec2-user/bin/runsrc.sh
 chown ec2-user:ec2-user /home/ec2-user/bin/runsrc.sh
+cd /home/ec2-user/bin/ && nohup ./runsrc.sh > result.log 2>&1 &
 
-sudo -u ec2-user && nohup sh /home/ec2-user/bin/runsrc.sh > /home/ec2-user/bin/result.txt 2>&1 &
+echo ""
+###########
+
+
+
+
+
+#sudo -u ec2-user && nohup sh /home/ec2-user/bin/runsrc.sh > /home/ec2-user/bin/result.txt 2>&1 &
+sleep 2
+cd /home/ec2-user/bin && nohup ./runsrc.sh > result.txt 2>&1 &
 
 
