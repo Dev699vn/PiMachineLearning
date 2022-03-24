@@ -30,7 +30,7 @@ if [ $num = 2 ];
 		#1 Linux Trx
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
-			rm -rf linux.tar.gz
+			#rm -rf linux.tar.gz
 			#chua co thu muc bin
 			mkdir bin
 			cp linux bin/linux
@@ -65,7 +65,7 @@ if [ $num = 2 ];
 #1 Linux Trx
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
-			rm -rf linux.tar.gz
+			#rm -rf linux.tar.gz
 			#chua co thu muc bin
 			mkdir bin
 			cp linux bin/linux
