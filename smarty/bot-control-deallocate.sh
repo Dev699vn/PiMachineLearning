@@ -12,16 +12,17 @@ valuelines_2=("$RANDOMLINE_2"p)
 
 #action and move to 2SMV.txt
 setstep3=$(sed -n $valuelines_2 _temp/2STOP.txt)
+
 echo "Deallocate for: $setstep3"
 echo $setstep3 >> _temp/3DEALLOCATE.txt
 cmdactionfor3=$(head -1 _temp/$setstep3.2SVM.txt)
 # Ra file random chua command : Hostserver48.VMS1.txt 
-
+setsubid1=$(head -1 sub_id.txt)
 # Action stop
-az vm deallocate $cmdactionfor3
+az vm deallocate $cmdactionfor3 $setsubid1
 sleep 2
 #Rename file 1SMV to 2 SMV
-mv _temp/$setstep3.2SVM.txt _temp/$setstep2.3SVM.txt
+mv _temp/$setstep3.2SVM.txt _temp/$setstep2.complete
 #Remove line in 1 SMV
 
 # + Also remove it from _temp/FILE STOP

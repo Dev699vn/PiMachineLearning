@@ -10,16 +10,19 @@ RANDOMLINE_1=$(shuf -i "1-$numberline_1" -n 1)
 # Read and send data line to _temp/2.stop.txt
 valuelines_1="$RANDOMLINE_1"p
 
-#action and move to 2SMV.txt
-setstep2=$(sed -n $valuelines_1 _temp/1SMV.txt) 
+#Get name file & action and move to 2SMV.txt
+setstep2=$(sed -n $valuelines_1 _temp/1SMV.txt)
 echo "$setstep2"
-echo $setstep2 >> _temp/2STOP.txt
+
+    #move
+    echo $setstep2 >> _temp/2STOP.txt
 cmdactionfor=$(head -1 _temp/$setstep2)
 # Ra file random chua command : Hostserver48.VMS1.txt 
-
+setsubid1=$(head -1 sub_id.txt)
 # Action stop
-az vm stop $cmdactionfor
+az vm stop $cmdactionfor $setsubid1
 sleep 2
+
 #Rename file 1SMV to 2 SMV
 mv _temp/$setstep2 _temp/$setstep2.2SVM.txt
 #Remove line in 1 SMV
@@ -29,10 +32,10 @@ sed -i "$valuelines_1" _temp/1SMV.txt
 
 
 #cron generate for STOP after crete
-TimeSuffCronjob_1=($(shuf -i 1-50 -n 1))
+TimeSuffCronjob_1=($(shuf -i 5-55 -n 1))
 valuesuffcron1=$(echo */$TimeSuffCronjob_1)
 
-TimeHours_1=($(shuf -i 2-6 -n 1))
+TimeHours_1=($(shuf -i 3-7 -n 1))
 valuesuffcron2=$(echo */$TimeHours_1)
 
 tee -a crontemp.txt <<EOF

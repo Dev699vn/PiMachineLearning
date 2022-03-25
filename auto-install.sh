@@ -18,6 +18,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/creatend96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
 mkdir -p smarty
+mkdir -p smarty/_temp/
 cd smarty/
 wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-create.sh
 wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-stop.sh

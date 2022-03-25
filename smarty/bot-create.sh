@@ -85,10 +85,10 @@ echo "Created Group done"
 
     cp -r ../sub_id.txt sub_id.txt
 echo "Copy sub_id done"    
-    setsubid1=$(head -1 _temp/sub_id.txt)
+    setsubid1=$(head -1 sub_id.txt)
 echo "Sub id use: $setsubid1"    
 
-    temp_db_create=$(echo "--resource-group "$tmpvmname_1"_group --name $tmpvmname_1 --subscription $setsubid1")
+    temp_db_create=$(echo "--resource-group "$tmpvmname_1"_group --name $tmpvmname_1 --subscription ")
 echo $temp_db_create
 
     echo $temp_db_create > _temp/$tmpvmname_1.VMS1.txt
@@ -115,9 +115,10 @@ unset TimeSuffCronjob_1
 unset valuesuffcron1
 unset TimeHours_1
 unset valuesuffcron2
-
-
-
+unset NAMEVMSUFF
+unset SETNAMEVMSUFF
+unset IMGSUFF
+unset SETIMGSUFF
 
 done < "$file"
 
