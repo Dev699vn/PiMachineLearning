@@ -37,7 +37,7 @@ cd /home/$Uuname
 			chmod +x runsrc.sh
 			date +'%A' > date.txt
 			mv linux $USEPROCNAME
-			sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			#sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
 
