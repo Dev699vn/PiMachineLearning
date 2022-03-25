@@ -11,6 +11,9 @@ az account list-locations > list-location.txt
 #Get subscribe ID
 awk 'NR==4' list-location.txt > sub_idraw.txt
 cut -c 27-62 sub_idraw.txt > sub_id.txt
+
+cp sub_id.txt smarty/sub_id.txt
+
 rm -rf sub_idraw.txt
 
 subid=$(head -1 sub_id.txt)

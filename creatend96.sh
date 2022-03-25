@@ -446,13 +446,9 @@ done
     echo "Username ::: $adminusername"
     echo "Password ::: $Upassw"
     echo "CLI cmd add auto-run-custome.sh"
-     az account list --output table > list_subscription.txt
-        awk 'NR==3' list_subscription.txt > 1sub.txt
-        #cut -c 33-70 1sub.txt > 1.1sub.txt
-		cut -c 34-71 1sub.txt > 1.1sub.txt
-        setsubid1=$(head -1 1.1sub.txt)
+     setsubid1=$(head -1 _temp/sub_id.txt)
     echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1"
-        rm -rf list_subscription.txt 1sub.txt 1.1sub.txt
+        
     echo "Done"
     
 

@@ -17,7 +17,13 @@ wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/creatend96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
-
+mkdir -p smarty
+cd smarty/
+wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-create.sh
+wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-stop.sh
+wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-deallocate.sh
+chmod +x bot-create.sh bot-control-stop.sh bot-control-deallocate.sh
+cd ..
 
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh
