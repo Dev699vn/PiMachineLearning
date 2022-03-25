@@ -2,7 +2,7 @@
 echo "copy file region location"
 cp -r ../list_region_createvm.txt list_region_createvm.txt
 echo "suffle region for this sesssion"
-shuf -n 10 list_region_createvm.txt > list_region_createvm_use_bot.txt
+shuf -n 5 list_region_createvm.txt > list_region_createvm_use_bot.txt
 rm -rf list_region_createvm_full.txt
 
 echo "file=list_region_createvm_use_bot.txt"
