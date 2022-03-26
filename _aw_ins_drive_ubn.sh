@@ -40,9 +40,10 @@ IyEvYmluL2Jhc2gNCg0KY2QgL2hvbWUvdWJ1bnR1DQoNCndnZXQgaHR0cHM6Ly9yYXcuZ2l0aHVidXNl
 
 
 #ADD USERDATA
+#Install with createvm.sh manual script + ND96 NOT INSTALL DRIVE
+
 
 #!/bin/bash
-#Install with createvm.sh manual script + ND96 NOT INSTALL DRIVE
 
 echo ""
 sleep 20
