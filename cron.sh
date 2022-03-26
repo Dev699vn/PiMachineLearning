@@ -13,7 +13,7 @@ else
         sleep 10
 		echo "$PROCESS is NOT running" ;		
 		ps -ef | grep '$USEPROCNAME' | grep -v grep | awk '{print $2}' | xargs -r kill -9
-		sudo su -
+		#sudo su - #1111
 		cd /home/$namepath/bin/ && rm -rf result.log && nohup sh runsrc.sh > result.log 2>&1 &
 		echo "starting..." ;
 

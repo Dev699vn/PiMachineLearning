@@ -27,3 +27,7 @@ mv _temp/$setstep3.2SVM.txt _temp/$setstep2.complete
 
 # + Also remove it from _temp/FILE STOP
 sed -i "$valuelines_2" _temp/2STOP.txt
+
+unset numberline_2
+unset RANDOMLINE_2
+unset setstep3
