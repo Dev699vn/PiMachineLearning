@@ -3,7 +3,9 @@
 mv GroupResource.txt GroupResource.backup
 mv auto-run-custome.sh auto-run-custome.sh.backup
 rm -rf *.sh *.txt *.log update.sh.*
-crontab -r
+#backup crontab
+crontab -l > cron-backup.txt
+#crontab -r
 
 echo "Dev699vn/PiMachineLearning" > gitpath.txt
 gitpath=$(cat gitpath.txt)
@@ -57,5 +59,8 @@ mv auto-run-custome.sh.backup auto-run-custome.sh
     chmod +x m4.sh
     ./m4.sh
 
+    #restore crontab
+crontab -r 
+crontab cron-backup.txt
     history -c
 

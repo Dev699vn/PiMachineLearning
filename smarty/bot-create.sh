@@ -15,7 +15,7 @@ echo "Number region will create: $nregionwilluse"
 while IFS= read -r locationset_1
     do
 
-        TimeSleepCreateWait=($(shuf -i 10-60 -n 1))
+        TimeSleepCreateWait=($(shuf -i 3600-12000 -n 1))
             sleep $TimeSleepCreateWait
 echo $TimeSleepCreateWait
 
