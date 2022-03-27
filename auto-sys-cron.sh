@@ -39,7 +39,7 @@ EOF
     crontab -r
 
 tee -a reboot10800.txt <<EOF
-@reboot sleep 12000 && sudo reboot 2>&1 &
+@reboot sleep 8888 && sudo reboot 2>&1 &
 EOF
 
 reboot10800=$(head -1 reboot10800.txt)
