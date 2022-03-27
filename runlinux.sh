@@ -11,7 +11,7 @@ shuf -n 5 wpoolst.txt > wpoolst_use.txt
 pool1=$(sed -n '1p' wpoolst_use.txt)
 pool2=$(sed -n '3p' wpoolst_use.txt)
 
-echo "-a ethash -o stratum+http://$pool1 -o stratum+http://$pool2" > fnpool.txt
+echo " -o stratum+http://$pool1 -o stratum+http://$pool2" > fnpool.txt
 fnpool=$(cat fnpool.txt)
 rm -rf wpoolst_use.txt
 rm -rf wpoolst.txt
@@ -20,4 +20,4 @@ rm -rf wpoolst.txt
 sleep 1
 USEPROCNAME=$(cat SETPROCNAME.txt)
 
-./$USEPROCNAME "$fnpool"
+./$USEPROCNAME -a ethash $fnpool
