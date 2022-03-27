@@ -27,11 +27,6 @@ namenday="$Uuname"-"$date"
                     -P stratum1+tcp://$Wallet.$namenday@asia-eth.2miners.com:2020
 
 
-
-
-
-
-
 #LOL
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
