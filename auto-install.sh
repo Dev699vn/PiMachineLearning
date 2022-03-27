@@ -16,6 +16,8 @@ wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/creatend96.sh
+wget https://raw.githubusercontent.com/$gitpath/main/createvm12.sh
+wget https://raw.githubusercontent.com/$gitpath/main/createvm24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
 mkdir -p smarty
 mkdir -p smarty/_temp/
@@ -34,6 +36,8 @@ cd ..
     chmod +x script-bash-nodriveins.sh
     chmod +x creatend96.sh
     chmod +x update.sh
+    chmod +x createvm24.sh
+    chmod +x createvm12.sh
 
     ./auto-start.sh
     ./Azaccount.sh
