@@ -64,7 +64,7 @@ echo $gitpath > gitpath.txt
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
 			mkdir bin
-			mv linux bin/linux
+			cp linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
