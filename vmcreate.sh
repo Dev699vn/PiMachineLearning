@@ -438,5 +438,9 @@ LSTWORDARR=(
         echo "Password ::: $Upassw"
         echo "..................................."
 
+	setsubid1=$(head -1 sub_id.txt)
+    echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1"
+	echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" > vmstart/$tmpvmname.sh
+    
 done < "$file"
 

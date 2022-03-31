@@ -19,6 +19,13 @@ wget https://raw.githubusercontent.com/$gitpath/main/creatend96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createvm12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createvm24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
+mkdir -p vmstart
+
+tee -a viewlog.sh <<EOF
+tail -f autorun.log
+EOF
+chmod +x viewlog.sh
+
 mkdir -p smarty
 mkdir -p smarty/_temp/
 cd smarty/

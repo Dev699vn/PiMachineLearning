@@ -446,9 +446,10 @@ done
     echo "Username ::: $adminusername"
     echo "Password ::: $Upassw"
     echo "CLI cmd add auto-run-custome.sh"
-     setsubid1=$(head -1 _temp/sub_id.txt)
+    
+	setsubid1=$(head -1 sub_id.txt)
     echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1"
-        
+	echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" > vmstart/$tmpvmname.sh        
     echo "Done"
     
 

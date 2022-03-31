@@ -32,18 +32,20 @@ tee -a cronjobgenetc.sh <<EOF
 sudo echo "$cronjobgenetc" >> /etc/crontab
 EOF
 
+# Disable add cron to system for new method
     chmod +x cronjobgenetc.sh
-    sudo ./cronjobgenetc.sh
+    #sudo ./cronjobgenetc.sh
 
     cd /home/azureuser
     crontab -r
 
-tee -a reboot10800.txt <<EOF
-@reboot sleep 8888 && sudo reboot 2>&1 &
+# Here
+tee -a autoruncron.txt <<EOF
+@reboot cd /home/azureuser && nohup sh auto-run.sh > autorun.log 2>&1 &
 EOF
 
-reboot10800=$(head -1 reboot10800.txt)
-(crontab -u azureuser -l; echo "$reboot10800" ) | crontab -u azureuser -
+autoruncron=$(head -1 autoruncron.txt)
+(crontab -u azureuser -l; echo "$autoruncron" ) | crontab -u azureuser -
 
     sudo service cron force-reload
     sudo service cron restart
