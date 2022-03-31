@@ -431,16 +431,23 @@ LSTWORDARR=(
 
         az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image UbuntuLTS --size $size --public-ip-sku $pubipsku --custom-data script-bash.sh --admin-username $adminusername --admin-password $adminpassword
 
+if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
+		then
+			echo "No VM was found. Created False"
+		else
+			echo "VM was found. Create Success. Adding to auto-run-custome"
+				setsubid1=$(head -1 sub_id.txt)
+    			#echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1"
+				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+				echo "Added done"
+		fi
+
         echo "..................................."
         echo "DA TAO Virtual Machine ::: $tmpvmname"
         echo "CAU HINH ::: $size"
         echo "Username ::: $Uuname"
         echo "Password ::: $Upassw"
         echo "..................................."
-
-	setsubid1=$(head -1 sub_id.txt)
-    echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1"
-	echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
     
 done < "$file"
 
