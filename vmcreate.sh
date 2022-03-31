@@ -431,14 +431,14 @@ LSTWORDARR=(
 				setsubid1=$(head -1 sub_id.txt)
 				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
 				echo "Added done"
+                echo "..................................."
+                echo "DA TAO Virtual Machine ::: $tmpvmname"
+                echo "CAU HINH ::: $size"
+                echo "Username ::: $Uuname"
+                echo "Password ::: $Upassw"
+                echo "..................................."
 		fi
 
-            echo "..................................."
-            echo "DA TAO Virtual Machine ::: $tmpvmname"
-            echo "CAU HINH ::: $size"
-            echo "Username ::: $Uuname"
-            echo "Password ::: $Upassw"
-            echo "..................................."
     
 done < "$file"
 

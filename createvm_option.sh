@@ -194,13 +194,21 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
     az group create --location $locationset --resource-group "$tmpvmname"_group
     sleep 2
     az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data $DATA_INSERT --admin-username $adminusername --admin-password $adminpassword
-
-    echo "DA TAO Virtual Machine ::: $tmpvmname"
-    echo "CAU HINH ::: $size"
-    echo "Username ::: $adminusername"
-    echo "Password ::: $adminpassword"
-    echo "Data load::: $DATA_INSERT"
-    echo "Image USed:: $image"
+        if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
+		    then
+			    echo "No VM was found. Created False"
+		    else
+			    echo "VM was found. Create Success. Adding to auto-run-custome"
+				setsubid1=$(head -1 sub_id.txt)
+				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+				echo "Added done"
+                echo "..................................."
+                echo "DA TAO Virtual Machine ::: $tmpvmname"
+                echo "CAU HINH ::: $size"
+                echo "Username ::: $Uuname"
+                echo "Password ::: $Upassw"
+                echo "..................................."
+		fi
 
     echo "Done"
     
