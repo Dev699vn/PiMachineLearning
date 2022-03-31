@@ -28,6 +28,7 @@ if [ $num = 2 ];
 	then
 		echo "RUN PROCESS 1"; 
 		#1 Linux Trx
+		whoami > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			#rm -rf linux.tar.gz
@@ -65,6 +66,7 @@ if [ $num = 2 ];
 		echo "RUN PROCESS 2"; 
 			#---------------------
 #1 Linux Trx
+whoami > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			#rm -rf linux.tar.gz
