@@ -12,19 +12,13 @@ wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/creatend96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createvm12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createvm24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
-mkdir -p vmstart
-
-tee -a viewlog.sh <<EOF
-tail -f autorun.log
-EOF
-chmod +x viewlog.sh
-
 mkdir -p smarty
 mkdir -p smarty/_temp/
 cd smarty/
