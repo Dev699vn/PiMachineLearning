@@ -5,6 +5,8 @@ gitpath=$(head -1 gitpath.txt)
 wget https://raw.githubusercontent.com/$gitpath/main/createvm.sh
 wget https://raw.githubusercontent.com/$gitpath/main/vmcreate.sh
 wget https://raw.githubusercontent.com/$gitpath/main/list_region_createvm.txt
+wget https://raw.githubusercontent.com/$gitpath/main/auto-syscron-1.sh
+wget https://raw.githubusercontent.com/$gitpath/main/auto-syscron-2.sh
 
 cat list_region_createvm.txt | awk 'BEGIN{srand();}{print rand()"\t"$0}' | sort -k1 -n | cut -f2- > list_region_createvm_full.txt
 
@@ -34,7 +36,7 @@ echo > GroupResource.txt
 ./script-bash-default.sh
 ./script-bash-nodriveins.sh
 
-echo "File script-bash.sh & script-bash-no-driver.shh has been generated"
+echo "File script-bash.sh & script-bash-no-driver.sh has been generated"
 sleep 2
     rm -rf script-bash-default.sh script-bash-nodriveins.sh
     history -c
