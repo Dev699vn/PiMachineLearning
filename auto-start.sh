@@ -37,6 +37,7 @@ chmod +x auto-run.sh
 chmod +x auto-add.sh
 chmod +x auto-setsub.sh
 chmod +x auto-sys-cron.sh
-./auto-sys-cron.sh
+#Fix 2222
+#./auto-sys-cron.sh
 nohup sleep 7200 && sudo reboot > reboot.log 2>&1 &
 
