@@ -12,7 +12,7 @@ cat list_region_createvm.txt | awk 'BEGIN{srand();}{print rand()"\t"$0}' | sort 
 
 # Select number of node will be create (shuf -n *)
 
-            zonrnumbuse=8
+            zonrnumbuse=4
                 shuf -n $zonrnumbuse list_region_createvm_full.txt > list_region_createvm_use.txt
     #Cron by number zone
             DEFNUM=8
