@@ -7,7 +7,10 @@ gitpath=$(head -1 gitpath.txt)
 tee -a script-bash.sh <<EOF
 #!/bin/sh
 
-echo "$Uuname" > /home/$Uuname/inuser.txt
+#echo "$Uuname" > /home/$Uuname/inuser.txt
+whoami > inuser.txt
+username=$(head -1 inuser.txt)
+whoami > /home/$Uuname/inuser.txt
 
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
     cp m1.sh /home/$Uuname/m1.sh && chmod +x /home/$Uuname/m1.sh
@@ -25,6 +28,6 @@ cd /home/$Uuname/
 
 echo "Install Completed" > /home/$Uuname/installed.lock
 
-sudo chown -R $Uuname:$Uuname /home/$Uuname/
+sudo chown -R $Uuname:$Uuname /home/$Uuname/bin
 
 EOF
