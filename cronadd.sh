@@ -1,6 +1,6 @@
 
 #! /bin/bash
-
+whoami > inuser.txt
 namepath=$(cat inuser.txt)
 
     cd /home/$namepath
