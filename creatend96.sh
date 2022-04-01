@@ -451,7 +451,7 @@ done
                 echo "..................................."
                 echo "DA TAO Virtual Machine ::: $tmpvmname"
                 echo "CAU HINH ::: $size"
-                echo "Username ::: $Uuname"
+                echo "Username ::: $adminusername"
                 echo "Password ::: $Upassw"
                 echo "..................................."
 		fi
