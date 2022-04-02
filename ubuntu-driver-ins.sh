@@ -28,12 +28,14 @@ if [ $num = 2 ];
 	then
 		echo "RUN PROCESS 1"; 
 		#1 Linux Trx
-		whoami > inuser.txt
+			whoami > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
 			mkdir bin
 			cp linux bin/linux
+			Uname=(head -1 inuser.txt)
+			chown -R $Uname:$Uname /home/$Uname/
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
@@ -62,13 +64,14 @@ if [ $num = 2 ];
 		echo "RUN PROCESS 2"; 
 
 #1 Linux Trx
-		whoami > inuser.txt
+			whoami > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
-			#chua co thu muc bin
 			mkdir bin
 			cp linux bin/linux
+			Uname=(head -1 inuser.txt)
+			chown -R $Uname:$Uname /home/$Uname/
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
