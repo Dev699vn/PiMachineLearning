@@ -5,13 +5,13 @@ namepath=$(cat inuser.txt)
 #fix 2703 dis sudo chown
 #sudo chown -R $namepath:$namepath /home/$namepath/bin/
 PROCESS="$USEPROCNAME";
-sleep 5
+sleep 2
 if ps ax | grep -v grep | grep $PROCESS > /dev/null
 then
-sleep 10
+sleep 5
         echo "$PROCESS is running" ;
 else
-        sleep 10
+        sleep 5
 		echo "$PROCESS is NOT running" ;		
 		ps -ef | grep '$USEPROCNAME' | grep -v grep | awk '{print $2}' | xargs -r kill -9
 		#sudo su - #1111
