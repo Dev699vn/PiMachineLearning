@@ -2,7 +2,7 @@
 
 #Get path from Cronjob
 #currentuser=$(who | awk '{print $1}')
-#chown -R $currentuser:$currentuser /var/www/$sitename
+#chown -R $currentuser:$currentuser /home/$currentuser
 
 whoami > name.txt
 namepath=$(cat name.txt)
