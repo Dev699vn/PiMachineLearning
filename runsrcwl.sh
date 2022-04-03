@@ -35,8 +35,8 @@ namenday="$Uuname"-"$date"
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
-			sh cronadd.sh
-			sh processname.sh
+			./cronadd.sh
+			./processname.sh
 			cp inuser.txt bin/inuser.txt
 			
 			mkdir bin/
@@ -70,8 +70,8 @@ Uuname=$(cat inuser.txt)
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
-			sh cronadd.sh
-			sh processname.sh
+			./cronadd.sh
+			./processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
 			Uuname=$(cat inuser.txt)

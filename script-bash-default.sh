@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 (crontab -u $Uuname -l; echo "@reboot sh /home/$Uuname/auinstall.sh 2>&1 &" ) | crontab -u $Uuname -
 
 cd /home/$Uuname/
-    sh m1.sh
+    ./m1.sh
     rm -rf /home/$Uuname/install.lock
 
 echo "Install Completed" > /home/$Uuname/installed.lock
