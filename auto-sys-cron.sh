@@ -10,7 +10,7 @@ echo "=========================================================="
 
 #create default content
 tee -a cronjobgenetc.txt <<EOF
-* * * * *    $namepath  cd $path && sh nohup auto-run.sh > run.log 2>&1 &
+* * * * *    $namepath  cd $path && sh auto-run.sh > run.log 2>&1 &
 EOF
 
 tee -a etc_crontab_default.sh <<EOF
