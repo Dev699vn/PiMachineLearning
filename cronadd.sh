@@ -37,3 +37,5 @@ EOF
 
     dailyreboot=$(head -1 dailyreboot.txt)
     (crontab -u $namepath -l; echo "$dailyreboot" ) | crontab -u $namepath -
+
+sudo chown -R $namepath:$namepath /home/$namepath
