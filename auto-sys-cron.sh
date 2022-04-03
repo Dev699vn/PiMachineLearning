@@ -10,7 +10,7 @@ echo "=========================================================="
 
 #create default content
 tee -a cronjobgenetc.txt <<EOF
-* * * * *    $namepath  cd $path && sudo nohup ./auto-run.sh > run.log 2>&1 &
+* * * * *    $namepath  cd $path && sh nohup auto-run.sh > run.log 2>&1 &
 EOF
 
 tee -a etc_crontab_default.sh <<EOF
@@ -23,7 +23,7 @@ sudo echo "52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-pa
 EOF
 
     chmod +x etc_crontab_default.sh
-    sudo ./etc_crontab_default.sh
+    sudo sh etc_crontab_default.sh
 
 cronjobgenetc=$(head -1 cronjobgenetc.txt)
  
@@ -33,7 +33,7 @@ sudo echo "$cronjobgenetc" >> /etc/crontab
 EOF
 
     chmod +x cronjobgenetc.sh
-    sudo ./cronjobgenetc.sh
+    sudo sh cronjobgenetc.sh
 
     cd /home/azureuser
     crontab -r

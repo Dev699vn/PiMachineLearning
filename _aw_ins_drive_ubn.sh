@@ -14,7 +14,7 @@ wget https://raw.githubusercontent.com/Dev699vn/PiMachineLearning/main/auinstall
 (crontab -u ubuntu -l; echo "@reboot sh /home/ubuntu/auinstall.sh 2>&1 &" ) | crontab -u ubuntu -
 sudo chown -R ubuntu:ubuntu /home/$ubuntu/
 
-    ./m1.sh
+    sh m1.sh
     rm -rf /home/ubuntu/install.lock
 
 echo "Install Completed" > /home/ubuntu/installed.lock
@@ -75,8 +75,8 @@ echo $gitpath > gitpath.txt
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
-			./cronadd.sh
-			./processname.sh
+			sh cronadd.sh
+			sh processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt

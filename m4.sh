@@ -14,8 +14,8 @@ rm -rf list_region_createvm_full.txt
     chmod +x createvm.sh
     chmod +x vmcreate.sh
 echo > GroupResource.txt
-./script-bash-default.sh
-./script-bash-nodriveins.sh
+sh script-bash-default.sh
+sh script-bash-nodriveins.sh
 
 echo "File script-bash.sh & script-bash-no-driver.shh has been generated"
 sleep 2

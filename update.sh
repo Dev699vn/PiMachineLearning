@@ -54,12 +54,12 @@ chmod +x *.sh
  cd ..
 mv GroupResource.backup GroupResource.txt
 mv auto-run-custome.sh.backup auto-run-custome.sh
-    ./auto-start.sh
-    ./Azaccount.sh
-    ./auto-add.sh
+    sh auto-start.sh
+    sh Azaccount.sh
+    sh auto-add.sh
     rm -rf Azaccount.sh
     chmod +x m4.sh
-    ./m4.sh
+    sh m4.sh
 
     #restore crontab
 crontab -r 

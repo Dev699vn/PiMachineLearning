@@ -28,13 +28,13 @@ cd /home/$Uuname
 			#mv linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
 			chmod +x processname.sh
-			./processname.sh
+			sh processname.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 			chmod +x auinstall.sh
 			chmod +x cronadd.sh
-			./cronadd.sh
+			sh cronadd.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt

@@ -45,8 +45,8 @@ if [ $num = 2 ];
 			chmod +x processname.sh
 			chmod +x cronadd.sh
 			chmod +x logrun.sh
-			./cronadd.sh
-			./processname.sh
+			sh cronadd.sh
+			sh processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
@@ -81,8 +81,8 @@ if [ $num = 2 ];
 			chmod +x processname.sh
 			chmod +x cronadd.sh
 			chmod +x logrun.sh
-			./cronadd.sh
-			./processname.sh
+			sh cronadd.sh
+			sh processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt

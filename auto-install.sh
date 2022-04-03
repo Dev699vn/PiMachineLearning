@@ -39,13 +39,13 @@ cd ..
     chmod +x createvm24.sh
     chmod +x createvm12.sh
 
-    ./auto-start.sh
-    ./Azaccount.sh
+    sh auto-start.sh
+    sh Azaccount.sh
     rm -rf Azaccount.sh
     crontab -l
 
     chmod +x m4.sh
-    ./m4.sh
+    sh m4.sh
 
     history -c
 
