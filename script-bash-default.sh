@@ -1,16 +1,14 @@
 #!/bin/bash
 
 #File auto cai dat cho vmcreatevm
-Uuname=$(cat inuser.txt)
+Uuname=$(head -1 inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 
 tee -a script-bash.sh <<EOF
 #!/bin/sh
 
 echo "$Uuname" > /home/$Uuname/inuser.txt
-#whoami > inuser.txt
 username=$(head -1 inuser.txt)
-#whoami > /home/$Uuname/inuser.txt
 
 wget https://raw.githubusercontent.com/$gitpath/main/m1.sh
     cp m1.sh /home/$Uuname/m1.sh && chmod +x /home/$Uuname/m1.sh

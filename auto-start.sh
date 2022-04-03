@@ -4,9 +4,9 @@
 #currentuser=$(who | awk '{print $1}')
 #chown -R $currentuser:$currentuser /home/$currentuser
 
-whoami > name.txt
-namepath=$(cat name.txt)
-path=/home/$namepath
+Uname=$(ls /home)
+sudo echo $Uname > inuser.txt
+
 gitpath=$(head -1 gitpath.txt)
 
 #Get subscription name:

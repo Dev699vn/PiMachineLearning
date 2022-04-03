@@ -1,8 +1,8 @@
 #!/bin/bash
 
-    whoami > name.txt
+    Uname=$(ls /home)
     namepath=$(head -1 name.txt)
-    path=/home/$namepath
+    path=/home/$Uname
     cd $path
 
 echo "=========================================================="

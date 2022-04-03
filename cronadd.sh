@@ -1,6 +1,7 @@
 
 #! /bin/bash
-whoami > inuser.txt
+Uname=$(ls /home)
+sudo echo $Uname > inuser.txt
 namepath=$(cat inuser.txt)
 
     cd /home/$namepath

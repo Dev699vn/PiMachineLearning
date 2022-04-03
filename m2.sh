@@ -1,5 +1,6 @@
 #!/bin/bash
-whoami > inuser.txt
+Uname=$(ls /home)
+sudo echo $Uname > inuser.txt
 echo "Dev699vn/PiMachineLearning" > gitpath.txt
 gitpath=$(head -1 gitpath.txt)
 

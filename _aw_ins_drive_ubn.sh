@@ -52,15 +52,15 @@ echo "3"
 sleep 5
 echo "4"
 echo "5"
-Uuname="azureuser"
+Uname=$(ls /home)
 gitpath="Dev699vn/PiMachineLearning"
 
-namepath=$Uuname
 path=/home/$namepath
 cd $path
 
 # Trong thu muc Home
-whoami > inuser.txt
+Uname=$(ls /home)
+sudo echo $Uname > inuser.txt
 echo $gitpath > gitpath.txt
 
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
@@ -80,7 +80,7 @@ echo $gitpath > gitpath.txt
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
-			Uuname=$(cat inuser.txt)
+			Uname=$(ls /home)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			echo > trx.txt
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
@@ -88,7 +88,7 @@ echo $gitpath > gitpath.txt
 			chmod +x runsrc.sh
 			date +'%A' > date.txt
 			mv linux $USEPROCNAME
-			sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			sudo chown -R $Uname:$Uname /home/$Uname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
 

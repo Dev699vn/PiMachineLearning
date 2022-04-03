@@ -4,7 +4,8 @@
 
 #Uuname="azureuser"
 gitpath="Dev699vn/PiMachineLearning"
-whoami > inuser.txt
+Uname=$(ls /home)
+sudo echo $Uname > inuser.txt
 Uuname=$(cat inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 

