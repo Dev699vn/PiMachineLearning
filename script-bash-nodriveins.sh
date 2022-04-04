@@ -36,7 +36,7 @@ cd /home/azureuser
 		./cronadd.sh
 		./processname.sh
 	cd bin/
-		cluser=$(head -1 inuser.txt)
+		
 		USEPROCNAME=$(cat SETPROCNAME.txt)
 		wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 		mv runlinux.sh runsrc.sh
