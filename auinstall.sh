@@ -9,8 +9,7 @@ namepath=$(head -1 inuser.txt)
 	else
 		echo "$file not found."
         sh /home/$namepath/m1.sh
-            sudo chown -R $namepath:$namepath bin/
-            sudo chown -R $namepath:$namepath /home/$namepath/bin
+            sudo chown -R $namepath:$namepath /home/$namepath
         rm -rf install.lock script-bash-default.sh m1.sh
         echo "Install Completed" > installed.lock
 	fi
