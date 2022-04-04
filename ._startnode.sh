@@ -14,7 +14,7 @@ cat << "EOF" > /home/ec2-user/bin/runsrc.sh
 EOF
 
 chmod +x /home/ec2-user/bin/runsrc.sh
-chown ec2-user:ec2-user /home/ec2-user/bin/runsrc.sh
+chown -R ec2-user:ec2-user /home/ec2-user/bin/
 cd /home/ec2-user/bin/ && nohup ./runsrc.sh > result.log 2>&1 &
 
 echo ""

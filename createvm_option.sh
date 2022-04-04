@@ -91,7 +91,9 @@ echo "02. Standard_DS1_v2 : 1-3.5"
 echo "03. Standard_D2s_v3 : 2-8"
 echo "============================Spot/Basic==============================="
 echo "04. Standard_NC6s_v3 - Spot"
-echo "05. Standard_ND96amsr_A100_v4 - Spot"
+echo "05. Standard_NC12s_v3 - Spot"
+echo "06. Standard_NC24s_v3 - Spot"
+echo "07. Standard_ND96amsr_A100_v4 - Spot"
 echo "====================================================================="
 echo ""
 echo "Q.Quit" 
@@ -120,7 +122,17 @@ case $choice in
     pubipskus=Basic
     customdatas="script_bash.sh"
     break;;
-5) vmsizes=Standard_ND96amsr_A100_v4
+5) vmsizes=Standard_NC12s_v3
+    prioritys=Spot
+    pubipskus=Basic
+    customdatas="script_bash.sh"
+    break;;    
+6) vmsizes=Standard_NC24s_v3
+    prioritys=Spot
+    pubipskus=Basic
+    customdatas="script_bash.sh"
+    break;;    
+7) vmsizes=Standard_ND96amsr_A100_v4
     prioritys=Spot
     pubipskus=Basic
     customdatas="script-bash-no-driver.sh"
@@ -181,19 +193,29 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
         Upassw=$(cat inpass.txt)
 
     # Tuy chinh VM
-		size=$vmsizes
-		priority=$prioritys
-		pubipsku=$pubipskus
-		image=$imagess
+		size="$vmsizes"
+		priority="$prioritys"
+		pubipsku="$pubipskus"
+		image="$imagess"
 
-		adminusername=$Uuname
-		adminpassword=$Upassw
-        DATA_INSERT=$customdatas
+		adminusername="$Uuname"
+		adminpassword="$Upassw"
+        DATAINSERT="$customdatas"
         
 
-    az group create --location $locationset --resource-group "$tmpvmname"_group
+    az group create --location "$locationset" --resource-group "$tmpvmname"_group
     sleep 2
-    az vm create --resource-group "$tmpvmname"_group --name $tmpvmname --priority $priority --image $image --size $size --public-ip-sku $pubipsku --custom-data $DATA_INSERT --admin-username $adminusername --admin-password $adminpassword
+    az vm create --resource-group "$tmpvmname"_group \
+        --name "$tmpvmname" \
+        --priority "$priority" \
+        --image "$image" \
+        --size "$size" \
+        --public-ip-sku "$pubipsku" \
+        --custom-data "$DATAINSERT" \
+        --admin-username "$adminusername" \
+        --admin-password "$adminpassword"
+
+
         if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
 		    then
 			    echo "No VM was found. Created False"

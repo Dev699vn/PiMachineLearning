@@ -16,7 +16,6 @@ cd /home/$Uuname
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
-			chmod +x logrun.sh
 			mkdir bin
 			cp linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
