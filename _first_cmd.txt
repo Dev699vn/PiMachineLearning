@@ -36,3 +36,4 @@ chmod +x ins_script.sh
 ./ins_script.sh
 
 
+az vm list-skus --size Standard_ND96amsr --output table

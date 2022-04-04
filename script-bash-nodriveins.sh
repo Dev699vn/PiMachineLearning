@@ -7,16 +7,16 @@ gitpath=$(head -1 gitpath.txt)
 
 tee -a script-bash-no-driver.sh <<EOF
 #!/bin/bash
-
+cd /home/azureuser
 echo "" 
 sleep 20
 echo ""
 sleep 5
 
-echo "$Uuname" > /home/$Uuname/inuser.txt
-echo "$gitpath" > /home/$Uuname/gitpath.txt
+echo azureuser > /home/azureuser/inuser.txt
+echo "$gitpath" > /home/azureuser/gitpath.txt
 
-cd /home/$Uuname
+cd /home/azureuser
 
 			wget https://github.com/$gitpath/raw/main/Getuser.sh
 			chmod +x Getuser.sh
