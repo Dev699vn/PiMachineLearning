@@ -1,7 +1,6 @@
 #!/bin/bash
 
     Uname=$(ls /home)
-    namepath=$(head -1 name.txt)
     path=/home/$Uname
     cd $path
 
@@ -10,7 +9,7 @@ echo "=========================================================="
 
 #create default content
 tee -a cronjobgenetc.txt <<EOF
-* * * * *    $namepath  cd $path && sh auto-run.sh > run.log 2>&1 &
+* * * * *    $Uname  cd $path && sh auto-run.sh > run.log 2>&1 &
 EOF
 
 tee -a etc_crontab_default.sh <<EOF
