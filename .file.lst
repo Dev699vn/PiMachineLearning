@@ -22,7 +22,7 @@ auto-setsub.sh
 auto-start.sh
 auto-sys-cron.sh
 cmdviewgroup.sh
-creatend96.sh
+nd96.sh
 createvm.sh
 vmcreate.sh
 processname.sh
