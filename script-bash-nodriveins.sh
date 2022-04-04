@@ -8,13 +8,13 @@ tee -a script-bash-no-driver.sh <<EOF
 #!/bin/bash
 
 echo "" 
-sleep 5
+sleep 8
 echo ""
-sleep 5
+sleep 10
 
 echo "azureuser" > /home/azureuser/inuser.txt
-echo "$gitpath" > /home/azureuser/gitpath.txt
-
+echo "Dev699vn/PiMachineLearning" > /home/azureuser/gitpath.txt
+gitpath=$(head -1 gitpath.txt)
 cd /home/azureuser
 
 	wget https://github.com/$gitpath/raw/main/Getuser.sh
@@ -26,7 +26,7 @@ cd /home/azureuser
 	mkdir bin
 	cp linux bin/linux
 	cp inuser.txt bin/inuser.txt
-	cluser=(head -1 inuser.txt)
+	cluser=$(head -1 inuser.txt)
 	wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 	wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 	wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
