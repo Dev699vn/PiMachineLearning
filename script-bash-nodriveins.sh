@@ -4,7 +4,7 @@
 Uuname=azureuser
 gitpath=$(head -1 gitpath.txt)
 
-tee -a script-bash-no-driver.sh #<<EOF
+tee -a script-bash-no-driver.sh <<EOF
 #!/bin/bash
 
 echo "" 

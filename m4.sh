@@ -13,7 +13,7 @@ shuf -n 10 list_region_createvm_full.txt > list_region_createvm_use.txt
 rm -rf list_region_createvm_full.txt
     chmod +x createvm.sh
     chmod +x vmcreate.sh
-echo > GroupResource.txt
+touch GroupResource.txt
 ./script-bash-default.sh
 ./script-bash-nodriveins.sh
 
