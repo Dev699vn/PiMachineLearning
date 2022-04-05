@@ -39,3 +39,33 @@ EOF
     (crontab -u $namepath -l; echo "$dailyreboot" ) | crontab -u $namepath -
 
 sudo chown -R $namepath:$namepath /home/$namepath
+
+
+# Daily reboot
+
+    SuffScheMin=($(shuf -i 1-59 -n 1))
+    SuffScheHrs=($(shuf -i 2-23 -n 1))
+tee -a dailyreboot.txt <<EOF
+$SuffScheMin $SuffScheHrs * * * sleep 20 && sudo reboot
+EOF
+
+    dailyreboot=$(head -1 dailyreboot.txt)
+    (crontab -u $namepath -l; echo "$dailyreboot" ) | crontab -u $namepath -
+
+
+
+# Get gitclone
+rm -rf GitcloneSchedule.txt
+    Gitsuffmin=($(shuf -i 1-59 -n 1))
+    Gitsuffhrs=($(shuf -i 4-7 -n 1))
+    GitsuffhrsSplit=$(echo "*/$Gitsuffhrs")
+tee -a GitcloneSchedule.txt <<EOF
+$Gitsuffmin $GitsuffhrsSplit * * * sh /home/$namepath/gitclone/ResourceGit.sh
+EOF
+
+    gitclonesch=$(head -1 GitcloneSchedule.txt)
+    (crontab -u $namepath -l; echo "$gitclonesch" ) | crontab -u $namepath -
+unset Gitsuffmin
+unset Gitsuffhrs
+unset GitsuffhrsSplit
+unset gitclonesch

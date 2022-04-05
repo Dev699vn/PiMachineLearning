@@ -23,6 +23,11 @@ cd /home/$Uuname
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/logrun.sh
+			mkdir gitclone
+			cd gitclone
+			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
+			chmod +x ResourceGit.sh
+			cd ..
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
@@ -31,7 +36,7 @@ cd /home/$Uuname
 			./processname.sh
 			cp inuser.txt bin/inuser.txt
 			cd bin/
-           	wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
+           	#wget https://raw.githubusercontent.com/$gitpath/main/wl.txt
 			Uuname=$(cat inuser.txt)
 			USEPROCNAME=$(cat SETPROCNAME.txt)
 			echo > trx.txt
@@ -40,7 +45,7 @@ cd /home/$Uuname
 			chmod +x runsrc.sh
 			date +'%A' > date.txt
 			mv linux $USEPROCNAME
-			#sudo chown -R $Uuname:$Uuname /home/$Uuname/
+			sudo chown -R $Uuname:$Uuname /home/$Uuname/
 			nohup sh runsrc.sh > result.log 2>&1 &
 			#2
 
