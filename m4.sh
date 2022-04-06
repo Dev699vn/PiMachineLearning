@@ -20,9 +20,8 @@ touch GroupResource.txt
 echo "File script-bash.sh & script-bash-no-driver.shh has been generated"
 sleep 2
     rm -rf script-bash-default.sh script-bash-nodriveins.sh
-    history -c
-
+    
 echo "CAI DAT CLI HOAN THANH, CHO REBOOT VA LOGIN VAO LAI"
-
+history -c
 # Reboot for schedule reboot 7200
     sudo reboot

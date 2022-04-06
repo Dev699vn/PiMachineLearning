@@ -50,7 +50,9 @@ cd ..
     crontab -l
 
     chmod +x m4.sh
+    history -c
     ./m4.sh
 
-    history -c
+
+
 
