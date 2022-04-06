@@ -438,7 +438,6 @@ LSTWORDARR=(
                 echo "Password ::: $Upassw"
                 echo "..................................."
 		fi
-
     
 done < "$file"
 

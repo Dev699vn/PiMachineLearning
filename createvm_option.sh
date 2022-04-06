@@ -23,6 +23,7 @@ echo "15. francecentral"
 echo "16. switzenlandnorth"
 echo "17. eastasia -xxx"
 echo "18. brazilsouth"
+echo "19. INPUT CUSTOM ZONE NAME"
 echo "=====================CAC REGION DA TAO TRUOC DAY========================"
 
 echo ""
@@ -67,6 +68,12 @@ case $choice in
     break;;
 18)	locationset=brazilsouth
 	break;;
+19) unset locationset_cus
+	read -p "Nhap vao ten Region: " locationset_cus
+	echo "Data received"
+	echo $locationset_cus
+	locationset=$locationset_cus
+    break;;	    
 
 Q|q) quit=y;; 
 *) echo "Try Again" 
@@ -222,8 +229,11 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
 		    else
 			    echo "VM was found. Create Success. Adding to auto-run-custome"
 				setsubid1=$(head -1 sub_id.txt)
+                echo "Add to auto-run-cus"
 				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
-				echo "Added done"
+                echo "Add $tmpvmname.sh to checkpo/"
+                echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
+				echo "Create and config complete"
                 echo "..................................."
                 echo "DA TAO Virtual Machine ::: $tmpvmname"
                 echo "CAU HINH ::: $size"
