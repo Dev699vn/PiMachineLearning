@@ -35,9 +35,12 @@ if [ $num = 2 ];
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
+			mkdir -p gitclone
+			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
+			mv ResourceGit.sh gitclone/ResourceGit.sh
+			chmod +x gitclone/ResourceGit.sh
 			mkdir bin
 			cp linux bin/linux
-			
 			chown -R $Uname:$Uname /home/$Uname/
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
@@ -72,6 +75,10 @@ if [ $num = 2 ];
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
+			mkdir -p gitclone
+			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
+			mv ResourceGit.sh gitclone/ResourceGit.sh
+			chmod +x gitclone/ResourceGit.sh
 			mkdir bin
 			cp linux bin/linux
 			Uname=(head -1 inuser.txt)

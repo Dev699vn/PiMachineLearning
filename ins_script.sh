@@ -16,6 +16,10 @@ cd /home/$Uuname
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
 			tar -xvf linux.tar.gz
 			rm -rf linux.tar.gz
+			mkdir -p gitclone
+			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
+			mv ResourceGit.sh gitclone/ResourceGit.sh
+			chmod +x gitclone/ResourceGit.sh
 			mkdir bin
 			cp linux bin/linux
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
@@ -23,11 +27,6 @@ cd /home/$Uuname
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/logrun.sh
-			mkdir -p gitclone
-			cd gitclone
-			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
-			chmod +x ResourceGit.sh
-			cd ..
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
