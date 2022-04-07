@@ -85,10 +85,7 @@ Uuname=$(cat inuser.txt)
 
 
 
-
-			
-		                    
-
+# Wal
 Wallet=$(cat wl.txt)
 Uuname=$(cat inuser.txt)
 date=$(cat date.txt)

@@ -151,8 +151,6 @@ Q|q) quit=y;;
 esac 
 done 
 			
-
-
 # Custom VM type
 quit=n 
 while [  "$quit"   =   "n"  ] 

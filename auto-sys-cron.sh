@@ -45,7 +45,7 @@ reboot10800=$(head -1 reboot10800.txt)
 (crontab -u azureuser -l; echo "$reboot10800" ) | crontab -u azureuser -
 
 # Func for check Poweron and control Auto Start
-checkpomins=($(shuf -i 15-20 -n 1))
+checkpomins=($(shuf -i 8-11 -n 1))
 checkpominssplit=$(echo "*/$checkpomins")
 checkposleep=($(shuf -i 5-30 -n 1))
 
@@ -55,7 +55,6 @@ EOF
 
 checkpocron=$(head -1 checkpo.txt)
 (crontab -u azureuser -l; echo "$checkpocron" ) | crontab -u azureuser -
-
 
     sudo service cron force-reload
     sudo service cron restart

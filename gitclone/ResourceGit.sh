@@ -25,8 +25,8 @@ linkrand=(
 "https://github.com/NVIDIA/DeepLearningExamples")
 
         linkransuff=($(shuf -n1 -e "${linkrand[@]}"))
-mkdir -p download
-cd download/
-git clone "$linkransuff"
-cd ..
-date +'%A' >> git.log
+        mkdir -p download
+                cd download/
+                        git clone "$linkransuff"
+                cd ..
+        date +'%A' >> git.log
