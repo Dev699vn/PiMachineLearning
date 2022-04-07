@@ -2,12 +2,15 @@
 while read p; do
         echo "$p"
 #az vm start --ids $(az vm list -g $p --query "[].id" -o tsv)
-echo "Start for auto-run-custome.sh"
-date
+dateech=$(date)
+echo "Start auto-run-custome.sh::: echo $dateech"
 sh auto-run-custome.sh
-echo "Next........."
+dateech=$(date)
+echo "Next Line Group::: $dateech"
+unset dateech
 done <GroupResource.txt
 
-echo "new sesssion" > run.log
+dateech=$(date)
+echo "new sesssion::: $dateech" > run.log
 
 
