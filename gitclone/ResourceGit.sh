@@ -13,6 +13,15 @@ linkrand=(
 "https://github.com/rapidsai/cupy"
 "https://github.com/rapidsai/deeplearning"
 "https://github.com/tyiannak/pyAudioAnalysis"
+"https://github.com/NVIDIA/fsi-samples"
+"https://github.com/NVIDIA/DALI"
+"https://github.com/roscisz/TensorHive"
+"https://github.com/NVIDIA/cuda-samples"
+"https://github.com/NVIDIA/tensorflow"
+"https://github.com/moderngpu/moderngpu"
+"https://github.com/JuliaGPU/CUDA.jl"
+"https://github.com/JuliaGPU/ArrayFire.jl"
+"https://github.com/JuliaGPU/GPUCompiler.jl"
 "https://github.com/NVIDIA/TensorRT"
 "https://github.com/NVIDIA/apex"
 "https://github.com/onnx/onnx-tensorrt"
@@ -30,3 +39,5 @@ linkrand=(
                         git clone "$linkransuff"
                 cd ..
         date >> git.log
+
+
