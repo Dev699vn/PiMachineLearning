@@ -29,4 +29,4 @@ linkrand=(
                 cd download/
                         git clone "$linkransuff"
                 cd ..
-        date +'%A' >> git.log
+        date >> git.log
