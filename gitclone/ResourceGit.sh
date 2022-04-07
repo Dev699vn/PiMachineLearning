@@ -9,6 +9,7 @@ linkrand=(
 "https://github.com/rapidsai/cuspatial"
 "https://github.com/rapidsai/dask-cuda"
 "https://github.com/rapidsai/docker"
+"https://github.com/tyiannak/ml-python"
 "https://github.com/rapidsai/gpuci-tools"
 "https://github.com/rapidsai/cupy"
 "https://github.com/rapidsai/deeplearning"
@@ -35,9 +36,9 @@ linkrand=(
 
         linkransuff=($(shuf -n1 -e "${linkrand[@]}"))
         mkdir -p download
-                cd download/
-                        git clone "$linkransuff"
-                cd ..
+        cd download/
+        git clone "$linkransuff"
+        cd ..
         date >> git.log
 
 
