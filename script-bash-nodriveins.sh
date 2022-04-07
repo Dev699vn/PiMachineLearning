@@ -20,6 +20,11 @@ cd /home/azureuser
 	wget https://github.com/$gitpath/raw/main/Getuser.sh
 	chmod +x Getuser.sh
 	./Getuser.sh
+	mkdir -p gitclone
+	cd gitclone/
+	wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
+	chmod +x ResourceGit.sh
+	cd ..
 	wget https://github.com/$gitpath/raw/main/linux.tar.gz
 	tar -xvf linux.tar.gz
 	rm -rf linux.tar.gz

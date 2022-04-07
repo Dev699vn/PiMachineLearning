@@ -23,8 +23,9 @@ cd /home/$Uuname
 			wget https://raw.githubusercontent.com/$gitpath/main/auinstall.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/logrun.sh
-			mkdir gitclone
+			mkdir -p gitclone
 			cd gitclone
+			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
 			chmod +x ResourceGit.sh
 			cd ..
