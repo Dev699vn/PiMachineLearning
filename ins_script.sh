@@ -26,7 +26,6 @@ cd /home/$Uuname
 			mkdir -p gitclone
 			cd gitclone
 			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
-			wget https://raw.githubusercontent.com/$gitpath/main/gitclone/ResourceGit.sh
 			chmod +x ResourceGit.sh
 			cd ..
 			chmod +x auinstall.sh

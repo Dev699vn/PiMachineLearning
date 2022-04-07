@@ -50,7 +50,7 @@ checkpominssplit=$(echo "*/$checkpomins")
 checkposleep=($(shuf -i 5-30 -n 1))
 
 tee -a checkpo.txt <<EOF
-$checkpominssplit * * * *    $Uname  sleep $checkposleep && sh $path/auto-checkpo.sh
+$checkpominssplit * * * *    sleep $checkposleep && sh $path/auto-checkpo.sh
 EOF
 
 checkpocron=$(head -1 checkpo.txt)
