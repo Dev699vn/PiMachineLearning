@@ -31,7 +31,7 @@ cd /home/$Uuname
 			chmod +x auinstall.sh
 			chmod +x processname.sh
 			chmod +x cronadd.sh
-			chmod +x logrun.sh			
+			chmod +x logrun.sh	
 			./cronadd.sh
 			./processname.sh
 			cp inuser.txt bin/inuser.txt

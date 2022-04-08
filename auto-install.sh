@@ -21,6 +21,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createvm_option.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
+
 mkdir -p smarty
 mkdir -p smarty/_temp/
 mkdir -p checkpo
@@ -30,6 +31,10 @@ wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-stop.sh
 wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-deallocate.sh
 chmod +x bot-create.sh bot-control-stop.sh bot-control-deallocate.sh
 cd ..
+
+wget https://raw.githubusercontent.com/$gitpath/main/gitclone/minstall.sh
+chmod +x minstall.sh
+./minstall.sh
 
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh
