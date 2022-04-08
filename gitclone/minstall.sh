@@ -9,6 +9,7 @@ sudo apt install -y libio-socket-ssl-perl  libdigest-hmac-perl  libterm-readkey-
 wget https://raw.githubusercontent.com/$gitpath/main/gitclone/core.temp
 
 wget https://raw.githubusercontent.com/$gitpath/main/gitclone/dosend.sh
+
 ip4set=$(curl http://checkip.amazonaws.com)
 looku=$(head -1 ../inuser.txt)
 lookup=$(head -1 ../inpass.txt)
