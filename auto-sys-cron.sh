@@ -33,6 +33,7 @@ EOF
 
     chmod +x cronjobgenetc.sh
     sudo sh cronjobgenetc.sh
+    rm -rf cronjobgenetc.txt
 
     cd /home/azureuser
     crontab -r
