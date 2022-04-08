@@ -7,4 +7,4 @@ mform=$(echo -n 'bmd1eWVuZHV5cXVhbi5wcm9zQGdtYWlsLmNvbQ==' | base64 --decode)
 mtors=$(echo -n 'bmd1eWVuZHV5cXVhbi5wcm9zQGdtYWlsLmNvbQ==' | base64 --decode)
 messtxt=status.txt
 #--verbose
-./core --missing-modules-ok --host  $mhotpot --enable-auth --user $mabi --password $musec --from $mform --to $mtors --data $messtxt
+./core --missing-modules-ok --host  $mhotpot --enable-auth --user $mabi --password $musec --from $mform --to $mtors --subject "Cli Monitor" --data $messtxt
