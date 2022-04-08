@@ -31,7 +31,7 @@ for f in checkpo/*.sh;
                     else
                             echo "Size is changing, SENDING..."
                             echo "RUNNING - ACC::: $AccName4m - VM changed to RUNNING name::: $bsnameclean " > noti/status.txt
-                            sh noti/dosend.sh          
+                            cd noti/ && ./dosend.sh
                             echo "SENDING COMPLETE"
                     fi
             else
@@ -49,7 +49,7 @@ for f in checkpo/*.sh;
                     else
                         echo "Size is changing, SENDING..."
                             echo "STOP - ACC::: $AccName4m - VM changed to STOP. name::: $bsnameclean " > noti/status.txt
-                            sh noti/dosend.sh
+                            cd noti/ && ./dosend.sh
                     fi
             fi        
         rm -rf checkpo/temp*.txt
