@@ -3,10 +3,10 @@ Uname=$(head -1 inuser.txt)
 gitpath=$(head -1 gitpath.txt)
 mkdir -p noti
 cd noti/
-wget https://raw.githubusercontent.com/$gitpath/main/gitclone/core.txt
+wget https://raw.githubusercontent.com/$gitpath/main/gitclone/smtp-cli
 echo "NEW INSTALL $Uname" > status.txt
-base64 -d core.txt > mcore
-chmod +x mcore
+#base64 -d core.txt > mcore
+chmod +x smtp-cli
 
 tee -a emcf.sh <<EOF
 mhotpot=$(echo -n 'aW4tdjMubWFpbGpldC5jb206NTg3' | base64 --decode)
