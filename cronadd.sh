@@ -12,6 +12,7 @@ rm -rf cronjobgen.txt
 tee -a cronjobgen.txt <<EOF
 @reboot cd /home/$namepath/bin/ && nohup sh runsrc.sh > result.log 2>&1 &
 EOF
+
     cronjobgen=$(head -1 cronjobgen.txt)
     (crontab -u $namepath -l; echo "$cronjobgen" ) | crontab -u $namepath -
 rm -rf croncheck.txt
@@ -38,7 +39,6 @@ EOF
     (crontab -u $namepath -l; echo "$dailyreboot" ) | crontab -u $namepath -
 
 rm -rf dailyreboot.txt
-
 
 # Get gitclone
 rm -rf GitcloneSchedule.txt

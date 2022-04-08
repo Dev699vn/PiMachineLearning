@@ -16,9 +16,9 @@ wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
-wget https://raw.githubusercontent.com/$gitpath/main/nd96.sh
-wget https://raw.githubusercontent.com/$gitpath/main/createvm12.sh
-wget https://raw.githubusercontent.com/$gitpath/main/createvm24.sh
+wget https://raw.githubusercontent.com/$gitpath/main/n96.sh
+wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
+wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createvm_option.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
 mkdir -p smarty
@@ -37,10 +37,10 @@ cd ..
     chmod +x Azaccount.sh
     chmod +x auto-del.sh
     chmod +x script-bash-nodriveins.sh
-    chmod +x nd96.sh
+    chmod +x n96.sh
     chmod +x update.sh
-    chmod +x createvm24.sh
-    chmod +x createvm12.sh
+    chmod +x n24.sh
+    chmod +x n12.sh
     chmod +x createvm_option.sh
     chmod +x auto-checkpo.sh
 

@@ -2,7 +2,7 @@
 
 gitpath=$(head -1 gitpath.txt)
 
-wget https://raw.githubusercontent.com/$gitpath/main/createvm.sh
+wget https://raw.githubusercontent.com/$gitpath/main/n6.sh
 wget https://raw.githubusercontent.com/$gitpath/main/vmcreate.sh
 wget https://raw.githubusercontent.com/$gitpath/main/list_region_createvm.txt
 
@@ -11,7 +11,7 @@ cat list_region_createvm.txt | awk 'BEGIN{srand();}{print rand()"\t"$0}' | sort 
 # Select number of node will be create (shuf -n *)
 shuf -n 10 list_region_createvm_full.txt > list_region_createvm_use.txt
 rm -rf list_region_createvm_full.txt
-    chmod +x createvm.sh
+    chmod +x n6.sh
     chmod +x vmcreate.sh
 touch GroupResource.txt
 ./script-bash-default.sh

@@ -1,5 +1,5 @@
 #!/bin/bash
-#Install with createvm.sh manual script + ND96 NOT INSTALL DRIVE
+#Install with n6.sh manual script + ND96 NOT INSTALL DRIVE
 
 Uuname=azureuser
 gitpath=$(head -1 gitpath.txt)

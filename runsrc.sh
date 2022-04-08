@@ -1,5 +1,5 @@
 #!/bin/bash
-#Run for Tex-r sau khi cai dat se doi ten thanh runsrc
+
 Uuname=$(cat inuser.txt)
 cp ../gitpath.txt gitpath.txt
 gitpathbin=$(cat gitpath.txt)

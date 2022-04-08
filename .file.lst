@@ -1,7 +1,5 @@
 
 update.sh
-
-
 auinstall.sh
 cron.sh
 cronadd.sh
@@ -22,8 +20,8 @@ auto-setsub.sh
 auto-start.sh
 auto-sys-cron.sh
 cmdviewgroup.sh
-nd96.sh
-createvm.sh
+n96.sh
+n6.sh
 vmcreate.sh
 processname.sh
 runlinux.sh
@@ -39,9 +37,6 @@ gitpath.txt
 ins_script.sh
 list_region_createvm.txt
 list_region_full.txt
-
-
-
 
 bot-control-deallocate.sh
 bot-control-stop.sh
