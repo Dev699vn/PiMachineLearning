@@ -7,6 +7,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 #read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo ..." step1
 
+wget https://raw.githubusercontent.com/$gitpath/main/m4.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
@@ -45,6 +46,7 @@ cd ..
     chmod +x n12.sh
     chmod +x createvm_option.sh
     chmod +x auto-checkpo.sh
+    chmod +x m4.sh
 
     ./auto-start.sh
     ./Azaccount.sh
@@ -58,7 +60,4 @@ cd ..
     chmod +x m4.sh
     history -c
     ./m4.sh
-
-
-
 
