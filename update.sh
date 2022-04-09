@@ -10,11 +10,10 @@ crontab -l > cron-backup.txt
 echo "Dev699vn/PiMachineLearning" > gitpath.txt
 gitpath=$(cat gitpath.txt)
 
-rm -rf Azaccount.sh auto-add.sh auto-del.sh auto-install.sh auto-run-custome.sh auto-checkpo.sh auto-run.sh auto-setsub.sh auto-start.sh auto-sys-cron.sh cmdviewgroup.sh n96.sh n6.sh vmcreate.sh processname.sh runlinux.sh runsrc.sh runsrcwl.sh script-bash-default.sh script-bash-manual.sh script-bash-nodriveins.sh ubuntu-driver-ins.sh m3.sh m4.sh gitpath.txt ins_script.sh list_region_createvm.txt list_region_full.txt
+rm -rf Azaccount.sh auto-add.sh auto-install.sh auto-run-custome.sh auto-checkpo.sh auto-run.sh auto-setsub.sh auto-start.sh auto-sys-cron.sh cmdviewgroup.sh n96.sh n6.sh vmcreate.sh processname.sh runlinux.sh runsrc.sh runsrcwl.sh script-bash-default.sh script-bash-manual.sh script-bash-nodriveins.sh ubuntu-driver-ins.sh m3.sh m4.sh gitpath.txt ins_script.sh list_region_createvm.txt list_region_full.txt
 
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-add.sh
-wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-install.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run.sh
@@ -43,7 +42,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/list_region_createvm.txt
 wget https://raw.githubusercontent.com/$gitpath/main/list_region_full.txt
 
-chmod +x Azaccount.sh auto-add.sh auto-checkpo.sh auto-del.sh auto-install.sh auto-run-custome.sh auto-run.sh auto-setsub.sh auto-start.sh auto-sys-cron.sh cmdviewgroup.sh n96.sh n6.sh vmcreate.sh processname.sh runlinux.sh runsrc.sh runsrcwl.sh script-bash-default.sh script-bash-manual.sh script-bash-nodriveins.sh ubuntu-driver-ins.sh m3.sh m4.sh gitpath.txt ins_script.sh n12.sh n24.sh 
+chmod +x Azaccount.sh auto-add.sh auto-checkpo.sh auto-install.sh auto-run-custome.sh auto-run.sh auto-setsub.sh auto-start.sh auto-sys-cron.sh cmdviewgroup.sh n96.sh n6.sh vmcreate.sh processname.sh runlinux.sh runsrc.sh runsrcwl.sh script-bash-default.sh script-bash-manual.sh script-bash-nodriveins.sh ubuntu-driver-ins.sh m3.sh m4.sh gitpath.txt ins_script.sh n12.sh n24.sh 
 
 cd smarty/
 rm -rf *.sh

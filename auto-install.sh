@@ -8,9 +8,7 @@ az login
 #read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo ..." step1
 
 wget https://raw.githubusercontent.com/$gitpath/main/auto-start.sh
-wget https://raw.githubusercontent.com/$gitpath/main/cmdviewgroup.sh
 wget https://raw.githubusercontent.com/$gitpath/main/Azaccount.sh
-wget https://raw.githubusercontent.com/$gitpath/main/auto-del.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
@@ -32,15 +30,10 @@ wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-dealloca
 chmod +x bot-create.sh bot-control-stop.sh bot-control-deallocate.sh
 cd ..
 
-wget https://raw.githubusercontent.com/$gitpath/main/gitclone/minstall.sh
-chmod +x minstall.sh
-./minstall.sh
-
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh
-    chmod +x cmdviewgroup.sh
+
     chmod +x Azaccount.sh
-    chmod +x auto-del.sh
     chmod +x script-bash-nodriveins.sh
     chmod +x n96.sh
     chmod +x update.sh
@@ -53,6 +46,10 @@ chmod +x minstall.sh
     ./Azaccount.sh
     rm -rf Azaccount.sh
     crontab -l
+
+    wget https://raw.githubusercontent.com/$gitpath/main/gitclone/minstall.sh
+    chmod +x minstall.sh
+    ./minstall.sh
 
     chmod +x m4.sh
     history -c
