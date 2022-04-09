@@ -13,6 +13,11 @@ wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
+mkdir -p noti
+gitpath1="clicmdscript/git.test"
+cd noti/
+wget https://raw.githubusercontent.com/$gitpath1/main/._test.txt
+cd ..
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
@@ -32,7 +37,6 @@ cd ..
 
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh
-
     chmod +x Azaccount.sh
     chmod +x script-bash-nodriveins.sh
     chmod +x n96.sh
