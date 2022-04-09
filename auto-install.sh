@@ -3,7 +3,7 @@
 gitpath=$(head -1 gitpath.txt)
 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-echo "Truy cap URL https://microsoft.com/devicelogin"
+
 az login
 #read -p "Copy Code ben tren & Paste vao url vua mo, Bam phim bat ky de sang buoc tiep theo ..." step1
 
