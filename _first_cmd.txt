@@ -1,7 +1,0 @@
-
-    echo "Dev699vn/PiMachineLearning" > gitpath.txt
-    gitpath=$(head -1 gitpath.txt)
-    wget https://raw.githubusercontent.com/$gitpath/main/m3.sh && chmod +x m3.sh
-    ./m3.sh
-
-
