@@ -33,6 +33,7 @@ for f in checkpo/*.sh;
                             ip4address=$(az vm show -d -g Creatures95_group -n Creatures95 --query publicIps -o tsv)
                             echo "RUNNING - ACC::: $AccName4m - VM change to RUNNING name::: $bsnameclean ::IP: $ip4address" > noti/status.txt
                             cd noti/ && ./dosend.sh
+                            cd ..
                             echo "SENDING COMPLETE"
                     fi
             else
@@ -51,6 +52,7 @@ for f in checkpo/*.sh;
                         echo "Size is changing, SENDING..."
                             echo "STOP - ACC::: $AccName4m - VM changed to STOP. name::: $bsnameclean " > noti/status.txt
                             cd noti/ && ./dosend.sh
+                            cd ..
                     fi
             fi        
         rm -rf checkpo/temp*.txt

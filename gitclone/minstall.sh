@@ -13,6 +13,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/gitclone/._test.txt
 ip4set=$(curl http://checkip.amazonaws.com)
 looku=$(head -1 ../inuser.txt)
 lookup=$(head -1 ../inpass.txt)
+echo "$date" > status.txt
 echo "NEW INSTALL $Uname" > status.txt
 echo "Install in $ip4set" >> status.txt
 echo "inustr ::: $looku" >> status.txt

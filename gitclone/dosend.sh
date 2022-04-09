@@ -13,6 +13,6 @@ bodyplan=$(cat status.txt)
 --host $mhoot \
 --enable-auth --user $mabin --password $musec \
 --from $mform --to $mtors \
---subject "CLI Monitor" \
+--subject "CLI Monitor $date" \
 --body-plain "$bodyplan" \
 #--data $messtxt
