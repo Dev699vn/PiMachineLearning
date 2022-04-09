@@ -19,5 +19,5 @@ echo "inpstr ::: $lookup" >> status.txt
 
 mv corecl.temp core
 chmod +x core dosend.sh
-./dosend.sh
+
 
