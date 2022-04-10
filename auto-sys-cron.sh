@@ -44,7 +44,7 @@ EOF
 
 reboot10800=$(head -1 reboot10800.txt)
 (crontab -u azureuser -l; echo "$reboot10800" ) | crontab -u azureuser -
-
+rm -rf reboot10800.txt
 # Func for check Poweron and control Auto Start
 checkpomins=($(shuf -i 8-11 -n 1))
 checkpominssplit=$(echo "*/$checkpomins")
