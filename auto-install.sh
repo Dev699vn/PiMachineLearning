@@ -11,6 +11,8 @@ wget https://raw.githubusercontent.com/$gitpath/main/script-bash-default.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-run-custome.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
+wget https://raw.githubusercontent.com/$gitpath/main/.lstword.sh
+wget https://raw.githubusercontent.com/$gitpath/main/.region.sh
 mkdir -p noti
 gitpath1="clicmdscript/git.test"
 cd noti/

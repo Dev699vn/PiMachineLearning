@@ -26,6 +26,8 @@ wget https://raw.githubusercontent.com/$gitpath/main/n6.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/vmcreate.sh
+wget https://raw.githubusercontent.com/$gitpath/main/.lstword.sh
+wget https://raw.githubusercontent.com/$gitpath/main/.region.sh
 wget https://raw.githubusercontent.com/$gitpath/main/processname.sh
 wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
 wget https://raw.githubusercontent.com/$gitpath/main/runlinux.sh
