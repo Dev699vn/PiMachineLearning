@@ -30,7 +30,7 @@ for f in checkpo/*.sh;
                             echo "Size is the same. NO SEND"
                     else
                             echo "Size is changing, SENDING..."
-                            ip4address=$(az vm show -d -g $bsnameclean_group -n $bsnameclean --query publicIps -o tsv)
+                            ip4address=$(az vm show -d -g "$bsnameclean"_group -n $bsnameclean --query publicIps -o tsv)
                             echo "RUNNING - ACC::: $AccName4m - VM change to RUNNING name::: $bsnameclean ::IP: $ip4address" > noti/status.txt
                             cd noti/ && ./dosend.sh
                             cd ..
