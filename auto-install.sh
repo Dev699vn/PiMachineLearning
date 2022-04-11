@@ -12,17 +12,13 @@ wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/.lstword.sh
 wget https://raw.githubusercontent.com/$gitpath/main/.region.sh
-mkdir -p noti
-gitpath1="clicmdscript/git.test"
-cd noti/
-wget https://raw.githubusercontent.com/$gitpath1/main/._test.txt
-cd ..
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createoption.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
+mkdir -p noti
 mkdir -p smarty
 mkdir -p smarty/_temp/
 mkdir -p checkpo

@@ -371,6 +371,5 @@ LSTWORDARR=(
 "Upstepped"
 "Upsteps")
 
-
-        WORDTOUSE=($(shuf -n1 -e "${LSTWORDARR[@]}"))
-        RANDOMNumbers=($(shuf -i 2-99 -n 1))
+WORDTOUSE=($(shuf -n1 -e "${LSTWORDARR[@]}"))
+RANDOMNumbers=($(shuf -i 2-99 -n 1))

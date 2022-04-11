@@ -63,5 +63,3 @@ for f in checkpo/*.sh;
         rm -rf checkpo/temp*.txt
         # END IF
 done
-
-
