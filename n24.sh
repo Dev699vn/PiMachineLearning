@@ -19,11 +19,6 @@
     Uuname=$(cat inuser.txt)
     Upassw=$(cat inpass.txt)
 
-
-    #size=Standard_B2s
-    #priority=Regular
-    #pubipsku=Standard
-
     # Tuy chinh VM
     size=Standard_NC24s_v3
     priority=Spot
