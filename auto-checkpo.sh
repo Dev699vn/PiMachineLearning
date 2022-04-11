@@ -30,7 +30,11 @@ for f in checkpo/*.sh;
                     else
                             echo "Size is changing, SENDING..."
                             ip4address=$(az vm show -d -g "$bsnameclean"_group -n $bsnameclean --query publicIps -o tsv)
-                            echo "RUNNING - ACC::: $AccName4m - VM change to RUNNING name::: $bsnameclean ::IP: $ip4address" > noti/status.txt
+                            echo "RUNNING on ACC::: $AccName4m " > noti/status.txt
+                            echo "Name VM change to RUNNING::: $bsnameclean" >> noti/status.txt
+                            echo "IP: $ip4address" >> noti/status.txt
+                            az vm list -g "$bsnameclean"_group > noti/vmsize.txt
+                            awk 'NR==15' noti/vmsize.txt >> noti/status.txt && rm -rf noti/vmsize.txt
                             cd noti/ && ./dosend.sh
                             cd ..
                             echo "SENDING COMPLETE"
@@ -48,7 +52,10 @@ for f in checkpo/*.sh;
                             echo "Size is the same. NO SEND"
                     else
                         echo "Size is changing, SENDING..."
-                            echo "STOP - ACC::: $AccName4m - VM changed to STOP. name::: $bsnameclean " > noti/status.txt
+                            echo "STOP on ACC::: $AccName4m " > noti/status.txt
+                            echo "Name VM changed to STOP::: $bsnameclean" >> noti/status.txt
+                            az vm list -g "$bsnameclean"_group > noti/vmsize.txt
+                            awk 'NR==15' noti/vmsize.txt >> noti/status.txt && rm -rf noti/vmsize.txt
                             cd noti/ && ./dosend.sh
                             cd ..
                     fi
