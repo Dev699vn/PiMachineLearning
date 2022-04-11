@@ -43,7 +43,8 @@
 				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
                 echo "Add $tmpvmname.sh to checkpo/"
                 echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
-				echo "Added done"
+				echo "$size" > checkpo/$tmpvmname.txt
+                echo "Added done"
                 echo "..................................."
                 echo "DA TAO Virtual Machine ::: $tmpvmname"
                 echo "CAU HINH ::: $size"

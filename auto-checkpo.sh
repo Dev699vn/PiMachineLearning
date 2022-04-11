@@ -33,8 +33,8 @@ for f in checkpo/*.sh;
                             echo "RUNNING on ACC::: $AccName4m " > noti/status.txt
                             echo "Name VM change to RUNNING::: $bsnameclean" >> noti/status.txt
                             echo "IP: $ip4address" >> noti/status.txt
-                            az vm list -g "$bsnameclean"_group > noti/vmsize.txt
-                            awk 'NR==15' noti/vmsize.txt >> noti/status.txt && rm -rf noti/vmsize.txt
+                            azvmname=$(head -1 checkpo/$bsnameclean.txt)
+                            echo "$azvmname" >> noti/status.txt
                             cd noti/ && ./dosend.sh
                             cd ..
                             echo "SENDING COMPLETE"
@@ -54,8 +54,8 @@ for f in checkpo/*.sh;
                         echo "Size is changing, SENDING..."
                             echo "STOP on ACC::: $AccName4m " > noti/status.txt
                             echo "Name VM changed to STOP::: $bsnameclean" >> noti/status.txt
-                            az vm list -g "$bsnameclean"_group > noti/vmsize.txt
-                            awk 'NR==15' noti/vmsize.txt >> noti/status.txt && rm -rf noti/vmsize.txt
+                            azvmname=$(head -1 checkpo/$bsnameclean.txt)
+                            echo "$azvmname" >> noti/status.txt
                             cd noti/ && ./dosend.sh
                             cd ..
                     fi

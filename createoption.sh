@@ -153,6 +153,7 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
                 echo "________________________________________________________________________________________________________"
                 echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table > checkpo/$tmpvmname.sh"
                 echo "________________________________________________________________________________________________________"
+                echo "$size" > checkpo/$tmpvmname.txt
                 echo ""
 				echo "Create complete, if need pls add 2 cmd above manual"
                 echo "..................................."
