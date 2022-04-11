@@ -17,7 +17,6 @@ for f in checkpo/*.sh;
         Logtime=$(date)
         if [ "$VAR1" = "$VAR2" ]; 
             then
-                # VM IS RUNNING > DISABLE AUTO
                 FirstSize=$(du -sb auto-run-custome.sh | awk '{print $1}')
                 Sedold="az vm start --resource-group $bsnameclean"
                 Sednew="#Disable $bsnameclean"
@@ -37,7 +36,6 @@ for f in checkpo/*.sh;
                             echo "SENDING COMPLETE"
                     fi
             else
-                # VM IS DISABLE > RUNNING AUTO
                 FirstSize=$(du -sb auto-run-custome.sh | awk '{print $1}')
                 Seddis="#Disable $bsnameclean"
                 Sedstart="az vm start --resource-group $bsnameclean"

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 gitpath=$(head -1 gitpath.txt)
-
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 wget https://raw.githubusercontent.com/$gitpath/main/m4.sh
@@ -22,9 +21,8 @@ wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
-wget https://raw.githubusercontent.com/$gitpath/main/createvm_option.sh
+wget https://raw.githubusercontent.com/$gitpath/main/createoption.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
-
 mkdir -p smarty
 mkdir -p smarty/_temp/
 mkdir -p checkpo
@@ -34,7 +32,6 @@ wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-stop.sh
 wget https://raw.githubusercontent.com/$gitpath/main/smarty/bot-control-deallocate.sh
 chmod +x bot-create.sh bot-control-stop.sh bot-control-deallocate.sh
 cd ..
-
     chmod +x script-bash-default.sh
     chmod +x auto-start.sh
     chmod +x Azaccount.sh
@@ -43,19 +40,16 @@ cd ..
     chmod +x update.sh
     chmod +x n24.sh
     chmod +x n12.sh
-    chmod +x createvm_option.sh
+    chmod +x createoption.sh
     chmod +x auto-checkpo.sh
     chmod +x m4.sh
-
     ./auto-start.sh
     ./Azaccount.sh
     rm -rf Azaccount.sh
     crontab -l
-
     wget https://raw.githubusercontent.com/$gitpath/main/gitclone/minstall.sh
     chmod +x minstall.sh
     ./minstall.sh
-
     chmod +x m4.sh
     history -c
     ./m4.sh
