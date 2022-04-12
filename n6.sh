@@ -5,8 +5,7 @@
         echo $location >> created.txt
         echo > VMName.txt
     #file source
-    . .lstword.sh
-
+. .lstword.sh
         echo $WORDTOUSE$RANDOMNumbers > VMName.txt
 
     echo "------------------------------------------------------------------------"
