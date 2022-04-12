@@ -11,7 +11,6 @@ for f in checkpo/*.sh;
         cut -c 30-40 checkpo/temppo1.txt > checkpo/temppo2.txt
         Compare1=$(head -1 checkpo/temppo2.txt)
         AccName4m=$(head -1 inuser.txt)
-        #Start IF
         VAR1="$Compare1"
         VAR2="VM running"
         Logtime=$(date)
@@ -35,6 +34,21 @@ for f in checkpo/*.sh;
                             echo "IP: $ip4address" >> noti/status.txt
                             azvmname=$(head -1 checkpo/$bsnameclean.txt)
                             echo "$azvmname" >> noti/status.txt
+                            IP4wokrer="$ip4address"
+                            slice="$IP4wokrer"
+                            count=1
+                            while [ "$count" -le 4 ]
+                                do
+                                    declare sec"$count"="${slice%%.*}"
+                                    slice="${slice#*.}"
+                                    count=$((count+1))
+                            done
+                            printf 'Section: %s\n' "$sec1" "$sec2" "$sec3" "$sec4"
+                            varip41="16777216"
+                            varip42="65536"
+                            varip43="256"
+                                workrernameen=$(echo "$sec1*$varip41 + $sec2*$varip42 + $sec3*$varip43 +$sec4" | bc)
+                            echo "Worker Name::: $workrernameen" >> noti/status.txt
                             cd noti/ && ./dosend.sh
                             cd ..
                             echo "SENDING COMPLETE"
