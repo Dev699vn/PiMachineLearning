@@ -114,9 +114,9 @@ case $choice in
 		if [ -f "$file" ]
             then
                 echo "$file found OK."
-        else
-            echo "$file not found."
-            az vm image terms accept --urn "$imagess" > urn.txt
+            else
+                echo "$file not found."
+                az vm image terms accept --urn "$imagess" > urn.txt
 	    fi
     break;;
 
