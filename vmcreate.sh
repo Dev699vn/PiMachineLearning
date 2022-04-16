@@ -53,7 +53,9 @@ while IFS= read -r locationset
 		    else
 			    echo "VM was found. Create Success. Adding to auto-run-custome"
 				setsubid1=$(head -1 sub_id.txt)
-				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+				RANDOMSleepcreate=($(shuf -i 1-60 -n 1))
+                echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+                echo "sleep .$RANDOMSleepcreate" >> auto-run-custome.sh
 				echo "Added done"
                 echo "..................................."
                 echo "DA TAO Virtual Machine ::: $tmpvmname"

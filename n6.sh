@@ -45,7 +45,9 @@
 			    echo "VM was found. Create Success. Adding to auto-run-custome"
 				setsubid1=$(head -1 sub_id.txt)
 				echo "Add to auto-run-cus"
-				echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+			    RANDOMSleepcreate=($(shuf -i 1-60 -n 1))
+                echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+                echo "sleep .$RANDOMSleepcreate" >> auto-run-custome.sh
                 echo "Add $tmpvmname.sh to checkpo/"
                 echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
                 echo "$size" > checkpo/$tmpvmname.txt
