@@ -41,7 +41,8 @@
         --admin-username $adminusername \
         --admin-password $adminpassword \
         --max-price -1 \
-	    --eviction-policy Deallocate
+        --eviction-policy Deallocate
+
 		if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
 		    then
 			    echo "No VM found. Created False"
