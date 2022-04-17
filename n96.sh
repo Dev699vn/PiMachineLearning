@@ -39,22 +39,27 @@
         --public-ip-sku $pubipsku \
         --custom-data script-bash-no-driver.sh \
         --admin-username $adminusername \
-        --admin-password $adminpassword
+        --admin-password $adminpassword \
+        --max-price -1 \
+	    --eviction-policy Deallocate
 		if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
 		    then
-			    echo "No VM was found. Created False"
+			    echo "No VM found. Created False"
 		    else
-			    echo "VM was found. Create Success. Adding to auto-run-custome"
+			    echo "Create Success. Adding to auto-run-custome"
 				setsubid1=$(head -1 sub_id.txt)
 				echo "Add to auto-run-cus"
 				RANDOMSleepcreate=($(shuf -i 1-60 -n 1))
                 echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
                 echo "sleep .$RANDOMSleepcreate" >> auto-run-custome.sh
                 echo "Add $tmpvmname.sh to checkpo/"
-                
                 echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
 				echo "$size" > checkpo/$tmpvmname.txt
                 echo "Added done"
+                    az vm list \
+                    -g "$tmpvmname"_group \
+                    --query '[].{Name:name, MaxPrice:billingProfile.maxPrice}' \
+                    --output table
                 echo "..................................."
                 echo "DA TAO Virtual Machine ::: $tmpvmname"
                 echo "CAU HINH ::: $size"

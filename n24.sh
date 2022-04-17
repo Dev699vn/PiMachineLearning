@@ -40,9 +40,9 @@
 		--admin-password $adminpassword
 		if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
 		    then
-			    echo "No VM was found. Created False"
+			    echo "No VM found. Created False"
 		    else
-			    echo "VM was found. Create Success. Adding to auto-run-custome"
+			    echo "Create Success. Adding to auto-run-custome"
 				setsubid1=$(head -1 sub_id.txt)
 				echo "Add to auto-run-cus"
 				RANDOMSleepcreate=($(shuf -i 1-60 -n 1))
