@@ -134,30 +134,24 @@ esac
 done 
 
     # VM and Group name
-read -p "Nhap vao ten may..........:: " VMNAMECustom
-        echo $VMNAMECustom > VMName.txt
-
-    echo "------------------------------------------------------------------------"
-        cat VMName.txt
-    echo "------------------------------------------------------------------------"
-        tmpvmname=$(cat VMName.txt)
-        echo "$tmpvmname"_group >> GroupResource.txt
+read -p "Nhap vao ten may..........:: " vmnamecuscreate
+        echo "$vmnamecuscreate" > VMName.txt
+        tmpvmname="$vmnamecuscreate"
+        tmpnamegroup=$(echo "$tmpvmname"_group)
+        echo "$tmpnamegroup" >> GroupResource.txt
         Uuname=$(cat inuser.txt)
         Upassw=$(cat inpass.txt)
-
-    # Tuy chinh VM
 		size="$vmsizes"
 		priority="$prioritys"
 		pubipsku="$pubipskus"
 		image="$imagess"
-
 		adminusername="$Uuname"
 		adminpassword="$Upassw"
         DATAINSERT="$customdatas"
         
-    az group create --location "$locationset" --resource-group "$tmpvmname"_group
+    az group create --location "$locationset" --resource-group "$tmpnamegroup"
     sleep 2
-    az vm create --resource-group "$tmpvmname"_group \
+    az vm create --resource-group "$tmpnamegroup" \
         --name "$tmpvmname" \
         --priority "$priority" \
         --image "$image" \
@@ -166,7 +160,6 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
         --custom-data "$DATAINSERT" \
         --admin-username "$adminusername" \
         --admin-password "$adminpassword"
-
     
 echo -n "Add this VM to AUTO RUN (y/n)? "
 old_stty_cfg=$(stty -g)
@@ -175,37 +168,27 @@ answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
 stty $old_stty_cfg
 if echo "$answer" | grep -iq "^y" ;then
     echo Yes
-
     if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
     then
 		echo "No VM was found. Created False"
 	else
 		echo "VM was found. Create Success. Manual add auto-run-custome"
 		setsubid1=$(head -1 sub_id.txt)
-        echo "________________________________________________________________________________________________________"
-		echo "az vm start --resource-group "$tmpvmname"_group --name $tmpvmname --subscription $setsubid1 >> auto-run-custome.sh"
-        echo "________________________________________________________________________________________________________"
-        echo ""
-        echo "Manual Add $tmpvmname.sh to checkpo/"
-        echo "________________________________________________________________________________________________________"
-        echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table > checkpo/$tmpvmname.sh"
-        echo "________________________________________________________________________________________________________"
+		echo "az vm start --resource-group "$tmpnamegroup" --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+        echo "az vm get-instance-view --resource-group "$tmpnamegroup" --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
         echo "$size" > checkpo/$tmpvmname.txt
-        echo ""
-		echo "Create complete, if need pls add 2 cmd above manual"
-        echo "..................................."
         echo "Virtual Machine Name ::: $tmpvmname"
-        echo "CAU HINH ::: $size"
-        echo "Username ::: $Uuname"
-        echo "Password ::: $Upassw"
+        echo "Size ::: $size"
+        echo "UN ::: $Uuname"
+        echo "PD ::: $Upassw"
 		fi
     echo "Done"
 else
     echo No
         echo "Create complete"
         echo "Virtual Machine Name ::: $tmpvmname"
-        echo "CAU HINH ::: $size"
-        echo "Username ::: $Uuname"
-        echo "Password ::: $Upassw"
-
+        echo "Size ::: $size"
+        echo "UN ::: $Uuname"
+        echo "PD ::: $Upassw"
+    echo "Done"
 fi

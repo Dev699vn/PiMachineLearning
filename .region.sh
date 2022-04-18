@@ -11,7 +11,7 @@ echo "04. westus"
 echo "05. westus2"
 echo "06. westus3"
 echo "07. centralus"
-echo "08. australiseast"
+echo "08. australiaeast"
 echo "09. southeastasia"
 echo "10. northeurope"
 echo "11. uksouth"
@@ -44,7 +44,7 @@ case $choice in
     break;;
 7) locationset=centralus
     break;;
-8) locationset=australiseast
+8) locationset=australiaeast
     break;;
 9) locationset=southeastasia
     break;;
