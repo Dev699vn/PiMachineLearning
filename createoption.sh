@@ -23,6 +23,10 @@ echo "============================NODRIVE=================================="
 echo "08. Standard_NC6s_v3 - Spot - NODRIVE"
 echo "09. Standard_NC12s_v3 - Spot - NODRIVE"
 echo "10. Standard_NC24s_v3 - Spot - NODRIVE"
+echo "============================NCADS===================================="
+echo "11. Standard_NC8ads_A10_v4 - Spot - IMG"
+echo "12. Standard_NC16ads_A10_v4 - Spot - IMG"
+echo "13. Standard_NC32ads_A10_v4 - Spot - IMG"
 echo ""
 echo "Q.Quit" 
 echo 
@@ -33,67 +37,67 @@ case $choice in
 1) vmsizes=Standard_B2s
     prioritys=Regular
     pubipskus=Standard
-    customdatas="auto-run-custome.sh"
     break;;
 2) vmsizes=Standard_DS1_v2
     prioritys=Regular
     pubipskus=Standard
-    customdatas="auto-run-custome.sh"
     break;;
 3) vmsizes=Standard_D2s_v3
     prioritys=Regular
     pubipskus=Standard
-    customdatas="auto-run-custome.sh"
     break;;
 4) vmsizes=Standard_NC6s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script_bash.sh"
     break;;
 5) vmsizes=Standard_NC12s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script_bash.sh"
     break;;    
 6) vmsizes=Standard_NC24s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script_bash.sh"
     break;;    
 7) vmsizes=Standard_ND96amsr_A100_v4
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script-bash-no-driver.sh"
     break;;
 8) vmsizes=Standard_NC6s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script-bash-no-driver.sh"
     break;;
 9) vmsizes=Standard_NC12s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script-bash-no-driver.sh"
     break;;    
 10) vmsizes=Standard_NC24s_v3
     prioritys=Spot
     pubipskus=Basic
-    customdatas="script-bash-no-driver.sh"
     break;;    
-
+11) vmsizes=Standard_NC8ads_A10_v4
+    prioritys=Spot
+    pubipskus=Basic
+    break;;
+12) vmsizes=Standard_NC16ads_A10_v4
+    prioritys=Spot
+    pubipskus=Basic
+    break;;    
+13) vmsizes=Standard_NC32ads_A10_v4
+    prioritys=Spot
+    pubipskus=Basic
+    break;;   
 
 Q|q) quit=y;; 
 *) echo "Try Again" 
 esac 
 done 
 			
-# Custom VM type
 quit=n 
 while [  "$quit"   =   "n"  ] 
 do 
 echo 
 echo "============================OS========================="
-echo "01. UbuntuLTS"
+echo "01. UbuntuServer:18_04-lts-gen2"
 echo "02. Win2012Datacenter"
 echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest NO DRIVE"
 echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest Include DRIVE"
@@ -104,10 +108,13 @@ echo "Enter choice"
 read choice 
 case $choice in 
 1) imagess=UbuntuLTS
+    customdatas="auto-run-custome.sh"
     break;;
 2) imagess=Win2012Datacenter
+    customdatas="auto-run-custome.sh"
     break;;
 3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
+    customdatas="script_bash.sh"
     break;;
 4) imagess=nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest
     file="urn.txt"
@@ -118,6 +125,7 @@ case $choice in
                 echo "$file not found."
                 az vm image terms accept --urn "$imagess" > urn.txt
 	    fi
+    customdatas="script-bash-no-driver.sh"
     break;;
 
 Q|q) quit=y;; 
@@ -133,9 +141,7 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
         cat VMName.txt
     echo "------------------------------------------------------------------------"
         tmpvmname=$(cat VMName.txt)
-                
-            echo "$tmpvmname"_group >> GroupResource.txt
-
+        echo "$tmpvmname"_group >> GroupResource.txt
         Uuname=$(cat inuser.txt)
         Upassw=$(cat inpass.txt)
 
@@ -161,7 +167,16 @@ read -p "Nhap vao ten may..........:: " VMNAMECustom
         --admin-username "$adminusername" \
         --admin-password "$adminpassword"
 
-if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
+    
+echo -n "Add this VM to AUTO RUN (y/n)? "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+    echo Yes
+
+    if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
     then
 		echo "No VM was found. Created False"
 	else
@@ -185,4 +200,12 @@ if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
         echo "Password ::: $Upassw"
 		fi
     echo "Done"
-    
+else
+    echo No
+        echo "Create complete"
+        echo "Virtual Machine Name ::: $tmpvmname"
+        echo "CAU HINH ::: $size"
+        echo "Username ::: $Uuname"
+        echo "Password ::: $Upassw"
+
+fi
