@@ -172,9 +172,11 @@ if echo "$answer" | grep -iq "^y" ;then
     then
 		echo "No VM was found. Created False"
 	else
+        RANDOMSleepcreate=($(shuf -i 1-60 -n 1))
 		echo "VM was found. Create Success. Manual add auto-run-custome"
 		setsubid1=$(head -1 sub_id.txt)
 		echo "az vm start --resource-group "$tmpnamegroup" --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
+        echo "sleep .$RANDOMSleepcreate" >> auto-run-custome.sh
         echo "az vm get-instance-view --resource-group "$tmpnamegroup" --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
         echo "$size" > checkpo/$tmpvmname.txt
         echo "Virtual Machine Name ::: $tmpvmname"
