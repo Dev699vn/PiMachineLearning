@@ -17,6 +17,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/n96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createoption.sh
+wget https://raw.githubusercontent.com/$gitpath/main/otherstr.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
 mkdir -p noti
 mkdir -p smarty
@@ -38,6 +39,7 @@ cd ..
     chmod +x n12.sh
     chmod +x createoption.sh
     chmod +x auto-checkpo.sh
+    chmod +x otherstr.sh
     chmod +x m4.sh
     ./auto-start.sh
     ./Azaccount.sh
