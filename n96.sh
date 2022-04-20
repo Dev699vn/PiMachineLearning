@@ -39,9 +39,8 @@
         --public-ip-sku $pubipsku \
         --custom-data script-bash-no-driver.sh \
         --admin-username $adminusername \
-        --admin-password $adminpassword \
-        --max-price -1 \
-        --eviction-policy Deallocate
+        --admin-password $adminpassword 
+        
 
 		if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
 		    then
@@ -57,10 +56,6 @@
                 echo "az vm get-instance-view --resource-group "$tmpvmname"_group --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
 				echo "$size" > checkpo/$tmpvmname.txt
                 echo "Added done"
-                    az vm list \
-                    -g "$tmpvmname"_group \
-                    --query '[].{Name:name, MaxPrice:billingProfile.maxPrice}' \
-                    --output table
                 echo "..................................."
                 echo "DA TAO Virtual Machine ::: $tmpvmname"
                 echo "CAU HINH ::: $size"
