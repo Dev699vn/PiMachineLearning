@@ -26,3 +26,5 @@ history -c
 # Reboot for schedule reboot 7200
 rm -f auto-sys-cron.sh cronjobgenetc.sh etc_crontab_default.sh list_region_createvm.txt m3.sh minstall.sh 
     nohup sleep 7200 && sudo reboot > reboot.log 2>&1 &
+echo ""
+echo "done"
