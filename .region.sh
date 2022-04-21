@@ -21,7 +21,8 @@ echo "14. canadacentral"
 echo "15. francecentral"
 echo "16. switzenlandnorth"
 echo "17. eastasia"
-echo "18. INPUT CUSTOM REGION NAME"
+echo "18. brazilsouth"
+echo "19. INPUT CUSTOM REGION NAME"
 echo "=====================CAC REGION DA TAO TRUOC DAY========================"
 cat created.txt
 echo ""
@@ -64,7 +65,7 @@ case $choice in
     break;;
 17) locationset=eastasia
     break;;
-18  locationset=brazilsouth
+18) locationset=brazilsouth
     break;;  
 19) unset locationset_cus
 	read -p "Nhap vao ten Region: " locationset_cus
