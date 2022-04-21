@@ -44,6 +44,10 @@ cd ..
     ./auto-start.sh
     ./Azaccount.sh
     rm -rf Azaccount.sh
+tee -a runlog.sh <<EOF
+tail -f run.log
+EOF
+chmod +x runlog.sh
     crontab -l
     wget https://raw.githubusercontent.com/$gitpath/main/gitclone/minstall.sh
     chmod +x minstall.sh
