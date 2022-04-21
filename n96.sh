@@ -11,6 +11,9 @@
             echo $tmpvmname
             echo "$tmpvmname"_group >> GroupResource.txt
 
+    read -p "Enter Zone 1,2 or 3: " avzone
+	echo "Data received"
+
     #Uuname=$(cat inuser.txt)
     Upassw=$(cat inpass.txt)
 
@@ -39,7 +42,8 @@
         --public-ip-sku $pubipsku \
         --custom-data script-bash-no-driver.sh \
         --admin-username $adminusername \
-        --admin-password $adminpassword 
+        --admin-password $adminpassword \
+        --zone "$avzone"
         
 
 		if [ "$(az vm list -d -o table --query "[?name=='$tmpvmname']")" = "" ];
