@@ -64,7 +64,9 @@ case $choice in
     break;;
 17) locationset=eastasia
     break;;
-18) unset locationset_cus
+18  locationset=brazilsouth
+    break;;  
+19) unset locationset_cus
 	read -p "Nhap vao ten Region: " locationset_cus
 	echo "Data received"
 	echo $locationset_cus

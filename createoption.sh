@@ -23,10 +23,14 @@ echo "============================NODRIVE=================================="
 echo "08. Standard_NC6s_v3 - Spot - NODRIVE"
 echo "09. Standard_NC12s_v3 - Spot - NODRIVE"
 echo "10. Standard_NC24s_v3 - Spot - NODRIVE"
-echo "============================NCADS===================================="
-echo "11. Standard_NC8ads_A10_v4 - Spot - IMG"
-echo "12. Standard_NC16ads_A10_v4 - Spot - IMG"
-echo "13. Standard_NC32ads_A10_v4 - Spot - IMG"
+echo "============================NCA10 ADS================================"
+echo "11. Standard_NC8ads_A10_v4 - Spot - NODRIVE"
+echo "12. Standard_NC16ads_A10_v4 - Spot - NODRIVE"
+echo "13. Standard_NC32ads_A10_v4 - Spot - NODRIVE"
+echo "============================NCT4-ads================================="
+echo "11. Standard_NC16as_T4_v3 - Spot - NODRIVE"
+echo "12. Standard_NC64as_T4_v3 - Spot - NODRIVE"
+
 echo ""
 echo "Q.Quit" 
 echo 
@@ -86,6 +90,14 @@ case $choice in
     prioritys=Spot
     pubipskus=Basic
     break;;   
+15) vmsizes=Standard_NC16as_T4_v3
+    prioritys=Spot
+    pubipskus=Basic
+    break;;       
+16) vmsizes=Standard_NC64as_T4_v3
+    prioritys=Spot
+    pubipskus=Basic
+    break;;       
 
 Q|q) quit=y;; 
 *) echo "Try Again" 
@@ -100,7 +112,7 @@ echo "============================OS========================="
 echo "01. UbuntuServer:18_04-lts-gen2"
 echo "02. Win2012Datacenter"
 echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest NO DRIVE"
-echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest Include DRIVE"
+echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest DRIVE"
 echo "============================OS========================="
 echo "Q.Quit" 
 echo 
