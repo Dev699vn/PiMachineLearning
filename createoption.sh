@@ -28,8 +28,8 @@ echo "11. Standard_NC8ads_A10_v4 - Spot - NODRIVE"
 echo "12. Standard_NC16ads_A10_v4 - Spot - NODRIVE"
 echo "13. Standard_NC32ads_A10_v4 - Spot - NODRIVE"
 echo "============================NCT4-ads================================="
-echo "11. Standard_NC16as_T4_v3 - Spot - NODRIVE"
-echo "12. Standard_NC64as_T4_v3 - Spot - NODRIVE"
+echo "14. Standard_NC16as_T4_v3 - Spot - NODRIVE"
+echo "15. Standard_NC64as_T4_v3 - Spot - NODRIVE"
 
 echo ""
 echo "Q.Quit" 
@@ -90,11 +90,11 @@ case $choice in
     prioritys=Spot
     pubipskus=Basic
     break;;   
-15) vmsizes=Standard_NC16as_T4_v3
+14) vmsizes=Standard_NC16as_T4_v3
     prioritys=Spot
     pubipskus=Basic
     break;;       
-16) vmsizes=Standard_NC64as_T4_v3
+15) vmsizes=Standard_NC64as_T4_v3
     prioritys=Spot
     pubipskus=Basic
     break;;       
