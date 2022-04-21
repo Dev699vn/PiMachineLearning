@@ -20,11 +20,9 @@ touch GroupResource.txt
 echo "File script-bash.sh & script-bash-no-driver.shh has been generated"
 sleep 2
     rm -rf script-bash-default.sh script-bash-nodriveins.sh
-    
-echo "CAI DAT CLI HOAN THANH, CHO REBOOT VA LOGIN VAO LAI"
 history -c
-# Reboot for schedule reboot 7200
+
 rm -f auto-sys-cron.sh cronjobgenetc.sh etc_crontab_default.sh list_region_createvm.txt m3.sh minstall.sh 
-    nohup sleep 7200 && sudo reboot > reboot.log 2>&1 &
+    #nohup sleep 7200 && sudo reboot > reboot.log 2>&1 &
 echo ""
-echo "done"
+echo "INSTALL COMPLETE"
