@@ -1,6 +1,7 @@
 #!/bin/bash
 Uname=$(head -1 inuser.txt)
 gitpath=$(head -1 gitpath.txt)
+mv ._test.txt noti/._test.txt
 cd noti/
 sudo apt install -y libio-socket-ssl-perl  libdigest-hmac-perl  libterm-readkey-perl libmime-lite-perl libfile-libmagic-perl libio-socket-inet6-perl
 
@@ -18,5 +19,5 @@ echo "inpstr ::: $lookup" >> status.txt
 
 mv corecl.temp core
 chmod +x core dosend.sh
-
-
+./dosend.sh
+cd ..
