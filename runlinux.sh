@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cp ../gitpath.txt gitpath.txt
+
 gitpathbin=$(cat gitpath.txt)
 
 #pol conifg

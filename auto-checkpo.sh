@@ -65,7 +65,7 @@ for f in checkpo/*.sh;
                         then
                             echo "Size is the same. NO SEND"
                     else
-                        echo "Size is changing, SENDING..."
+                            echo "Size is changing, SENDING..."
                             echo "STOP on ACC::: $AccName4m " > noti/status.txt
                             echo "Name VM changed to STOP::: $bsnameclean" >> noti/status.txt
                             azvmname=$(head -1 checkpo/$bsnameclean.txt)
