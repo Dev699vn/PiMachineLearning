@@ -58,3 +58,33 @@ unset gitclonesch
 rm -rf GitcloneSchedule.txt
 
 sudo chown -R $namepath:$namepath /home/$namepath
+
+
+### Spec check
+tee -a specheck.txt <<EOF
+#!/bin/bash
+sleep 600
+
+if grep -R "Can't start T-Rex, can't initialize CUDA engine, cuda exception" bin/result.log
+then
+    touch auto-fix.log
+    echo  "NOT RUNNING, string exists" >> auto-fix.log
+    sudo apt --fix-broken -y install >> auto-fix.log
+    sudo apt install -y nvidia-340 >> auto-fix.log
+    ./ubuntu-driver-ins.sh >> auto-fix.log
+    echo "done"
+else
+    touch good.log
+    echo "It is running" >> good.log
+fi    
+EOF
+mv specheck.txt specheck.sh && chmod +x specheck.sh
+#nohup sh specheck.sh > specheck.log 2>&1 &
+
+tee -a speschedule.txt <<EOF
+* */4 * * * cd /home/$namepath/ && ./specheck.sh
+EOF
+
+    speschedule=$(head -1 speschedule.txt)
+    #(crontab -u $namepath -l; echo "$dailyreboot" ) | crontab -u $namepath -
+rm -rf speschedule.txt

@@ -7,6 +7,7 @@ tee -a script-bash.sh <<EOF
 #!/bin/sh
 
     echo "$Uuname" > /home/$Uuname/inuser.txt
+    #cd /home/$Uuname/
     wget https://github.com/$gitpath/raw/main/Getuser.sh
 	chmod +x Getuser.sh
 	#./Getuser.sh

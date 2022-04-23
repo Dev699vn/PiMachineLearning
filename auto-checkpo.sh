@@ -19,7 +19,8 @@ for f in checkpo/*.sh;
                 FirstSize=$(du -sb auto-run-custome.sh | awk '{print $1}')
                 Sedold="az vm start --resource-group $bsnameclean"
                 Sednew="#Disable $bsnameclean"
-                    echo "VM is running, Disable auto."
+                    echo "VM is running, Disable auto. Pause for 420 then disable auto"
+                    sleep 420
                     echo "$Logtime ::: Disabled auto for VM Status RUNNING::: $bsnameclean" >> checkpo/log.st
                 sed -i "s/$Sedold/$Sednew/g" "auto-run-custome.sh"
                 SecondSize=$(du -sb auto-run-custome.sh | awk '{print $1}')
