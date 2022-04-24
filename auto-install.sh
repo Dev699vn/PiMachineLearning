@@ -19,6 +19,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/n24.sh
 wget https://raw.githubusercontent.com/$gitpath/main/createoption.sh
 wget https://raw.githubusercontent.com/$gitpath/main/otherstr.sh
 wget https://raw.githubusercontent.com/$gitpath/main/update.sh
+
 mkdir -p noti
 mkdir -p smarty
 mkdir -p smarty/_temp/
@@ -47,6 +48,11 @@ cd ..
 tee -a runlog.sh <<EOF
 tail -f run.log
 EOF
+
+sudo apt-get install -y sshpass
+wget https://raw.githubusercontent.com/$gitpath/main/sh.txt
+mv sh.txt ssh && chmod +x ssh
+
 chmod +x runlog.sh
     crontab -l
     wget https://raw.githubusercontent.com/$gitpath/main/gitclone/minstall.sh

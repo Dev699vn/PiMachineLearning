@@ -1,0 +1,12 @@
+#!/bin/bash
+while getopts i: flag
+do
+    case "${flag}" in
+        i) ip=${OPTARG};;
+    esac
+done
+
+user=$(head -1 inuser.txt)
+password=$(head -1 inpass.txt)
+
+sshpass -p "$password" ssh "$user"@"$ip"
