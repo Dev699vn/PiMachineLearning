@@ -51,7 +51,9 @@ EOF
 
 sudo apt-get install -y sshpass
 wget https://raw.githubusercontent.com/$gitpath/main/sh.txt
+wget https://raw.githubusercontent.com/$gitpath/main/sha.txt
 mv sh.txt ssh && chmod +x ssh
+mv sha.txt ssha && chmod +x ssha
 
 chmod +x runlog.sh
     crontab -l
