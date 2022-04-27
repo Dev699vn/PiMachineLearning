@@ -6,7 +6,37 @@ do
     esac
 done
 
-user=$(head -1 inuser.txt)
+showusers2=$(head -1 inuser.txt)
+
+quit=n 
+while [  "$quit"   =   "n"  ] 
+do 
+echo 
+echo "=========================SELECT USER========================="
+echo "01. User Generate         : $showusers2 "
+echo "02. User Default for ND   : azureuser "
+echo "03. Enter Custom user..... "
+echo "_____________________________________________________________"
+echo "Q.Quit" 
+echo 
+echo "Enter choice" 
+read choice 
+case $choice in 
+1) user=$showusers2
+    break;;
+2) user="azureuser"
+    break;;
+3)  read -p "Nhap vao ten user: " userss_cus
+	echo "Data received"
+	user=$userss_cus
+    break;;	    
+
+Q|q) quit=y;; 
+*) echo "Try Again" 
+esac 
+done 
+
 password=$(head -1 inpass.txt)
 
 sshpass -p "$password" ssh "$user"@"$ip"
+
