@@ -11,6 +11,7 @@ if ps ax | grep -v grep | grep $PROCESS > /dev/null
 				echo "$PROCESS is running" ;
 	else
 			sleep 3
+			sudo chown -R $namepath:$namepath /home/$namepath/
 			echo "$PROCESS is NOT running" ;		
 			ps -ef | grep '$USEPROCNAME' | grep -v grep | awk '{print $2}' | xargs -r kill -9
 			cd /home/$namepath/bin/ && rm -rf result.log && nohup sh runsrc.sh > result.log 2>&1 &
