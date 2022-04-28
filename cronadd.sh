@@ -2,7 +2,7 @@
 #! /bin/bash
 Uname=$(ls /home)
 sudo echo $Uname > inuser.txt
-namepath=$(cat inuser.txt)
+namepath=$(head -1 inuser.txt)
 
     cd /home/$namepath
     crontab -r
@@ -57,9 +57,6 @@ unset GitsuffhrsSplit
 unset gitclonesch
 rm -rf GitcloneSchedule.txt
 
-sudo chown -R $namepath:$namepath /home/$namepath
-
-
 ### Spec check
 tee -a specheck.txt <<EOF
 #!/bin/bash
@@ -88,3 +85,5 @@ EOF
     speschedule=$(head -1 speschedule.txt)
     #(crontab -u $namepath -l; echo "$dailyreboot" ) | crontab -u $namepath -
 rm -rf speschedule.txt
+
+sudo chown -R $namepath:$namepath /home/$namepath
