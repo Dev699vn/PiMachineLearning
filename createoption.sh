@@ -134,7 +134,9 @@ case $choice in
     customdatas="auto-run-custome.sh"
     break;;
 3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
-    customdatas="script_bash.sh"
+    customdatas="script-bash.sh"
+    echo $customdatas > logcreate.txt
+    echo $imagess >> logcreate.txt
     break;;
 4) imagess=nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest
     file="urn.txt"
@@ -174,7 +176,7 @@ read -p "Nhap vao ten may..........:: " vmnamecuscreate
 		adminusername="$Uuname"
 		adminpassword="$Upassw"
         DATAINSERT="$customdatas"
-        
+
     az group create --location "$locationset" --resource-group "$tmpnamegroup"
     sleep 2
     az vm create --resource-group "$tmpnamegroup" \

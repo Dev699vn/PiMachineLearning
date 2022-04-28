@@ -75,5 +75,6 @@ for f in checkpo/*.sh;
                     fi
             fi        
         rm -rf checkpo/temp*.txt
+        echo "...................................."
         # END IF
 done
