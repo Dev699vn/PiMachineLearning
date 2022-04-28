@@ -7,7 +7,8 @@ do
 done
 
 showusers2=$(head -1 inuser.txt)
-
+password=$(head -1 inpass.txt)
+##
 quit=n 
 while [  "$quit"   =   "n"  ] 
 do 
@@ -16,6 +17,9 @@ echo "=========================SELECT USER========================="
 echo "01. User Generate         : $showusers2 "
 echo "02. User Default for ND   : azureuser "
 echo "03. Enter Custom user..... "
+echo ".................................."
+echo "Pass used: $password"
+echo ".................................."
 echo "_____________________________________________________________"
 echo "Q.Quit" 
 echo 
@@ -35,8 +39,6 @@ Q|q) quit=y;;
 *) echo "Try Again" 
 esac 
 done 
+##
 
-password=$(head -1 inpass.txt)
-
-sshpass -p "$password" ssh "$user"@"$ip"
-
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no "$user"@"$ip"
