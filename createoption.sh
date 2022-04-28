@@ -135,8 +135,6 @@ case $choice in
     break;;
 3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
     customdatas="script-bash.sh"
-    echo $customdatas > logcreate.txt
-    echo $imagess >> logcreate.txt
     break;;
 4) imagess=nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest
     file="urn.txt"
@@ -166,7 +164,6 @@ read -p "Nhap vao ten may..........:: " vmnamecuscreate
         echo "$vmnamecuscreate" > VMName.txt
         tmpvmname="$vmnamecuscreate"
         tmpnamegroup=$(echo "$tmpvmname"_group)
-        echo "$tmpnamegroup" >> GroupResource.txt
         Uuname=$(cat inuser.txt)
         Upassw=$(cat inpass.txt)
 		size="$vmsizes"
@@ -205,6 +202,7 @@ if echo "$answer" | grep -iq "^y" ;then
 		setsubid1=$(head -1 sub_id.txt)
 		echo "az vm start --resource-group "$tmpnamegroup" --name $tmpvmname --subscription $setsubid1" >> auto-run-custome.sh
         echo "sleep .$RANDOMSleepcreate" >> auto-run-custome.sh
+        echo "$tmpnamegroup" >> GroupResource.txt
         echo "az vm get-instance-view --resource-group "$tmpnamegroup" --name $tmpvmname  --query instanceView.statuses[1] --output table" > checkpo/$tmpvmname.sh
         echo "$size" > checkpo/$tmpvmname.txt
         echo "Virtual Machine Name ::: $tmpvmname"
