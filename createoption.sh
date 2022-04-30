@@ -110,7 +110,10 @@ Q|q) quit=y;;
 *) echo "Try Again" 
 esac 
 done 
-			
+
+Uuname=$(cat inuser.txt)
+adminusername="$Uuname"
+
 quit=n 
 while [  "$quit"   =   "n"  ] 
 do 
@@ -120,6 +123,8 @@ echo "01. UbuntuServer:18_04-lts-gen2"
 echo "02. Win2012Datacenter"
 echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest NO DRIVE"
 echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest DRIVE"
+echo "05. nvidia:pytorch_from_nvidia:gen2_21-11-0:latest DRIVE"
+
 echo "99. CUSTOM IMAGE"
 echo "============================OS========================="
 echo "Q.Quit" 
@@ -128,15 +133,19 @@ echo "Enter choice"
 read choice 
 case $choice in 
 1) imagess=UbuntuLTS
+    adminusername="$Uuname"
     customdatas="auto-run-custome.sh"
     break;;
 2) imagess=Win2012Datacenter
+    adminusername="$Uuname"
     customdatas="auto-run-custome.sh"
     break;;
 3) imagess=Canonical:UbuntuServer:18_04-lts-gen2:latest
+    adminusername="$Uuname"
     customdatas="script-bash.sh"
     break;;
 4) imagess=nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest
+    adminusername="azureuser"
     file="urn.txt"
 		if [ -f "$file" ]
             then
@@ -147,6 +156,20 @@ case $choice in
 	    fi
     customdatas="script-bash-no-driver.sh"
     break;;
+
+5) imagess=nvidia:pytorch_from_nvidia:gen2_21-11-0:latest
+    adminusername="azureuser"
+    file="urnpy.txt"
+		if [ -f "$file" ]
+            then
+                echo "$file found OK."
+            else
+                echo "$file not found."
+                az vm image terms accept --urn "$imagess" > urnpy.txt
+	    fi
+    customdatas="script-bash-no-driver.sh"
+    break;;
+
 99) unset imagess_cus
 	read -p "Nhap vao ten IMAGES: " imagess_cus
 	echo "Data received"
@@ -170,7 +193,6 @@ read -p "Nhap vao ten may..........:: " vmnamecuscreate
 		priority="$prioritys"
 		pubipsku="$pubipskus"
 		image="$imagess"
-		adminusername="$Uuname"
 		adminpassword="$Upassw"
         DATAINSERT="$customdatas"
 
