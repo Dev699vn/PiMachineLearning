@@ -12,6 +12,7 @@ wget https://raw.githubusercontent.com/$gitpath/main/auto-checkpo.sh
 wget https://raw.githubusercontent.com/$gitpath/main/ins_script.sh
 wget https://raw.githubusercontent.com/$gitpath/main/.lstword.sh
 wget https://raw.githubusercontent.com/$gitpath/main/.region.sh
+wget https://raw.githubusercontent.com/$gitpath/main/.regionsub.sh
 wget https://raw.githubusercontent.com/$gitpath/main/script-bash-nodriveins.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n96.sh
 wget https://raw.githubusercontent.com/$gitpath/main/n12.sh
