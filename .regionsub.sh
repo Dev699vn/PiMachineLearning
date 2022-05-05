@@ -31,41 +31,41 @@ echo
 echo "Enter choice" 
 read choice 
 case $choice in 
-1) locationset=eastus
+1) vmlocationsub=eastus
     break;;
-2) locationset=eastus2
+2) vmlocationsub=eastus2
     break;;
-3) locationset=southcentralus
+3) vmlocationsub=southcentralus
     break;;
-4) locationset=westus
+4) vmlocationsub=westus
     break;;
-5) locationset=westus2
+5) vmlocationsub=westus2
     break;;
-6) locationset=westus3
+6) vmlocationsub=westus3
     break;;
-7) locationset=centralus
+7) vmlocationsub=centralus
     break;;
-8) locationset=australiaeast
+8) vmlocationsub=australiaeast
     break;;
-9) locationset=southeastasia
+9) vmlocationsub=southeastasia
     break;;
-10) locationset=northeurope
+10) vmlocationsub=northeurope
     break;;
-11) locationset=uksouth
+11) vmlocationsub=uksouth
     break;;
-12) locationset=westeurope
+12) vmlocationsub=westeurope
     break;;
-13) locationset=koreacentral
+13) vmlocationsub=koreacentral
     break;;
-14) locationset=canadacentral
+14) vmlocationsub=canadacentral
     break;;
-15) locationset=francecentral
+15) vmlocationsub=francecentral
     break;;
-16) locationset=switzenlandnorth
+16) vmlocationsub=switzenlandnorth
     break;;
-17) locationset=eastasia
+17) vmlocationsub=eastasia
     break;;
-18) locationset=brazilsouth
+18) vmlocationsub=brazilsouth
     break;;  
 19) unset vmlocationsub
 	read -p "Nhap vao ten Region: " vmlocationsub1

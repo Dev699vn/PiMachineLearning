@@ -198,15 +198,13 @@ read -p "Nhap vao ten may..........:: " vmnamecuscreate
 
     az group create --location "$locationset" --resource-group "$tmpnamegroup"
     sleep 2
-
-. .regionsub.sh
-
+    . .regionsub.sh
     az vm create --resource-group "$tmpnamegroup" \
         --name "$tmpvmname" \
-        --location "$vmlocationsub"
         --priority "$priority" \
         --image "$image" \
         --size "$size" \
+        --location "$vmlocationsub" \
         --public-ip-sku "$pubipsku" \
         --custom-data "$DATAINSERT" \
         --admin-username "$adminusername" \
