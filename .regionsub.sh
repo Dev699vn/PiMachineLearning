@@ -3,7 +3,7 @@ quit=n
 while [  "$quit"   =   "n"  ] 
 do 
 echo 
-echo "============================CREATEVM===================================="
+echo "==========================VM LOCATION============================"
 echo "01. eastus"
 echo "02. eastus2"
 echo "03. southcentralus"
@@ -23,8 +23,6 @@ echo "16. switzenlandnorth"
 echo "17. eastasia"
 echo "18. brazilsouth"
 echo "19. INPUT CUSTOM REGION NAME"
-echo "=====================CAC REGION DA TAO TRUOC DAY========================"
-cat created.txt
 echo ""
 echo "Q.Quit" 
 echo 
