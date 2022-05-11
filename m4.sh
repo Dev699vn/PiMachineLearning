@@ -17,7 +17,7 @@ touch GroupResource.txt
 ./script-bash-default.sh
 ./script-bash-nodriveins.sh
 
-echo "File script-bash.sh & script-bash-no-driver.shh has been generated"
+echo "File script-bash.sh & script-bash-no-driver.sh has been generated"
 sleep 2
     rm -rf script-bash-default.sh script-bash-nodriveins.sh
 history -c

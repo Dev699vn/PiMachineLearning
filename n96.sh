@@ -11,8 +11,8 @@
             echo $tmpvmname
             echo "$tmpvmname"_group >> GroupResource.txt
 
-    #read -p "Enter Zone 1,2 or 3: " avzone
-	#echo "Data received"
+    read -p "Enter Zone 1,2 or 3: " avzone
+	echo "Data received"
     #--zone "$avzone"
 
     #Uuname=$(cat inuser.txt)
@@ -44,6 +44,7 @@
         --custom-data script-bash-no-driver.sh \
         --admin-username $adminusername \
         --admin-password $adminpassword \
+        --zone "$avzone"
         
         
 
