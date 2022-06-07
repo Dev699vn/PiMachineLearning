@@ -30,6 +30,9 @@ echo "13. Standard_NC32ads_A10_v4 - Spot - NODRIVE"
 echo "============================NCT4-ads================================="
 echo "14. Standard_NC16as_T4_v3 - Spot - NODRIVE"
 echo "15. Standard_NC64as_T4_v3 - Spot - NODRIVE"
+echo "16. Standard_D2s_v3 : 2-8 - SPOT"
+echo "17. Standard_NC24ads_A100_v4 - SPOT"
+
 echo "99. CUSTOM SIZE"
 
 echo ""
@@ -98,13 +101,23 @@ case $choice in
 15) vmsizes=Standard_NC64as_T4_v3
     prioritys=Spot
     pubipskus=Basic
-    break;;       
-19) unset sizes_cus
+    break;;   
+16) vmsizes=Standard_D2s_v3
+    prioritys=Spot
+    pubipskus=Basic
+    break;;    
+17) vmsizes=Standard_NC24ads_A100_v4
+    prioritys=Spot
+    pubipskus=Basic
+    break;; 
+
+99) unset sizes_cus
 	read -p "Nhap vao ten SIZE: " sizes_cus
 	echo "Data received"
 	echo $sizes_cus
 	vmsizes=$sizes_cus
     break;;	
+  
 
 Q|q) quit=y;; 
 *) echo "Try Again" 
@@ -124,6 +137,7 @@ echo "02. Win2012Datacenter"
 echo "03. Canonical:UbuntuServer:18_04-lts-gen2:latest NO DRIVE"
 echo "04. nvidia:tensorflow_from_nvidia:gen2_21-06-0:latest DRIVE"
 echo "05. nvidia:pytorch_from_nvidia:gen2_21-11-0:latest DRIVE"
+echo "06. microsoft-dsvm:ubuntu-hpc:1804:18.04.2021051701 DRIVE"
 
 echo "99. CUSTOM IMAGE"
 echo "============================OS========================="
@@ -158,6 +172,19 @@ case $choice in
     break;;
 
 5) imagess=nvidia:pytorch_from_nvidia:gen2_21-11-0:latest
+    adminusername="azureuser"
+    file="urnpy.txt"
+		if [ -f "$file" ]
+            then
+                echo "$file found OK."
+            else
+                echo "$file not found."
+                az vm image terms accept --urn "$imagess" > urnpy.txt
+	    fi
+    customdatas="script-bash-no-driver.sh"
+    break;;
+
+6) imagess=microsoft-dsvm:ubuntu-hpc:1804:18.04.2021051701
     adminusername="azureuser"
     file="urnpy.txt"
 		if [ -f "$file" ]
