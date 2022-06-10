@@ -32,7 +32,7 @@ echo "14. Standard_NC16as_T4_v3 - Spot - NODRIVE"
 echo "15. Standard_NC64as_T4_v3 - Spot - NODRIVE"
 echo "16. Standard_D2s_v3 : 2-8 - SPOT"
 echo "17. Standard_NC24ads_A100_v4 - SPOT"
-
+echo "18. Standard_NC48ads_A100_v4 - SPOT"
 echo "99. CUSTOM SIZE"
 
 echo ""
@@ -107,6 +107,10 @@ case $choice in
     pubipskus=Basic
     break;;    
 17) vmsizes=Standard_NC24ads_A100_v4
+    prioritys=Spot
+    pubipskus=Basic
+    break;; 
+18) vmsizes=Standard_NC48ads_A100_v4
     prioritys=Spot
     pubipskus=Basic
     break;; 
