@@ -239,7 +239,9 @@ read -p "Nhap vao ten may..........:: " vmnamecuscreate
         --public-ip-sku "$pubipsku" \
         --custom-data "$DATAINSERT" \
         --admin-username "$adminusername" \
-        --admin-password "$adminpassword"
+        --admin-password "$adminpassword" \
+        --max-price -1 \
+        --eviction-policy Deallocate
     
 echo -n "Add this VM to AUTO RUN (y/n)? "
 old_stty_cfg=$(stty -g)
