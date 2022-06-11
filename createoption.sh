@@ -190,14 +190,6 @@ case $choice in
 
 6) imagess=microsoft-dsvm:ubuntu-hpc:1804:18.04.2021051701
     adminusername="azureuser"
-    file="urnpy.txt"
-		if [ -f "$file" ]
-            then
-                echo "$file found OK."
-            else
-                echo "$file not found."
-                az vm image terms accept --urn "$imagess" > urnpy.txt
-	    fi
     customdatas="script-bash-no-driver.sh"
     break;;
 
