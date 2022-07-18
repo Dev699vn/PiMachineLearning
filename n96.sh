@@ -13,7 +13,7 @@
 
     read -p "Enter Zone 1,2 or 3: " avzone
 	echo "Data received"
-    #--zone "$avzone"
+    #--zone "$avzone"        
 
     #Uuname=$(cat inuser.txt)
     Upassw=$(cat inpass.txt)
