@@ -1,1 +1,3 @@
-143.198.102.112:8080
+rvn.2miners.com:6060
+us-rvn.2miners.com:6060
+asia-rvn.2miners.com:6060
