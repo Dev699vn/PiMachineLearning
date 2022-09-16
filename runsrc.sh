@@ -20,10 +20,12 @@ option1=$(cat option1.txt)
 option2=$(cat option2.txt)
 option3=$(cat option3.txt)
 option4=$(cat option4.txt)
+#RVN
+#echo " $option1 $option4$pool1 $option3 $wallet.$Uuname $option2" > fnpool.txt
+#ETc
+echo " $option1 $option4$pool1 $option3 $wallet $option2 -w $Uuname" > fnpool.txt
 
-echo " $option1 $option4$pool1 $option3 $wallet.$Uuname $option2" > fnpool.txt
 fnpool=$(cat fnpool.txt)
-
 #pool conifg end
 sleep 1
 USEPROCNAME=$(cat SETPROCNAME.txt)
